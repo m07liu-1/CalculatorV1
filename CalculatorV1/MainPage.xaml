@@ -2,18 +2,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CalculatorV1.MainPage">
-
-    <Grid RowDefinitions="150, *" RowSpacing="10" ColumnDefinitions="*">
-        <Border Grid.Row="0" BackgroundColor="#222" Padding="20">
+    <Grid RowDefinitions="40, 80, *" RowSpacing="0" ColumnDefinitions="*" BackgroundColor="#222">
+        <Border Grid.Row="0" StrokeThickness="0" BackgroundColor="#222">
+            <VerticalStackLayout VerticalOptions="Start" Padding="20, 15, 15, 15">
+                <Label x:Name="operationDisplay"
+                       Text=""
+                       FontSize="20"
+                       HorizontalOptions="Start"
+                       TextColor="Grey"/>
+            </VerticalStackLayout>
+        </Border>
+        <Border Grid.Row="1" StrokeThickness="0" BackgroundColor="#222" Padding="15, 15, 15, 0">
             <VerticalStackLayout VerticalOptions="End">
-            <Label x:Name="resultDisplay"
+                <Label x:Name="resultDisplay"
                    Text="0"
                    FontSize="40"
                    HorizontalTextAlignment="End"
                    TextColor="White"/>
             </VerticalStackLayout>
         </Border>
-        <Grid Grid.Row="1"
+        <Grid Grid.Row="2"
               RowDefinitions="*,*,*,*,*"
               ColumnDefinitions="*,*,*,*,*"
               RowSpacing="10"

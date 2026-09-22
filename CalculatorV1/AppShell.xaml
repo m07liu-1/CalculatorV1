@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="CalculatorV1.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:CalculatorV1"
-    Title="CalculatorV1">
-
-    <ShellContent
-        Title="CalculatorV1"
+    xmlns:views="clr-namespace:CalculatorV1.Views" 
+    x:Class="CalculatorV1.AppShell"
+    Title="CalculatorV1"
+    BackgroundColor="LightGrey">
+    <!--To use secondary menu option, use <MenuFlyoutSubItem> under <MenuBarItem>-->
+    <Shell.TitleView> <!-- Hides the title-->
+        <Grid />
+    </Shell.TitleView>
+    <Shell.MenuBarItems>
+        <MenuBarItem Text="Open" >
+            <MenuFlyoutItem Text="Calculator" Clicked="openTab"/>
+            <MenuFlyoutItem Text="Page 2" Clicked="openTab"/>
+            <MenuFlyoutItem Text="Page 3" Clicked="openTab"/>
+        </MenuBarItem>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Text="Save"/>
+            <MenuFlyoutSubItem Text="Save as">
+                <MenuFlyoutItem Text="XAML File"/>
+                <MenuFlyoutItem Text="PDF"/>
+            </MenuFlyoutSubItem>
+            <MenuFlyoutItem Text="Help"/>
+        </MenuBarItem>
+        <MenuBarItem Text="Import">
+            <MenuFlyoutItem Text="Option 1"/>
+            <MenuFlyoutItem Text="Option 2"/>
+            <MenuFlyoutItem Text="Option 3"/>
+        </MenuBarItem>
+    </Shell.MenuBarItems>
+    <TabBar x:Name="Tabs">
+        <ShellContent
+        Title="Calculator"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-
+    </TabBar>
 </Shell>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorV1.Views.PageTwo"
+             Title="PageTwo">
+    <Grid RowDefinitions="auto, auto" ColumnDefinitions="auto">
+        <HorizontalStackLayout Grid.Row="0">
+            <Entry  x:Name="Data1"
+                        Text="{Binding Num1}"
+                        Placeholder="Measurement 1"
+                        PlaceholderColor="Grey"
+                        TextColor="black"
+                        FontSize="Small"
+                        Keyboard="Numeric"/>
+            <Entry  x:Name="Data2"
+                        Text="{Binding Num2}"
+                        Placeholder="Measurement 2"
+                        PlaceholderColor="Grey"
+                        TextColor="black"
+                        FontSize="Small"
+                        Keyboard="Numeric"/>
+        </HorizontalStackLayout>
+        <VerticalStackLayout Grid.Row="1" VerticalOptions="Center">
+            <Label x:Name="message"
+               Text=""/>
+            <Button Text="Transfer data to next page!"
+                FontSize="12"
+                BackgroundColor="Green"
+                Command="{Binding TransferCommand}"/>
+            <Label Text="Completed Time: "/>
+            <HorizontalStackLayout>
+                <TimePicker x:Name="timePicker"
+                        Format="T"
+                        TimeSelected="updateTime"/>
+                <Button Text="Now" Clicked="takeTime"/>
+            </HorizontalStackLayout>
+            <CheckBox CheckedChanged="OnCheckBoxCheckedChanged" />
+            <HorizontalStackLayout>
+                <DatePicker x:Name="datePicker" MinimumDate="01/01/1980"
+                            MaximumDate="01/01/2050"/>
+                <Button Text="Today" Clicked="takeDate"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
