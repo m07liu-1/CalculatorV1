@@ -43,11 +43,11 @@
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
 		<PackageCertificateThumbprint>2995F23FD8573C9E2F98A2E2802250009F3F0E4B</PackageCertificateThumbprint>
 		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
-		<AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+		<AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>False</GenerateTestArtifacts>
-		<AppInstallerUri>https://m07liu-1.github.io/CalculatorV1/</AppInstallerUri>
-		<HoursBetweenUpdateChecks>24</HoursBetweenUpdateChecks>
+		<AppInstallerUri>https://m07liu-1.github.io/CalculatorV1/CalculatorV1_x64.appinstaller</AppInstallerUri>
+		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
 	</PropertyGroup>
 
 	<ItemGroup>
