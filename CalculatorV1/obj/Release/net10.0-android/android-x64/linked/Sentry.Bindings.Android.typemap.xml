@@ -1,0 +1,923 @@
+<api type="release" assembly-name="Sentry.Bindings.Android" mvid="ca0dc7c49e0a4aee87e41f3b97683842">
+  <module assembly-name="Sentry.Bindings.Android" mvid="ca0dc7c49e0a4aee87e41f3b97683842" mvid-bytes="xMcNygqe7kqH5B87l2g4Qg==">
+    <duplicates>
+      <entry java-name="io/sentry/util/network/NetworkDetailCaptureUtils$NetworkBodyExtractor" managed-type-name="IO.Sentry.Util.Network.NetworkDetailCaptureUtils/INetworkBodyExtractorInvoker" token="33555112" />
+      <entry java-name="io/sentry/util/network/NetworkDetailCaptureUtils$NetworkHeaderExtractor" managed-type-name="IO.Sentry.Util.Network.NetworkDetailCaptureUtils/INetworkHeaderExtractorInvoker" token="33555114" />
+      <entry java-name="io/sentry/time/EpochClock" managed-type-name="IO.Sentry.Time.IEpochClockInvoker" token="33554488" />
+      <entry java-name="io/sentry/time/MonotonicTicker" managed-type-name="IO.Sentry.Time.IMonotonicTickerInvoker" token="33554490" />
+      <entry java-name="io/sentry/rrweb/RRWebEvent" managed-type-name="IO.Sentry.Rrweb.RRWebEventInvoker" token="33554497" />
+      <entry java-name="io/sentry/rrweb/RRWebIncrementalSnapshotEvent" managed-type-name="IO.Sentry.Rrweb.RRWebIncrementalSnapshotEventInvoker" token="33554500" />
+      <entry java-name="io/sentry/profiling/JavaContinuousProfilerProvider" managed-type-name="IO.Sentry.Profiling.IJavaContinuousProfilerProviderInvoker" token="33554511" />
+      <entry java-name="io/sentry/profiling/JavaProfileConverterProvider" managed-type-name="IO.Sentry.Profiling.IJavaProfileConverterProviderInvoker" token="33554513" />
+      <entry java-name="io/sentry/ndk/INativeScope" managed-type-name="IO.Sentry.Ndk.INativeScopeInvoker" token="33554520" />
+      <entry java-name="io/sentry/metrics/IMetricsApi" managed-type-name="IO.Sentry.Metrics.IMetricsApiInvoker" token="33554529" />
+      <entry java-name="io/sentry/metrics/IMetricsBatchProcessor" managed-type-name="IO.Sentry.Metrics.IMetricsBatchProcessorInvoker" token="33554531" />
+      <entry java-name="io/sentry/metrics/IMetricsBatchProcessorFactory" managed-type-name="IO.Sentry.Metrics.IMetricsBatchProcessorFactoryInvoker" token="33554533" />
+      <entry java-name="io/sentry/logger/ILoggerApi" managed-type-name="IO.Sentry.Logger.ILoggerApiInvoker" token="33554542" />
+      <entry java-name="io/sentry/logger/ILoggerBatchProcessor" managed-type-name="IO.Sentry.Logger.ILoggerBatchProcessorInvoker" token="33554544" />
+      <entry java-name="io/sentry/logger/ILoggerBatchProcessorFactory" managed-type-name="IO.Sentry.Logger.ILoggerBatchProcessorFactoryInvoker" token="33554546" />
+      <entry java-name="io/sentry/internal/viewhierarchy/ViewHierarchyExporter" managed-type-name="IO.Sentry.Internal.Viewhierarchy.IViewHierarchyExporterInvoker" token="33554554" />
+      <entry java-name="io/sentry/internal/debugmeta/IDebugMetaLoader" managed-type-name="IO.Sentry.Internal.Debugmeta.IDebugMetaLoaderInvoker" token="33554557" />
+      <entry java-name="io/sentry/featureflags/IFeatureFlagBuffer" managed-type-name="IO.Sentry.Featureflags.IFeatureFlagBufferInvoker" token="33554562" />
+      <entry java-name="io/sentry/cache/tape/ObjectQueue$Converter" managed-type-name="IO.Sentry.Cache.Tape.ObjectQueue/IConverterInvoker" token="33555150" />
+      <entry java-name="io/sentry/cache/tape/ObjectQueue" managed-type-name="IO.Sentry.Cache.Tape.ObjectQueueInvoker" token="33554566" />
+      <entry java-name="io/sentry/backpressure/IBackpressureMonitor" managed-type-name="IO.Sentry.Backpressure.IBackpressureMonitorInvoker" token="33554569" />
+      <entry java-name="io/sentry/android/replay/gestures/TouchRecorderCallback" managed-type-name="IO.Sentry.Android.Replay.Gestures.ITouchRecorderCallbackInvoker" token="33554580" />
+      <entry java-name="io/sentry/android/core/util/AndroidLazyEvaluator$AndroidEvaluator" managed-type-name="IO.Sentry.Android.Core.Util.AndroidLazyEvaluator/IAndroidEvaluatorInvoker" token="33555152" />
+      <entry java-name="io/sentry/FullyDisplayedReporter$FullyDisplayedReporterListener" managed-type-name="Sentry.JavaSdk.FullyDisplayedReporter/IFullyDisplayedReporterListenerInvoker" token="33555160" />
+      <entry java-name="io/sentry/IAppStartExtender" managed-type-name="Sentry.JavaSdk.IAppStartExtenderInvoker" token="33554627" />
+      <entry java-name="io/sentry/CompositePerformanceCollector" managed-type-name="Sentry.JavaSdk.ICompositePerformanceCollectorInvoker" token="33554629" />
+      <entry java-name="io/sentry/IConnectionStatusProvider$IConnectionStatusObserver" managed-type-name="Sentry.JavaSdk.IConnectionStatusProvider/IConnectionStatusObserverInvoker" token="33555164" />
+      <entry java-name="io/sentry/IConnectionStatusProvider" managed-type-name="Sentry.JavaSdk.IConnectionStatusProviderInvoker" token="33554631" />
+      <entry java-name="io/sentry/IContinuousProfiler" managed-type-name="Sentry.JavaSdk.IContinuousProfilerInvoker" token="33554633" />
+      <entry java-name="io/sentry/IEnvelopeReader" managed-type-name="Sentry.JavaSdk.IEnvelopeReaderInvoker" token="33554635" />
+      <entry java-name="io/sentry/IEnvelopeSender" managed-type-name="Sentry.JavaSdk.IEnvelopeSenderInvoker" token="33554637" />
+      <entry java-name="io/sentry/EventProcessor" managed-type-name="Sentry.JavaSdk.IEventProcessorInvoker" token="33554639" />
+      <entry java-name="io/sentry/IHub" managed-type-name="Sentry.JavaSdk.IHubInvoker" token="33554641" />
+      <entry java-name="io/sentry/Integration" managed-type-name="Sentry.JavaSdk.IIntegrationInvoker" token="33554643" />
+      <entry java-name="io/sentry/JsonDeserializer" managed-type-name="Sentry.JavaSdk.IJsonDeserializerInvoker" token="33554645" />
+      <entry java-name="io/sentry/JsonSerializable" managed-type-name="Sentry.JavaSdk.IJsonSerializableInvoker" token="33554647" />
+      <entry java-name="io/sentry/JsonUnknown" managed-type-name="Sentry.JavaSdk.IJsonUnknownInvoker" token="33554649" />
+      <entry java-name="io/sentry/ILogger" managed-type-name="Sentry.JavaSdk.ILoggerInvoker" token="33554651" />
+      <entry java-name="io/sentry/MeasurementUnit" managed-type-name="Sentry.JavaSdk.IMeasurementUnitInvoker" token="33554654" />
+      <entry java-name="io/sentry/ObjectReader" managed-type-name="Sentry.JavaSdk.IObjectReaderInvoker" token="33554659" />
+      <entry java-name="io/sentry/ObjectWriter" managed-type-name="Sentry.JavaSdk.IObjectWriterInvoker" token="33554661" />
+      <entry java-name="io/sentry/IOptionsObserver" managed-type-name="Sentry.JavaSdk.IOptionsObserverInvoker" token="33554663" />
+      <entry java-name="io/sentry/IPerformanceCollector" managed-type-name="Sentry.JavaSdk.IPerformanceCollectorInvoker" token="33554666" />
+      <entry java-name="io/sentry/IPerformanceContinuousCollector" managed-type-name="Sentry.JavaSdk.IPerformanceContinuousCollectorInvoker" token="33554668" />
+      <entry java-name="io/sentry/IPerformanceSnapshotCollector" managed-type-name="Sentry.JavaSdk.IPerformanceSnapshotCollectorInvoker" token="33554670" />
+      <entry java-name="io/sentry/IProfileConverter" managed-type-name="Sentry.JavaSdk.IProfileConverterInvoker" token="33554672" />
+      <entry java-name="io/sentry/IReplayApi" managed-type-name="Sentry.JavaSdk.IReplayApiInvoker" token="33554674" />
+      <entry java-name="io/sentry/ReplayBreadcrumbConverter" managed-type-name="Sentry.JavaSdk.IReplayBreadcrumbConverterInvoker" token="33554676" />
+      <entry java-name="io/sentry/ReplayController" managed-type-name="Sentry.JavaSdk.IReplayControllerInvoker" token="33554678" />
+      <entry java-name="io/sentry/IScopes" managed-type-name="Sentry.JavaSdk.IScopesInvoker" token="33554680" />
+      <entry java-name="io/sentry/IScopesStorage" managed-type-name="Sentry.JavaSdk.IScopesStorageInvoker" token="33554682" />
+      <entry java-name="io/sentry/IScopesStorageFactory" managed-type-name="Sentry.JavaSdk.IScopesStorageFactoryInvoker" token="33554684" />
+      <entry java-name="io/sentry/SentryDateProvider" managed-type-name="Sentry.JavaSdk.ISentryDateProviderInvoker" token="33554686" />
+      <entry java-name="io/sentry/ISentryExecutorService" managed-type-name="Sentry.JavaSdk.ISentryExecutorServiceInvoker" token="33554688" />
+      <entry java-name="io/sentry/ISentryLifecycleToken" managed-type-name="Sentry.JavaSdk.ISentryLifecycleTokenInvoker" token="33554690" />
+      <entry java-name="io/sentry/ISerializer" managed-type-name="Sentry.JavaSdk.ISerializerInvoker" token="33554692" />
+      <entry java-name="io/sentry/ISocketTagger" managed-type-name="Sentry.JavaSdk.ISocketTaggerInvoker" token="33554694" />
+      <entry java-name="io/sentry/ISpan" managed-type-name="Sentry.JavaSdk.ISpanInvoker" token="33554696" />
+      <entry java-name="io/sentry/SpanDataConvention" managed-type-name="Sentry.JavaSdk.ISpanDataConventionInvoker" token="33554699" />
+      <entry java-name="io/sentry/ISpanFactory" managed-type-name="Sentry.JavaSdk.ISpanFactoryInvoker" token="33554701" />
+      <entry java-name="io/sentry/SpanFinishedCallback" managed-type-name="Sentry.JavaSdk.ISpanFinishedCallbackInvoker" token="33554703" />
+      <entry java-name="io/sentry/ITransaction" managed-type-name="Sentry.JavaSdk.ITransactionInvoker" token="33554705" />
+      <entry java-name="io/sentry/TransactionFinishedCallback" managed-type-name="Sentry.JavaSdk.ITransactionFinishedCallbackInvoker" token="33554707" />
+      <entry java-name="io/sentry/ITransportFactory" managed-type-name="Sentry.JavaSdk.ITransportFactoryInvoker" token="33554709" />
+      <entry java-name="io/sentry/IVersionDetector" managed-type-name="Sentry.JavaSdk.IVersionDetectorInvoker" token="33554711" />
+      <entry java-name="io/sentry/Scope$IWithPropagationContext" managed-type-name="Sentry.JavaSdk.Scope/IWithPropagationContextInvoker" token="33555181" />
+      <entry java-name="io/sentry/Scope$IWithSession" managed-type-name="Sentry.JavaSdk.Scope/IWithSessionInvoker" token="33555183" />
+      <entry java-name="io/sentry/Scope$IWithTransaction" managed-type-name="Sentry.JavaSdk.Scope/IWithTransactionInvoker" token="33555185" />
+      <entry java-name="io/sentry/ScopeObserverAdapter" managed-type-name="Sentry.JavaSdk.ScopeObserverAdapterInvoker" token="33554763" />
+      <entry java-name="io/sentry/SendCachedEnvelopeFireAndForgetIntegration$SendFireAndForget" managed-type-name="Sentry.JavaSdk.SendCachedEnvelopeFireAndForgetIntegration/ISendFireAndForgetInvoker" token="33555187" />
+      <entry java-name="io/sentry/SendCachedEnvelopeFireAndForgetIntegration$SendFireAndForgetDirPath" managed-type-name="Sentry.JavaSdk.SendCachedEnvelopeFireAndForgetIntegration/ISendFireAndForgetDirPathInvoker" token="33555189" />
+      <entry java-name="io/sentry/SendCachedEnvelopeFireAndForgetIntegration$SendFireAndForgetFactory" managed-type-name="Sentry.JavaSdk.SendCachedEnvelopeFireAndForgetIntegration/ISendFireAndForgetFactoryInvoker" token="33555191" />
+      <entry java-name="io/sentry/Sentry$OptionsConfiguration" managed-type-name="Sentry.JavaSdk.Sentry/IOptionsConfigurationInvoker" token="33555193" />
+      <entry java-name="io/sentry/SentryBaseEvent" managed-type-name="Sentry.JavaSdk.SentryBaseEventInvoker" token="33554779" />
+      <entry java-name="io/sentry/SentryDate" managed-type-name="Sentry.JavaSdk.SentryDateInvoker" token="33554783" />
+      <entry java-name="io/sentry/SentryFeedbackOptions$IFormHandler" managed-type-name="Sentry.JavaSdk.SentryFeedbackOptions/IFormHandlerInvoker" token="33555206" />
+      <entry java-name="io/sentry/SentryFeedbackOptions$IShakeController" managed-type-name="Sentry.JavaSdk.SentryFeedbackOptions/IShakeControllerInvoker" token="33555208" />
+      <entry java-name="io/sentry/SentryFeedbackOptions$OptionsConfigurator" managed-type-name="Sentry.JavaSdk.SentryFeedbackOptions/IOptionsConfiguratorInvoker" token="33555210" />
+      <entry java-name="io/sentry/SentryFeedbackOptions$SentryFeedbackCallback" managed-type-name="Sentry.JavaSdk.SentryFeedbackOptions/ISentryFeedbackCallbackInvoker" token="33555212" />
+      <entry java-name="io/sentry/SentryMaskingOptions" managed-type-name="Sentry.JavaSdk.SentryMaskingOptionsInvoker" token="33554804" />
+      <entry java-name="io/sentry/SentryOptions$BeforeBreadcrumbCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IBeforeBreadcrumbCallbackInvoker" token="33555229" />
+      <entry java-name="io/sentry/SentryOptions$BeforeEnvelopeCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IBeforeEnvelopeCallbackInvoker" token="33555231" />
+      <entry java-name="io/sentry/SentryOptions$BeforeSendCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IBeforeSendCallbackInvoker" token="33555233" />
+      <entry java-name="io/sentry/SentryOptions$BeforeSendReplayCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IBeforeSendReplayCallbackInvoker" token="33555235" />
+      <entry java-name="io/sentry/SentryOptions$BeforeSendTransactionCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IBeforeSendTransactionCallbackInvoker" token="33555237" />
+      <entry java-name="io/sentry/SentryOptions$Logs$BeforeSendLogCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/Logs/IBeforeSendLogCallbackInvoker" token="33555401" />
+      <entry java-name="io/sentry/SentryOptions$Metrics$BeforeSendMetricCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/Metrics/IBeforeSendMetricCallbackInvoker" token="33555403" />
+      <entry java-name="io/sentry/SentryOptions$OnDiscardCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IOnDiscardCallbackInvoker" token="33555243" />
+      <entry java-name="io/sentry/SentryOptions$OnOversizedEventCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IOnOversizedEventCallbackInvoker" token="33555245" />
+      <entry java-name="io/sentry/SentryOptions$ProfilesSamplerCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IProfilesSamplerCallbackInvoker" token="33555247" />
+      <entry java-name="io/sentry/SentryOptions$TracesSamplerCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/ITracesSamplerCallbackInvoker" token="33555251" />
+      <entry java-name="io/sentry/SentryReplayOptions$BeforeErrorSamplingCallback" managed-type-name="Sentry.JavaSdk.SentryReplayOptions/IBeforeErrorSamplingCallbackInvoker" token="33555256" />
+      <entry java-name="io/sentry/SentryReplayOptions$ReplayFrameObserver" managed-type-name="Sentry.JavaSdk.SentryReplayOptions/IReplayFrameObserverInvoker" token="33555258" />
+      <entry java-name="io/sentry/util/CollectionUtils$Mapper" managed-type-name="Sentry.JavaSdk.Util.CollectionUtils/IMapperInvoker" token="33555273" />
+      <entry java-name="io/sentry/util/CollectionUtils$Predicate" managed-type-name="Sentry.JavaSdk.Util.CollectionUtils/IPredicateInvoker" token="33555275" />
+      <entry java-name="io/sentry/util/HintUtils$SentryConsumer" managed-type-name="Sentry.JavaSdk.Util.HintUtils/ISentryConsumerInvoker" token="33555277" />
+      <entry java-name="io/sentry/util/HintUtils$SentryHintFallback" managed-type-name="Sentry.JavaSdk.Util.HintUtils/ISentryHintFallbackInvoker" token="33555279" />
+      <entry java-name="io/sentry/util/HintUtils$SentryNullableConsumer" managed-type-name="Sentry.JavaSdk.Util.HintUtils/ISentryNullableConsumerInvoker" token="33555281" />
+      <entry java-name="io/sentry/util/LazyEvaluator$Evaluator" managed-type-name="Sentry.JavaSdk.Util.LazyEvaluator/IEvaluatorInvoker" token="33555283" />
+      <entry java-name="io/sentry/util/thread/IThreadChecker" managed-type-name="Sentry.JavaSdk.Util.Thread.IThreadCheckerInvoker" token="33554884" />
+      <entry java-name="io/sentry/transport/ICurrentDateProvider" managed-type-name="Sentry.JavaSdk.Transport.ICurrentDateProviderInvoker" token="33554890" />
+      <entry java-name="io/sentry/transport/RateLimiterConfig" managed-type-name="Sentry.JavaSdk.Transport.IRateLimiterConfigInvoker" token="33554892" />
+      <entry java-name="io/sentry/transport/ITransport" managed-type-name="Sentry.JavaSdk.Transport.ITransportInvoker" token="33554894" />
+      <entry java-name="io/sentry/transport/ITransportGate" managed-type-name="Sentry.JavaSdk.Transport.ITransportGateInvoker" token="33554896" />
+      <entry java-name="io/sentry/transport/RateLimiter$IRateLimitObserver" managed-type-name="Sentry.JavaSdk.Transport.RateLimiter/IRateLimitObserverInvoker" token="33555287" />
+      <entry java-name="io/sentry/transport/TransportResult" managed-type-name="Sentry.JavaSdk.Transport.TransportResultInvoker" token="33554904" />
+      <entry java-name="io/sentry/internal/modules/IModulesLoader" managed-type-name="Sentry.JavaSdk.Internal.Modules.IModulesLoaderInvoker" token="33554944" />
+      <entry java-name="io/sentry/internal/modules/ModulesLoader" managed-type-name="Sentry.JavaSdk.Internal.Modules.ModulesLoaderInvoker" token="33554947" />
+      <entry java-name="io/sentry/internal/gestures/GestureTargetLocator" managed-type-name="Sentry.JavaSdk.Internal.Gestures.IGestureTargetLocatorInvoker" token="33554951" />
+      <entry java-name="io/sentry/hints/BlockingFlushHint" managed-type-name="Sentry.JavaSdk.Hints.BlockingFlushHintInvoker" token="33554958" />
+      <entry java-name="io/sentry/hints/AbnormalExit" managed-type-name="Sentry.JavaSdk.Hints.IAbnormalExitInvoker" token="33554961" />
+      <entry java-name="io/sentry/hints/ApplyScopeData" managed-type-name="Sentry.JavaSdk.Hints.IApplyScopeDataInvoker" token="33554963" />
+      <entry java-name="io/sentry/hints/Backfillable" managed-type-name="Sentry.JavaSdk.Hints.IBackfillableInvoker" token="33554965" />
+      <entry java-name="io/sentry/hints/Cached" managed-type-name="Sentry.JavaSdk.Hints.ICachedInvoker" token="33554967" />
+      <entry java-name="io/sentry/hints/DiskFlushNotification" managed-type-name="Sentry.JavaSdk.Hints.IDiskFlushNotificationInvoker" token="33554969" />
+      <entry java-name="io/sentry/hints/Enqueable" managed-type-name="Sentry.JavaSdk.Hints.IEnqueableInvoker" token="33554971" />
+      <entry java-name="io/sentry/hints/Flushable" managed-type-name="Sentry.JavaSdk.Hints.IFlushableInvoker" token="33554973" />
+      <entry java-name="io/sentry/hints/NativeCrashExit" managed-type-name="Sentry.JavaSdk.Hints.INativeCrashExitInvoker" token="33554975" />
+      <entry java-name="io/sentry/hints/Resettable" managed-type-name="Sentry.JavaSdk.Hints.IResettableInvoker" token="33554977" />
+      <entry java-name="io/sentry/hints/Retryable" managed-type-name="Sentry.JavaSdk.Hints.IRetryableInvoker" token="33554979" />
+      <entry java-name="io/sentry/hints/SessionEnd" managed-type-name="Sentry.JavaSdk.Hints.ISessionEndInvoker" token="33554981" />
+      <entry java-name="io/sentry/hints/SessionStart" managed-type-name="Sentry.JavaSdk.Hints.ISessionStartInvoker" token="33554983" />
+      <entry java-name="io/sentry/hints/SubmissionResult" managed-type-name="Sentry.JavaSdk.Hints.ISubmissionResultInvoker" token="33554985" />
+      <entry java-name="io/sentry/hints/TransactionEnd" managed-type-name="Sentry.JavaSdk.Hints.ITransactionEndInvoker" token="33554987" />
+      <entry java-name="io/sentry/config/PropertiesProvider" managed-type-name="Sentry.JavaSdk.Config.IPropertiesProviderInvoker" token="33554991" />
+      <entry java-name="io/sentry/clientreport/IClientReportRecorder" managed-type-name="Sentry.JavaSdk.ClientReports.IClientReportRecorderInvoker" token="33554998" />
+      <entry java-name="io/sentry/clientreport/IClientReportStorage" managed-type-name="Sentry.JavaSdk.ClientReports.IClientReportStorageInvoker" token="33555000" />
+      <entry java-name="io/sentry/cache/IEnvelopeCache" managed-type-name="Sentry.JavaSdk.Cache.IEnvelopeCacheInvoker" token="33555004" />
+      <entry java-name="io/sentry/android/replay/Recorder" managed-type-name="Sentry.JavaSdk.Android.Replay.IRecorderInvoker" token="33555012" />
+      <entry java-name="io/sentry/android/replay/ScreenshotRecorderCallback" managed-type-name="Sentry.JavaSdk.Android.Replay.IScreenshotRecorderCallbackInvoker" token="33555014" />
+      <entry java-name="io/sentry/android/replay/WindowCallback" managed-type-name="Sentry.JavaSdk.Android.Replay.IWindowCallbackInvoker" token="33555016" />
+      <entry java-name="io/sentry/android/core/AppStartExtension$ExtendAppStartListener" managed-type-name="Sentry.JavaSdk.Android.Core.AppStartExtension/IExtendAppStartListenerInvoker" token="33555370" />
+      <entry java-name="io/sentry/android/core/AppState$AppStateListener" managed-type-name="Sentry.JavaSdk.Android.Core.AppState/IAppStateListenerInvoker" token="33555375" />
+      <entry java-name="io/sentry/android/core/EmptySecureContentProvider" managed-type-name="Sentry.JavaSdk.Android.Core.EmptySecureContentProviderInvoker" token="33555059" />
+      <entry java-name="io/sentry/android/core/EnvelopeFileObserverIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.EnvelopeFileObserverIntegrationInvoker" token="33555061" />
+      <entry java-name="io/sentry/android/core/IDebugImagesLoader" managed-type-name="Sentry.JavaSdk.Android.Core.IDebugImagesLoaderInvoker" token="33555064" />
+      <entry java-name="io/sentry/android/core/SentryAndroidOptions$BeforeCaptureCallback" managed-type-name="Sentry.JavaSdk.Android.Core.SentryAndroidOptions/IBeforeCaptureCallbackInvoker" token="33555386" />
+      <entry java-name="io/sentry/android/core/SentryUserFeedbackForm$OptionsConfiguration" managed-type-name="Sentry.JavaSdk.Android.Core.SentryUserFeedbackForm/IOptionsConfigurationInvoker" token="33555389" />
+    </duplicates>
+    <types-scratch>
+      <entry key="io/sentry/util/network/NetworkBody" java-name="io/sentry/util/network/NetworkBody" managed-type-name="IO.Sentry.Util.Network.NetworkBody" token="33554480" />
+      <entry key="io/sentry/util/network/NetworkBody$NetworkBodyWarning" java-name="io/sentry/util/network/NetworkBody$NetworkBodyWarning" managed-type-name="IO.Sentry.Util.Network.NetworkBody/NetworkBodyWarning" token="33555110" />
+      <entry key="io/sentry/util/network/NetworkBodyParser" java-name="io/sentry/util/network/NetworkBodyParser" managed-type-name="IO.Sentry.Util.Network.NetworkBodyParser" token="33554481" />
+      <entry key="io/sentry/util/network/NetworkDetailCaptureUtils" java-name="io/sentry/util/network/NetworkDetailCaptureUtils" managed-type-name="IO.Sentry.Util.Network.NetworkDetailCaptureUtils" token="33554482" />
+      <entry key="io/sentry/util/network/NetworkDetailCaptureUtils$NetworkBodyExtractor" java-name="io/sentry/util/network/NetworkDetailCaptureUtils$NetworkBodyExtractor" managed-type-name="IO.Sentry.Util.Network.NetworkDetailCaptureUtils/INetworkBodyExtractor" token="33555111" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/util/network/NetworkDetailCaptureUtils$NetworkHeaderExtractor" java-name="io/sentry/util/network/NetworkDetailCaptureUtils$NetworkHeaderExtractor" managed-type-name="IO.Sentry.Util.Network.NetworkDetailCaptureUtils/INetworkHeaderExtractor" token="33555113" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/util/network/NetworkRequestData" java-name="io/sentry/util/network/NetworkRequestData" managed-type-name="IO.Sentry.Util.Network.NetworkRequestData" token="33554483" />
+      <entry key="io/sentry/util/network/ReplayNetworkRequestOrResponse" java-name="io/sentry/util/network/ReplayNetworkRequestOrResponse" managed-type-name="IO.Sentry.Util.Network.ReplayNetworkRequestOrResponse" token="33554484" />
+      <entry key="io/sentry/time/AnchoredClock" java-name="io/sentry/time/AnchoredClock" managed-type-name="IO.Sentry.Time.AnchoredClock" token="33554485" />
+      <entry key="io/sentry/time/Deadline" java-name="io/sentry/time/Deadline" managed-type-name="IO.Sentry.Time.Deadline" token="33554486" />
+      <entry key="io/sentry/time/EpochClock" java-name="io/sentry/time/EpochClock" managed-type-name="IO.Sentry.Time.IEpochClock" token="33554487" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/time/MonotonicTicker" java-name="io/sentry/time/MonotonicTicker" managed-type-name="IO.Sentry.Time.IMonotonicTicker" token="33554489" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/time/JavaMonotonicTicker" java-name="io/sentry/time/JavaMonotonicTicker" managed-type-name="IO.Sentry.Time.JavaMonotonicTicker" token="33554491" />
+      <entry key="io/sentry/time/Stopwatch" java-name="io/sentry/time/Stopwatch" managed-type-name="IO.Sentry.Time.Stopwatch" token="33554492" />
+      <entry key="io/sentry/time/SystemEpochClock" java-name="io/sentry/time/SystemEpochClock" managed-type-name="IO.Sentry.Time.SystemEpochClock" token="33554493" />
+      <entry key="io/sentry/time/Timestamp" java-name="io/sentry/time/Timestamp" managed-type-name="IO.Sentry.Time.Timestamp" token="33554494" />
+      <entry key="io/sentry/rrweb/RRWebBreadcrumbEvent" java-name="io/sentry/rrweb/RRWebBreadcrumbEvent" managed-type-name="IO.Sentry.Rrweb.RRWebBreadcrumbEvent" token="33554495" />
+      <entry key="io/sentry/rrweb/RRWebBreadcrumbEvent$Deserializer" java-name="io/sentry/rrweb/RRWebBreadcrumbEvent$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebBreadcrumbEvent/Deserializer" token="33555115" />
+      <entry key="io/sentry/rrweb/RRWebBreadcrumbEvent$JsonKeys" java-name="io/sentry/rrweb/RRWebBreadcrumbEvent$JsonKeys" managed-type-name="IO.Sentry.Rrweb.RRWebBreadcrumbEvent/JsonKeys" token="33555116" />
+      <entry key="io/sentry/rrweb/RRWebEvent" java-name="io/sentry/rrweb/RRWebEvent" managed-type-name="IO.Sentry.Rrweb.RRWebEvent" token="33554496" />
+      <entry key="io/sentry/rrweb/RRWebEvent$Deserializer" java-name="io/sentry/rrweb/RRWebEvent$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebEvent/Deserializer" token="33555117" />
+      <entry key="io/sentry/rrweb/RRWebEvent$JsonKeys" java-name="io/sentry/rrweb/RRWebEvent$JsonKeys" managed-type-name="IO.Sentry.Rrweb.RRWebEvent/JsonKeys" token="33555118" />
+      <entry key="io/sentry/rrweb/RRWebEvent$Serializer" java-name="io/sentry/rrweb/RRWebEvent$Serializer" managed-type-name="IO.Sentry.Rrweb.RRWebEvent/Serializer" token="33555119" />
+      <entry key="io/sentry/rrweb/RRWebEventType" java-name="io/sentry/rrweb/RRWebEventType" managed-type-name="IO.Sentry.Rrweb.RRWebEventType" token="33554498" />
+      <entry key="io/sentry/rrweb/RRWebEventType$Deserializer" java-name="io/sentry/rrweb/RRWebEventType$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebEventType/Deserializer" token="33555120" />
+      <entry key="io/sentry/rrweb/RRWebIncrementalSnapshotEvent" java-name="io/sentry/rrweb/RRWebIncrementalSnapshotEvent" managed-type-name="IO.Sentry.Rrweb.RRWebIncrementalSnapshotEvent" token="33554499" />
+      <entry key="io/sentry/rrweb/RRWebIncrementalSnapshotEvent$Deserializer" java-name="io/sentry/rrweb/RRWebIncrementalSnapshotEvent$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebIncrementalSnapshotEvent/Deserializer" token="33555121" />
+      <entry key="io/sentry/rrweb/RRWebIncrementalSnapshotEvent$IncrementalSource" java-name="io/sentry/rrweb/RRWebIncrementalSnapshotEvent$IncrementalSource" managed-type-name="IO.Sentry.Rrweb.RRWebIncrementalSnapshotEvent/IncrementalSource" token="33555122" />
+      <entry key="io/sentry/rrweb/RRWebIncrementalSnapshotEvent$IncrementalSource$Deserializer" java-name="io/sentry/rrweb/RRWebIncrementalSnapshotEvent$IncrementalSource$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebIncrementalSnapshotEvent/IncrementalSource/Deserializer" token="33555392" />
+      <entry key="io/sentry/rrweb/RRWebIncrementalSnapshotEvent$JsonKeys" java-name="io/sentry/rrweb/RRWebIncrementalSnapshotEvent$JsonKeys" managed-type-name="IO.Sentry.Rrweb.RRWebIncrementalSnapshotEvent/JsonKeys" token="33555123" />
+      <entry key="io/sentry/rrweb/RRWebIncrementalSnapshotEvent$Serializer" java-name="io/sentry/rrweb/RRWebIncrementalSnapshotEvent$Serializer" managed-type-name="IO.Sentry.Rrweb.RRWebIncrementalSnapshotEvent/Serializer" token="33555124" />
+      <entry key="io/sentry/rrweb/RRWebInteractionEvent" java-name="io/sentry/rrweb/RRWebInteractionEvent" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionEvent" token="33554501" />
+      <entry key="io/sentry/rrweb/RRWebInteractionEvent$Deserializer" java-name="io/sentry/rrweb/RRWebInteractionEvent$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionEvent/Deserializer" token="33555125" />
+      <entry key="io/sentry/rrweb/RRWebInteractionEvent$InteractionType" java-name="io/sentry/rrweb/RRWebInteractionEvent$InteractionType" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionEvent/InteractionType" token="33555126" />
+      <entry key="io/sentry/rrweb/RRWebInteractionEvent$InteractionType$Deserializer" java-name="io/sentry/rrweb/RRWebInteractionEvent$InteractionType$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionEvent/InteractionType/Deserializer" token="33555393" />
+      <entry key="io/sentry/rrweb/RRWebInteractionEvent$JsonKeys" java-name="io/sentry/rrweb/RRWebInteractionEvent$JsonKeys" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionEvent/JsonKeys" token="33555127" />
+      <entry key="io/sentry/rrweb/RRWebInteractionMoveEvent" java-name="io/sentry/rrweb/RRWebInteractionMoveEvent" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionMoveEvent" token="33554502" />
+      <entry key="io/sentry/rrweb/RRWebInteractionMoveEvent$Deserializer" java-name="io/sentry/rrweb/RRWebInteractionMoveEvent$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionMoveEvent/Deserializer" token="33555128" />
+      <entry key="io/sentry/rrweb/RRWebInteractionMoveEvent$JsonKeys" java-name="io/sentry/rrweb/RRWebInteractionMoveEvent$JsonKeys" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionMoveEvent/JsonKeys" token="33555129" />
+      <entry key="io/sentry/rrweb/RRWebInteractionMoveEvent$Position" java-name="io/sentry/rrweb/RRWebInteractionMoveEvent$Position" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionMoveEvent/Position" token="33555130" />
+      <entry key="io/sentry/rrweb/RRWebInteractionMoveEvent$Position$Deserializer" java-name="io/sentry/rrweb/RRWebInteractionMoveEvent$Position$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionMoveEvent/Position/Deserializer" token="33555394" />
+      <entry key="io/sentry/rrweb/RRWebInteractionMoveEvent$Position$JsonKeys" java-name="io/sentry/rrweb/RRWebInteractionMoveEvent$Position$JsonKeys" managed-type-name="IO.Sentry.Rrweb.RRWebInteractionMoveEvent/Position/JsonKeys" token="33555395" />
+      <entry key="io/sentry/rrweb/RRWebMetaEvent" java-name="io/sentry/rrweb/RRWebMetaEvent" managed-type-name="IO.Sentry.Rrweb.RRWebMetaEvent" token="33554503" />
+      <entry key="io/sentry/rrweb/RRWebMetaEvent$Deserializer" java-name="io/sentry/rrweb/RRWebMetaEvent$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebMetaEvent/Deserializer" token="33555131" />
+      <entry key="io/sentry/rrweb/RRWebMetaEvent$JsonKeys" java-name="io/sentry/rrweb/RRWebMetaEvent$JsonKeys" managed-type-name="IO.Sentry.Rrweb.RRWebMetaEvent/JsonKeys" token="33555132" />
+      <entry key="io/sentry/rrweb/RRWebOptionsEvent" java-name="io/sentry/rrweb/RRWebOptionsEvent" managed-type-name="IO.Sentry.Rrweb.RRWebOptionsEvent" token="33554504" />
+      <entry key="io/sentry/rrweb/RRWebOptionsEvent$Deserializer" java-name="io/sentry/rrweb/RRWebOptionsEvent$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebOptionsEvent/Deserializer" token="33555133" />
+      <entry key="io/sentry/rrweb/RRWebOptionsEvent$JsonKeys" java-name="io/sentry/rrweb/RRWebOptionsEvent$JsonKeys" managed-type-name="IO.Sentry.Rrweb.RRWebOptionsEvent/JsonKeys" token="33555134" />
+      <entry key="io/sentry/rrweb/RRWebSpanEvent" java-name="io/sentry/rrweb/RRWebSpanEvent" managed-type-name="IO.Sentry.Rrweb.RRWebSpanEvent" token="33554505" />
+      <entry key="io/sentry/rrweb/RRWebSpanEvent$Deserializer" java-name="io/sentry/rrweb/RRWebSpanEvent$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebSpanEvent/Deserializer" token="33555135" />
+      <entry key="io/sentry/rrweb/RRWebSpanEvent$JsonKeys" java-name="io/sentry/rrweb/RRWebSpanEvent$JsonKeys" managed-type-name="IO.Sentry.Rrweb.RRWebSpanEvent/JsonKeys" token="33555136" />
+      <entry key="io/sentry/rrweb/RRWebVideoEvent" java-name="io/sentry/rrweb/RRWebVideoEvent" managed-type-name="IO.Sentry.Rrweb.RRWebVideoEvent" token="33554506" />
+      <entry key="io/sentry/rrweb/RRWebVideoEvent$Deserializer" java-name="io/sentry/rrweb/RRWebVideoEvent$Deserializer" managed-type-name="IO.Sentry.Rrweb.RRWebVideoEvent/Deserializer" token="33555137" />
+      <entry key="io/sentry/rrweb/RRWebVideoEvent$JsonKeys" java-name="io/sentry/rrweb/RRWebVideoEvent$JsonKeys" managed-type-name="IO.Sentry.Rrweb.RRWebVideoEvent/JsonKeys" token="33555138" />
+      <entry key="io/sentry/protocol/profiling/SentryProfile" java-name="io/sentry/protocol/profiling/SentryProfile" managed-type-name="IO.Sentry.Protocol.Profiling.SentryProfile" token="33554507" />
+      <entry key="io/sentry/protocol/profiling/SentryProfile$Deserializer" java-name="io/sentry/protocol/profiling/SentryProfile$Deserializer" managed-type-name="IO.Sentry.Protocol.Profiling.SentryProfile/Deserializer" token="33555139" />
+      <entry key="io/sentry/protocol/profiling/SentryProfile$JsonKeys" java-name="io/sentry/protocol/profiling/SentryProfile$JsonKeys" managed-type-name="IO.Sentry.Protocol.Profiling.SentryProfile/JsonKeys" token="33555140" />
+      <entry key="io/sentry/protocol/profiling/SentrySample" java-name="io/sentry/protocol/profiling/SentrySample" managed-type-name="IO.Sentry.Protocol.Profiling.SentrySample" token="33554508" />
+      <entry key="io/sentry/protocol/profiling/SentrySample$Deserializer" java-name="io/sentry/protocol/profiling/SentrySample$Deserializer" managed-type-name="IO.Sentry.Protocol.Profiling.SentrySample/Deserializer" token="33555141" />
+      <entry key="io/sentry/protocol/profiling/SentrySample$JsonKeys" java-name="io/sentry/protocol/profiling/SentrySample$JsonKeys" managed-type-name="IO.Sentry.Protocol.Profiling.SentrySample/JsonKeys" token="33555142" />
+      <entry key="io/sentry/protocol/profiling/SentryThreadMetadata" java-name="io/sentry/protocol/profiling/SentryThreadMetadata" managed-type-name="IO.Sentry.Protocol.Profiling.SentryThreadMetadata" token="33554509" />
+      <entry key="io/sentry/protocol/profiling/SentryThreadMetadata$Deserializer" java-name="io/sentry/protocol/profiling/SentryThreadMetadata$Deserializer" managed-type-name="IO.Sentry.Protocol.Profiling.SentryThreadMetadata/Deserializer" token="33555143" />
+      <entry key="io/sentry/protocol/profiling/SentryThreadMetadata$JsonKeys" java-name="io/sentry/protocol/profiling/SentryThreadMetadata$JsonKeys" managed-type-name="IO.Sentry.Protocol.Profiling.SentryThreadMetadata/JsonKeys" token="33555144" />
+      <entry key="io/sentry/profiling/JavaContinuousProfilerProvider" java-name="io/sentry/profiling/JavaContinuousProfilerProvider" managed-type-name="IO.Sentry.Profiling.IJavaContinuousProfilerProvider" token="33554510" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/profiling/JavaProfileConverterProvider" java-name="io/sentry/profiling/JavaProfileConverterProvider" managed-type-name="IO.Sentry.Profiling.IJavaProfileConverterProvider" token="33554512" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/profiling/ProfileRecordingState" java-name="io/sentry/profiling/ProfileRecordingState" managed-type-name="IO.Sentry.Profiling.ProfileRecordingState" token="33554514" />
+      <entry key="io/sentry/profiling/ProfilingServiceLoader" java-name="io/sentry/profiling/ProfilingServiceLoader" managed-type-name="IO.Sentry.Profiling.ProfilingServiceLoader" token="33554515" />
+      <entry key="io/sentry/opentelemetry/OpenTelemetryUtil" java-name="io/sentry/opentelemetry/OpenTelemetryUtil" managed-type-name="IO.Sentry.Opentelemetry.OpenTelemetryUtil" token="33554516" />
+      <entry key="io/sentry/ndk/BuildConfig" java-name="io/sentry/ndk/BuildConfig" managed-type-name="IO.Sentry.Ndk.BuildConfig" token="33554517" />
+      <entry key="io/sentry/ndk/DebugImage" java-name="io/sentry/ndk/DebugImage" managed-type-name="IO.Sentry.Ndk.DebugImage" token="33554518" />
+      <entry key="io/sentry/ndk/INativeScope" java-name="io/sentry/ndk/INativeScope" managed-type-name="IO.Sentry.Ndk.INativeScope" token="33554519" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ndk/NativeModuleListLoader" java-name="io/sentry/ndk/NativeModuleListLoader" managed-type-name="IO.Sentry.Ndk.NativeModuleListLoader" token="33554521" />
+      <entry key="io/sentry/ndk/NativeScope" java-name="io/sentry/ndk/NativeScope" managed-type-name="IO.Sentry.Ndk.NativeScope" token="33554522" />
+      <entry key="io/sentry/ndk/NdkHandlerStrategy" java-name="io/sentry/ndk/NdkHandlerStrategy" managed-type-name="IO.Sentry.Ndk.NdkHandlerStrategy" token="33554523" />
+      <entry key="io/sentry/ndk/NdkOptions" java-name="io/sentry/ndk/NdkOptions" managed-type-name="IO.Sentry.Ndk.NdkOptions" token="33554524" />
+      <entry key="io/sentry/ndk/SentryNdk" java-name="io/sentry/ndk/SentryNdk" managed-type-name="IO.Sentry.Ndk.SentryNdk" token="33554525" />
+      <entry key="io/sentry/ndk/SentryNdkPreloadProvider" java-name="io/sentry/ndk/SentryNdkPreloadProvider" managed-type-name="IO.Sentry.Ndk.SentryNdkPreloadProvider" token="33554526" />
+      <entry key="io/sentry/metrics/DefaultMetricsBatchProcessorFactory" java-name="io/sentry/metrics/DefaultMetricsBatchProcessorFactory" managed-type-name="IO.Sentry.Metrics.DefaultMetricsBatchProcessorFactory" token="33554527" />
+      <entry key="io/sentry/metrics/IMetricsApi" java-name="io/sentry/metrics/IMetricsApi" managed-type-name="IO.Sentry.Metrics.IMetricsApi" token="33554528" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/metrics/IMetricsBatchProcessor" java-name="io/sentry/metrics/IMetricsBatchProcessor" managed-type-name="IO.Sentry.Metrics.IMetricsBatchProcessor" token="33554530" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/metrics/IMetricsBatchProcessorFactory" java-name="io/sentry/metrics/IMetricsBatchProcessorFactory" managed-type-name="IO.Sentry.Metrics.IMetricsBatchProcessorFactory" token="33554532" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/metrics/MetricsApi" java-name="io/sentry/metrics/MetricsApi" managed-type-name="IO.Sentry.Metrics.MetricsApi" token="33554534" />
+      <entry key="io/sentry/metrics/MetricsBatchProcessor" java-name="io/sentry/metrics/MetricsBatchProcessor" managed-type-name="IO.Sentry.Metrics.MetricsBatchProcessor" token="33554535" />
+      <entry key="io/sentry/metrics/MetricsUnit" java-name="io/sentry/metrics/MetricsUnit" managed-type-name="IO.Sentry.Metrics.MetricsUnit" token="33554536" />
+      <entry key="io/sentry/metrics/MetricsUnit$Duration" java-name="io/sentry/metrics/MetricsUnit$Duration" managed-type-name="IO.Sentry.Metrics.MetricsUnit/Duration" token="33555145" />
+      <entry key="io/sentry/metrics/MetricsUnit$Fraction" java-name="io/sentry/metrics/MetricsUnit$Fraction" managed-type-name="IO.Sentry.Metrics.MetricsUnit/Fraction" token="33555146" />
+      <entry key="io/sentry/metrics/MetricsUnit$Information" java-name="io/sentry/metrics/MetricsUnit$Information" managed-type-name="IO.Sentry.Metrics.MetricsUnit/Information" token="33555147" />
+      <entry key="io/sentry/metrics/NoOpMetricsApi" java-name="io/sentry/metrics/NoOpMetricsApi" managed-type-name="IO.Sentry.Metrics.NoOpMetricsApi" token="33554537" />
+      <entry key="io/sentry/metrics/NoOpMetricsBatchProcessor" java-name="io/sentry/metrics/NoOpMetricsBatchProcessor" managed-type-name="IO.Sentry.Metrics.NoOpMetricsBatchProcessor" token="33554538" />
+      <entry key="io/sentry/metrics/SentryMetricsParameters" java-name="io/sentry/metrics/SentryMetricsParameters" managed-type-name="IO.Sentry.Metrics.SentryMetricsParameters" token="33554539" />
+      <entry key="io/sentry/logger/DefaultLoggerBatchProcessorFactory" java-name="io/sentry/logger/DefaultLoggerBatchProcessorFactory" managed-type-name="IO.Sentry.Logger.DefaultLoggerBatchProcessorFactory" token="33554540" />
+      <entry key="io/sentry/logger/ILoggerApi" java-name="io/sentry/logger/ILoggerApi" managed-type-name="IO.Sentry.Logger.ILoggerApi" token="33554541" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/logger/ILoggerBatchProcessor" java-name="io/sentry/logger/ILoggerBatchProcessor" managed-type-name="IO.Sentry.Logger.ILoggerBatchProcessor" token="33554543" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/logger/ILoggerBatchProcessorFactory" java-name="io/sentry/logger/ILoggerBatchProcessorFactory" managed-type-name="IO.Sentry.Logger.ILoggerBatchProcessorFactory" token="33554545" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/logger/LoggerApi" java-name="io/sentry/logger/LoggerApi" managed-type-name="IO.Sentry.Logger.LoggerApi" token="33554547" />
+      <entry key="io/sentry/logger/LoggerBatchProcessor" java-name="io/sentry/logger/LoggerBatchProcessor" managed-type-name="IO.Sentry.Logger.LoggerBatchProcessor" token="33554548" />
+      <entry key="io/sentry/logger/NoOpLoggerApi" java-name="io/sentry/logger/NoOpLoggerApi" managed-type-name="IO.Sentry.Logger.NoOpLoggerApi" token="33554549" />
+      <entry key="io/sentry/logger/NoOpLoggerBatchProcessor" java-name="io/sentry/logger/NoOpLoggerBatchProcessor" managed-type-name="IO.Sentry.Logger.NoOpLoggerBatchProcessor" token="33554550" />
+      <entry key="io/sentry/logger/SentryLogParameters" java-name="io/sentry/logger/SentryLogParameters" managed-type-name="IO.Sentry.Logger.SentryLogParameters" token="33554551" />
+      <entry key="io/sentry/internal/ManifestVersionReader" java-name="io/sentry/internal/ManifestVersionReader" managed-type-name="IO.Sentry.Internal.ManifestVersionReader" token="33554552" />
+      <entry key="io/sentry/internal/ManifestVersionReader$VersionInfoHolder" java-name="io/sentry/internal/ManifestVersionReader$VersionInfoHolder" managed-type-name="IO.Sentry.Internal.ManifestVersionReader/VersionInfoHolder" token="33555148" />
+      <entry key="io/sentry/internal/viewhierarchy/ViewHierarchyExporter" java-name="io/sentry/internal/viewhierarchy/ViewHierarchyExporter" managed-type-name="IO.Sentry.Internal.Viewhierarchy.IViewHierarchyExporter" token="33554553" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/internal/eventprocessor/EventProcessorAndOrder" java-name="io/sentry/internal/eventprocessor/EventProcessorAndOrder" managed-type-name="IO.Sentry.Internal.Eventprocessor.EventProcessorAndOrder" token="33554555" />
+      <entry key="io/sentry/internal/debugmeta/IDebugMetaLoader" java-name="io/sentry/internal/debugmeta/IDebugMetaLoader" managed-type-name="IO.Sentry.Internal.Debugmeta.IDebugMetaLoader" token="33554556" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/internal/debugmeta/NoOpDebugMetaLoader" java-name="io/sentry/internal/debugmeta/NoOpDebugMetaLoader" managed-type-name="IO.Sentry.Internal.Debugmeta.NoOpDebugMetaLoader" token="33554558" />
+      <entry key="io/sentry/internal/debugmeta/ResourcesDebugMetaLoader" java-name="io/sentry/internal/debugmeta/ResourcesDebugMetaLoader" managed-type-name="IO.Sentry.Internal.Debugmeta.ResourcesDebugMetaLoader" token="33554559" />
+      <entry key="io/sentry/featureflags/FeatureFlagBuffer" java-name="io/sentry/featureflags/FeatureFlagBuffer" managed-type-name="IO.Sentry.Featureflags.FeatureFlagBuffer" token="33554560" />
+      <entry key="io/sentry/featureflags/IFeatureFlagBuffer" java-name="io/sentry/featureflags/IFeatureFlagBuffer" managed-type-name="IO.Sentry.Featureflags.IFeatureFlagBuffer" token="33554561" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/featureflags/NoOpFeatureFlagBuffer" java-name="io/sentry/featureflags/NoOpFeatureFlagBuffer" managed-type-name="IO.Sentry.Featureflags.NoOpFeatureFlagBuffer" token="33554563" />
+      <entry key="io/sentry/featureflags/SpanFeatureFlagBuffer" java-name="io/sentry/featureflags/SpanFeatureFlagBuffer" managed-type-name="IO.Sentry.Featureflags.SpanFeatureFlagBuffer" token="33554564" />
+      <entry key="io/sentry/cache/tape/ObjectQueue" java-name="io/sentry/cache/tape/ObjectQueue" managed-type-name="IO.Sentry.Cache.Tape.ObjectQueue" token="33554565" />
+      <entry key="io/sentry/cache/tape/ObjectQueue$Converter" java-name="io/sentry/cache/tape/ObjectQueue$Converter" managed-type-name="IO.Sentry.Cache.Tape.ObjectQueue/IConverter" token="33555149" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/backpressure/BackpressureMonitor" java-name="io/sentry/backpressure/BackpressureMonitor" managed-type-name="IO.Sentry.Backpressure.BackpressureMonitor" token="33554567" />
+      <entry key="io/sentry/backpressure/IBackpressureMonitor" java-name="io/sentry/backpressure/IBackpressureMonitor" managed-type-name="IO.Sentry.Backpressure.IBackpressureMonitor" token="33554568" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/backpressure/NoOpBackpressureMonitor" java-name="io/sentry/backpressure/NoOpBackpressureMonitor" managed-type-name="IO.Sentry.Backpressure.NoOpBackpressureMonitor" token="33554570" />
+      <entry key="io/sentry/android/replay/video/SimpleVideoEncoderKt" java-name="io/sentry/android/replay/video/SimpleVideoEncoderKt" managed-type-name="IO.Sentry.Android.Replay.Video.SimpleVideoEncoderKt" token="33554571" />
+      <entry key="io/sentry/android/replay/util/ContextKt" java-name="io/sentry/android/replay/util/ContextKt" managed-type-name="IO.Sentry.Android.Replay.Util.ContextKt" token="33554572" />
+      <entry key="io/sentry/android/replay/util/ExecutorsKt" java-name="io/sentry/android/replay/util/ExecutorsKt" managed-type-name="IO.Sentry.Android.Replay.Util.ExecutorsKt" token="33554573" />
+      <entry key="io/sentry/android/replay/util/FixedWindowCallback" java-name="io/sentry/android/replay/util/FixedWindowCallback" managed-type-name="IO.Sentry.Android.Replay.Util.FixedWindowCallback" token="33554574" />
+      <entry key="io/sentry/android/replay/util/NodesKt" java-name="io/sentry/android/replay/util/NodesKt" managed-type-name="IO.Sentry.Android.Replay.Util.NodesKt" token="33554575" />
+      <entry key="io/sentry/android/replay/util/SamplingKt" java-name="io/sentry/android/replay/util/SamplingKt" managed-type-name="IO.Sentry.Android.Replay.Util.SamplingKt" token="33554576" />
+      <entry key="io/sentry/android/replay/util/ViewsKt" java-name="io/sentry/android/replay/util/ViewsKt" managed-type-name="IO.Sentry.Android.Replay.Util.ViewsKt" token="33554577" />
+      <entry key="io/sentry/android/replay/screenshot/PixelCopyStrategyKt" java-name="io/sentry/android/replay/screenshot/PixelCopyStrategyKt" managed-type-name="IO.Sentry.Android.Replay.Screenshot.PixelCopyStrategyKt" token="33554578" />
+      <entry key="io/sentry/android/replay/gestures/TouchRecorderCallback" java-name="io/sentry/android/replay/gestures/TouchRecorderCallback" managed-type-name="IO.Sentry.Android.Replay.Gestures.ITouchRecorderCallback" token="33554579" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/android/core/util/AndroidLazyEvaluator" java-name="io/sentry/android/core/util/AndroidLazyEvaluator" managed-type-name="IO.Sentry.Android.Core.Util.AndroidLazyEvaluator" token="33554581" />
+      <entry key="io/sentry/android/core/util/AndroidLazyEvaluator$AndroidEvaluator" java-name="io/sentry/android/core/util/AndroidLazyEvaluator$AndroidEvaluator" managed-type-name="IO.Sentry.Android.Core.Util.AndroidLazyEvaluator/IAndroidEvaluator" token="33555151" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/android/core/internal/tombstone/NativeExceptionMechanism" java-name="io/sentry/android/core/internal/tombstone/NativeExceptionMechanism" managed-type-name="IO.Sentry.Android.Core.Internal.Tombstone.NativeExceptionMechanism" token="33554582" />
+      <entry key="io/sentry/android/core/internal/tombstone/TombstoneParser" java-name="io/sentry/android/core/internal/tombstone/TombstoneParser" managed-type-name="IO.Sentry.Android.Core.Internal.Tombstone.TombstoneParser" token="33554583" />
+      <entry key="io/sentry/android/core/internal/time/AndroidMonotonicTicker" java-name="io/sentry/android/core/internal/time/AndroidMonotonicTicker" managed-type-name="IO.Sentry.Android.Core.Internal.Time.AndroidMonotonicTicker" token="33554584" />
+      <entry key="io/sentry/android/core/internal/profiling/ChunkRecord" java-name="io/sentry/android/core/internal/profiling/ChunkRecord" managed-type-name="IO.Sentry.Android.Core.Internal.Profiling.ChunkRecord" token="33554585" />
+      <entry key="io/sentry/android/core/internal/debugmeta/AssetsDebugMetaLoader" java-name="io/sentry/android/core/internal/debugmeta/AssetsDebugMetaLoader" managed-type-name="IO.Sentry.Android.Core.Internal.Debugmeta.AssetsDebugMetaLoader" token="33554586" />
+      <entry key="io/sentry/android/core/anr/AggregatedStackTrace" java-name="io/sentry/android/core/anr/AggregatedStackTrace" managed-type-name="IO.Sentry.Android.Core.Anr.AggregatedStackTrace" token="33554587" />
+      <entry key="io/sentry/android/core/anr/AnrCulpritIdentifier" java-name="io/sentry/android/core/anr/AnrCulpritIdentifier" managed-type-name="IO.Sentry.Android.Core.Anr.AnrCulpritIdentifier" token="33554588" />
+      <entry key="io/sentry/android/core/anr/AnrProfile" java-name="io/sentry/android/core/anr/AnrProfile" managed-type-name="IO.Sentry.Android.Core.Anr.AnrProfile" token="33554589" />
+      <entry key="io/sentry/android/core/anr/AnrProfileManager" java-name="io/sentry/android/core/anr/AnrProfileManager" managed-type-name="IO.Sentry.Android.Core.Anr.AnrProfileManager" token="33554590" />
+      <entry key="io/sentry/android/core/anr/AnrProfileRotationHelper" java-name="io/sentry/android/core/anr/AnrProfileRotationHelper" managed-type-name="IO.Sentry.Android.Core.Anr.AnrProfileRotationHelper" token="33554591" />
+      <entry key="io/sentry/android/core/anr/AnrProfilingIntegration" java-name="io/sentry/android/core/anr/AnrProfilingIntegration" managed-type-name="IO.Sentry.Android.Core.Anr.AnrProfilingIntegration" token="33554592" />
+      <entry key="io/sentry/android/core/anr/AnrProfilingIntegration$MainThreadState" java-name="io/sentry/android/core/anr/AnrProfilingIntegration$MainThreadState" managed-type-name="IO.Sentry.Android.Core.Anr.AnrProfilingIntegration/MainThreadState" token="33555153" />
+      <entry key="io/sentry/android/core/anr/AnrStackTrace" java-name="io/sentry/android/core/anr/AnrStackTrace" managed-type-name="IO.Sentry.Android.Core.Anr.AnrStackTrace" token="33554593" />
+      <entry key="io/sentry/android/core/anr/StackTraceConverter" java-name="io/sentry/android/core/anr/StackTraceConverter" managed-type-name="IO.Sentry.Android.Core.Anr.StackTraceConverter" token="33554594" />
+      <entry key="io/sentry/AsyncHttpTransportFactory" java-name="io/sentry/AsyncHttpTransportFactory" managed-type-name="Sentry.JavaSdk.AsyncHttpTransportFactory" token="33554595" />
+      <entry key="io/sentry/Attachment" java-name="io/sentry/Attachment" managed-type-name="Sentry.JavaSdk.Attachment" token="33554596" />
+      <entry key="io/sentry/Baggage" java-name="io/sentry/Baggage" managed-type-name="Sentry.JavaSdk.Baggage" token="33554597" />
+      <entry key="io/sentry/Baggage$DSCKeys" java-name="io/sentry/Baggage$DSCKeys" managed-type-name="Sentry.JavaSdk.Baggage/DSCKeys" token="33555154" />
+      <entry key="io/sentry/BaggageHeader" java-name="io/sentry/BaggageHeader" managed-type-name="Sentry.JavaSdk.BaggageHeader" token="33554598" />
+      <entry key="io/sentry/Breadcrumb" java-name="io/sentry/Breadcrumb" managed-type-name="Sentry.JavaSdk.Breadcrumb" token="33554599" />
+      <entry key="io/sentry/Breadcrumb$Deserializer" java-name="io/sentry/Breadcrumb$Deserializer" managed-type-name="Sentry.JavaSdk.Breadcrumb/Deserializer" token="33555155" />
+      <entry key="io/sentry/Breadcrumb$JsonKeys" java-name="io/sentry/Breadcrumb$JsonKeys" managed-type-name="Sentry.JavaSdk.Breadcrumb/JsonKeys" token="33555156" />
+      <entry key="io/sentry/BuildConfig" java-name="io/sentry/BuildConfig" managed-type-name="Sentry.JavaSdk.BuildConfig" token="33554600" />
+      <entry key="io/sentry/CheckIn" java-name="io/sentry/CheckIn" managed-type-name="Sentry.JavaSdk.CheckIn" token="33554601" />
+      <entry key="io/sentry/CheckIn$Deserializer" java-name="io/sentry/CheckIn$Deserializer" managed-type-name="Sentry.JavaSdk.CheckIn/Deserializer" token="33555157" />
+      <entry key="io/sentry/CheckIn$JsonKeys" java-name="io/sentry/CheckIn$JsonKeys" managed-type-name="Sentry.JavaSdk.CheckIn/JsonKeys" token="33555158" />
+      <entry key="io/sentry/CheckInStatus" java-name="io/sentry/CheckInStatus" managed-type-name="Sentry.JavaSdk.CheckInStatus" token="33554602" />
+      <entry key="io/sentry/CombinedContextsView" java-name="io/sentry/CombinedContextsView" managed-type-name="Sentry.JavaSdk.CombinedContextsView" token="33554603" />
+      <entry key="io/sentry/CombinedScopeView" java-name="io/sentry/CombinedScopeView" managed-type-name="Sentry.JavaSdk.CombinedScopeView" token="33554604" />
+      <entry key="io/sentry/CustomSamplingContext" java-name="io/sentry/CustomSamplingContext" managed-type-name="Sentry.JavaSdk.CustomSamplingContext" token="33554605" />
+      <entry key="io/sentry/DataCategory" java-name="io/sentry/DataCategory" managed-type-name="Sentry.JavaSdk.DataCategory" token="33554606" />
+      <entry key="io/sentry/DateUtils" java-name="io/sentry/DateUtils" managed-type-name="Sentry.JavaSdk.DateUtils" token="33554607" />
+      <entry key="io/sentry/DeduplicateMultithreadedEventProcessor" java-name="io/sentry/DeduplicateMultithreadedEventProcessor" managed-type-name="Sentry.JavaSdk.DeduplicateMultithreadedEventProcessor" token="33554608" />
+      <entry key="io/sentry/DefaultCompositePerformanceCollector" java-name="io/sentry/DefaultCompositePerformanceCollector" managed-type-name="Sentry.JavaSdk.DefaultCompositePerformanceCollector" token="33554609" />
+      <entry key="io/sentry/DefaultScopesStorage" java-name="io/sentry/DefaultScopesStorage" managed-type-name="Sentry.JavaSdk.DefaultScopesStorage" token="33554610" />
+      <entry key="io/sentry/DefaultSpanFactory" java-name="io/sentry/DefaultSpanFactory" managed-type-name="Sentry.JavaSdk.DefaultSpanFactory" token="33554611" />
+      <entry key="io/sentry/DefaultVersionDetector" java-name="io/sentry/DefaultVersionDetector" managed-type-name="Sentry.JavaSdk.DefaultVersionDetector" token="33554612" />
+      <entry key="io/sentry/DiagnosticLogger" java-name="io/sentry/DiagnosticLogger" managed-type-name="Sentry.JavaSdk.DiagnosticLogger" token="33554613" />
+      <entry key="io/sentry/DsnUtil" java-name="io/sentry/DsnUtil" managed-type-name="Sentry.JavaSdk.DsnUtil" token="33554614" />
+      <entry key="io/sentry/DuplicateEventDetectionEventProcessor" java-name="io/sentry/DuplicateEventDetectionEventProcessor" managed-type-name="Sentry.JavaSdk.DuplicateEventDetectionEventProcessor" token="33554615" />
+      <entry key="io/sentry/EnvelopeReader" java-name="io/sentry/EnvelopeReader" managed-type-name="Sentry.JavaSdk.EnvelopeReader" token="33554616" />
+      <entry key="io/sentry/ExperimentalOptions" java-name="io/sentry/ExperimentalOptions" managed-type-name="Sentry.JavaSdk.ExperimentalOptions" token="33554617" />
+      <entry key="io/sentry/ExternalOptions" java-name="io/sentry/ExternalOptions" managed-type-name="Sentry.JavaSdk.ExternalOptions" token="33554618" />
+      <entry key="io/sentry/FilterString" java-name="io/sentry/FilterString" managed-type-name="Sentry.JavaSdk.FilterString" token="33554619" />
+      <entry key="io/sentry/FullyDisplayedReporter" java-name="io/sentry/FullyDisplayedReporter" managed-type-name="Sentry.JavaSdk.FullyDisplayedReporter" token="33554620" />
+      <entry key="io/sentry/FullyDisplayedReporter$FullyDisplayedReporterListener" java-name="io/sentry/FullyDisplayedReporter$FullyDisplayedReporterListener" managed-type-name="Sentry.JavaSdk.FullyDisplayedReporter/IFullyDisplayedReporterListener" token="33555159" skip-in-java-to-managed="True" />
+      <entry key="mono/io/sentry/FullyDisplayedReporter_FullyDisplayedReporterListenerImplementor" java-name="mono/io/sentry/FullyDisplayedReporter_FullyDisplayedReporterListenerImplementor" managed-type-name="Sentry.JavaSdk.FullyDisplayedReporter/IFullyDisplayedReporterListenerImplementor" token="33555161" />
+      <entry key="io/sentry/Hint" java-name="io/sentry/Hint" managed-type-name="Sentry.JavaSdk.Hint" token="33554621" />
+      <entry key="io/sentry/HostnameCache" java-name="io/sentry/HostnameCache" managed-type-name="Sentry.JavaSdk.HostnameCache" token="33554622" />
+      <entry key="io/sentry/HttpStatusCodeRange" java-name="io/sentry/HttpStatusCodeRange" managed-type-name="Sentry.JavaSdk.HttpStatusCodeRange" token="33554623" />
+      <entry key="io/sentry/HubAdapter" java-name="io/sentry/HubAdapter" managed-type-name="Sentry.JavaSdk.HubAdapter" token="33554624" />
+      <entry key="io/sentry/HubScopesWrapper" java-name="io/sentry/HubScopesWrapper" managed-type-name="Sentry.JavaSdk.HubScopesWrapper" token="33554625" />
+      <entry key="io/sentry/IAppStartExtender" java-name="io/sentry/IAppStartExtender" managed-type-name="Sentry.JavaSdk.IAppStartExtender" token="33554626" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/CompositePerformanceCollector" java-name="io/sentry/CompositePerformanceCollector" managed-type-name="Sentry.JavaSdk.ICompositePerformanceCollector" token="33554628" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IConnectionStatusProvider" java-name="io/sentry/IConnectionStatusProvider" managed-type-name="Sentry.JavaSdk.IConnectionStatusProvider" token="33554630" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IConnectionStatusProvider$ConnectionStatus" java-name="io/sentry/IConnectionStatusProvider$ConnectionStatus" managed-type-name="Sentry.JavaSdk.IConnectionStatusProvider/ConnectionStatus" token="33555162" />
+      <entry key="io/sentry/IConnectionStatusProvider$IConnectionStatusObserver" java-name="io/sentry/IConnectionStatusProvider$IConnectionStatusObserver" managed-type-name="Sentry.JavaSdk.IConnectionStatusProvider/IConnectionStatusObserver" token="33555163" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IContinuousProfiler" java-name="io/sentry/IContinuousProfiler" managed-type-name="Sentry.JavaSdk.IContinuousProfiler" token="33554632" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IEnvelopeReader" java-name="io/sentry/IEnvelopeReader" managed-type-name="Sentry.JavaSdk.IEnvelopeReader" token="33554634" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IEnvelopeSender" java-name="io/sentry/IEnvelopeSender" managed-type-name="Sentry.JavaSdk.IEnvelopeSender" token="33554636" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/EventProcessor" java-name="io/sentry/EventProcessor" managed-type-name="Sentry.JavaSdk.IEventProcessor" token="33554638" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IHub" java-name="io/sentry/IHub" managed-type-name="Sentry.JavaSdk.IHub" token="33554640" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/Integration" java-name="io/sentry/Integration" managed-type-name="Sentry.JavaSdk.IIntegration" token="33554642" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/JsonDeserializer" java-name="io/sentry/JsonDeserializer" managed-type-name="Sentry.JavaSdk.IJsonDeserializer" token="33554644" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/JsonSerializable" java-name="io/sentry/JsonSerializable" managed-type-name="Sentry.JavaSdk.IJsonSerializable" token="33554646" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/JsonUnknown" java-name="io/sentry/JsonUnknown" managed-type-name="Sentry.JavaSdk.IJsonUnknown" token="33554648" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ILogger" java-name="io/sentry/ILogger" managed-type-name="Sentry.JavaSdk.ILogger" token="33554650" skip-in-java-to-managed="True" />
+      <entry key="mono/internal/io/sentry/MeasurementUnit" java-name="mono/internal/io/sentry/MeasurementUnit" managed-type-name="Sentry.JavaSdk.MeasurementUnit" token="33554652" />
+      <entry key="io/sentry/MeasurementUnit" java-name="io/sentry/MeasurementUnit" managed-type-name="Sentry.JavaSdk.IMeasurementUnit" token="33554653" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/MeasurementUnit$Custom" java-name="io/sentry/MeasurementUnit$Custom" managed-type-name="Sentry.JavaSdk.IMeasurementUnit/Custom" token="33555165" />
+      <entry key="io/sentry/MeasurementUnit$Duration" java-name="io/sentry/MeasurementUnit$Duration" managed-type-name="Sentry.JavaSdk.IMeasurementUnit/Duration" token="33555166" />
+      <entry key="io/sentry/MeasurementUnit$Fraction" java-name="io/sentry/MeasurementUnit$Fraction" managed-type-name="Sentry.JavaSdk.IMeasurementUnit/Fraction" token="33555167" />
+      <entry key="io/sentry/MeasurementUnit$Information" java-name="io/sentry/MeasurementUnit$Information" managed-type-name="Sentry.JavaSdk.IMeasurementUnit/Information" token="33555168" />
+      <entry key="io/sentry/InitPriority" java-name="io/sentry/InitPriority" managed-type-name="Sentry.JavaSdk.InitPriority" token="33554655" />
+      <entry key="io/sentry/Instrumenter" java-name="io/sentry/Instrumenter" managed-type-name="Sentry.JavaSdk.Instrumenter" token="33554656" />
+      <entry key="mono/internal/io/sentry/ObjectReader" java-name="mono/internal/io/sentry/ObjectReader" managed-type-name="Sentry.JavaSdk.ObjectReader" token="33554657" />
+      <entry key="io/sentry/ObjectReader" java-name="io/sentry/ObjectReader" managed-type-name="Sentry.JavaSdk.IObjectReader" token="33554658" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ObjectWriter" java-name="io/sentry/ObjectWriter" managed-type-name="Sentry.JavaSdk.IObjectWriter" token="33554660" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IOptionsObserver" java-name="io/sentry/IOptionsObserver" managed-type-name="Sentry.JavaSdk.IOptionsObserver" token="33554662" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IpAddressUtils" java-name="io/sentry/IpAddressUtils" managed-type-name="Sentry.JavaSdk.IpAddressUtils" token="33554664" />
+      <entry key="io/sentry/IPerformanceCollector" java-name="io/sentry/IPerformanceCollector" managed-type-name="Sentry.JavaSdk.IPerformanceCollector" token="33554665" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IPerformanceContinuousCollector" java-name="io/sentry/IPerformanceContinuousCollector" managed-type-name="Sentry.JavaSdk.IPerformanceContinuousCollector" token="33554667" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IPerformanceSnapshotCollector" java-name="io/sentry/IPerformanceSnapshotCollector" managed-type-name="Sentry.JavaSdk.IPerformanceSnapshotCollector" token="33554669" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IProfileConverter" java-name="io/sentry/IProfileConverter" managed-type-name="Sentry.JavaSdk.IProfileConverter" token="33554671" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IReplayApi" java-name="io/sentry/IReplayApi" managed-type-name="Sentry.JavaSdk.IReplayApi" token="33554673" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ReplayBreadcrumbConverter" java-name="io/sentry/ReplayBreadcrumbConverter" managed-type-name="Sentry.JavaSdk.IReplayBreadcrumbConverter" token="33554675" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ReplayController" java-name="io/sentry/ReplayController" managed-type-name="Sentry.JavaSdk.IReplayController" token="33554677" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IScopes" java-name="io/sentry/IScopes" managed-type-name="Sentry.JavaSdk.IScopes" token="33554679" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IScopesStorage" java-name="io/sentry/IScopesStorage" managed-type-name="Sentry.JavaSdk.IScopesStorage" token="33554681" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IScopesStorageFactory" java-name="io/sentry/IScopesStorageFactory" managed-type-name="Sentry.JavaSdk.IScopesStorageFactory" token="33554683" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryDateProvider" java-name="io/sentry/SentryDateProvider" managed-type-name="Sentry.JavaSdk.ISentryDateProvider" token="33554685" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ISentryExecutorService" java-name="io/sentry/ISentryExecutorService" managed-type-name="Sentry.JavaSdk.ISentryExecutorService" token="33554687" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ISentryLifecycleToken" java-name="io/sentry/ISentryLifecycleToken" managed-type-name="Sentry.JavaSdk.ISentryLifecycleToken" token="33554689" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ISerializer" java-name="io/sentry/ISerializer" managed-type-name="Sentry.JavaSdk.ISerializer" token="33554691" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ISocketTagger" java-name="io/sentry/ISocketTagger" managed-type-name="Sentry.JavaSdk.ISocketTagger" token="33554693" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ISpan" java-name="io/sentry/ISpan" managed-type-name="Sentry.JavaSdk.ISpan" token="33554695" skip-in-java-to-managed="True" />
+      <entry key="mono/internal/io/sentry/SpanDataConvention" java-name="mono/internal/io/sentry/SpanDataConvention" managed-type-name="Sentry.JavaSdk.SpanDataConvention" token="33554697" />
+      <entry key="io/sentry/SpanDataConvention" java-name="io/sentry/SpanDataConvention" managed-type-name="Sentry.JavaSdk.ISpanDataConvention" token="33554698" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ISpanFactory" java-name="io/sentry/ISpanFactory" managed-type-name="Sentry.JavaSdk.ISpanFactory" token="33554700" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SpanFinishedCallback" java-name="io/sentry/SpanFinishedCallback" managed-type-name="Sentry.JavaSdk.ISpanFinishedCallback" token="33554702" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ITransaction" java-name="io/sentry/ITransaction" managed-type-name="Sentry.JavaSdk.ITransaction" token="33554704" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/TransactionFinishedCallback" java-name="io/sentry/TransactionFinishedCallback" managed-type-name="Sentry.JavaSdk.ITransactionFinishedCallback" token="33554706" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ITransportFactory" java-name="io/sentry/ITransportFactory" managed-type-name="Sentry.JavaSdk.ITransportFactory" token="33554708" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/IVersionDetector" java-name="io/sentry/IVersionDetector" managed-type-name="Sentry.JavaSdk.IVersionDetector" token="33554710" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/JavaMemoryCollector" java-name="io/sentry/JavaMemoryCollector" managed-type-name="Sentry.JavaSdk.JavaMemoryCollector" token="33554712" />
+      <entry key="io/sentry/JsonObjectDeserializer" java-name="io/sentry/JsonObjectDeserializer" managed-type-name="Sentry.JavaSdk.JsonObjectDeserializer" token="33554713" />
+      <entry key="io/sentry/JsonObjectReader" java-name="io/sentry/JsonObjectReader" managed-type-name="Sentry.JavaSdk.JsonObjectReader" token="33554714" />
+      <entry key="io/sentry/JsonObjectSerializer" java-name="io/sentry/JsonObjectSerializer" managed-type-name="Sentry.JavaSdk.JsonObjectSerializer" token="33554715" />
+      <entry key="io/sentry/JsonObjectWriter" java-name="io/sentry/JsonObjectWriter" managed-type-name="Sentry.JavaSdk.JsonObjectWriter" token="33554716" />
+      <entry key="io/sentry/JsonReflectionObjectSerializer" java-name="io/sentry/JsonReflectionObjectSerializer" managed-type-name="Sentry.JavaSdk.JsonReflectionObjectSerializer" token="33554717" />
+      <entry key="io/sentry/JsonSerializer" java-name="io/sentry/JsonSerializer" managed-type-name="Sentry.JavaSdk.JsonSerializer" token="33554718" />
+      <entry key="io/sentry/MainEventProcessor" java-name="io/sentry/MainEventProcessor" managed-type-name="Sentry.JavaSdk.MainEventProcessor" token="33554719" />
+      <entry key="io/sentry/ManifestVersionDetector" java-name="io/sentry/ManifestVersionDetector" managed-type-name="Sentry.JavaSdk.ManifestVersionDetector" token="33554720" />
+      <entry key="io/sentry/MonitorConfig" java-name="io/sentry/MonitorConfig" managed-type-name="Sentry.JavaSdk.MonitorConfig" token="33554721" />
+      <entry key="io/sentry/MonitorConfig$Deserializer" java-name="io/sentry/MonitorConfig$Deserializer" managed-type-name="Sentry.JavaSdk.MonitorConfig/Deserializer" token="33555169" />
+      <entry key="io/sentry/MonitorConfig$JsonKeys" java-name="io/sentry/MonitorConfig$JsonKeys" managed-type-name="Sentry.JavaSdk.MonitorConfig/JsonKeys" token="33555170" />
+      <entry key="io/sentry/MonitorContexts" java-name="io/sentry/MonitorContexts" managed-type-name="Sentry.JavaSdk.MonitorContexts" token="33554722" />
+      <entry key="io/sentry/MonitorContexts$Deserializer" java-name="io/sentry/MonitorContexts$Deserializer" managed-type-name="Sentry.JavaSdk.MonitorContexts/Deserializer" token="33555171" />
+      <entry key="io/sentry/MonitorSchedule" java-name="io/sentry/MonitorSchedule" managed-type-name="Sentry.JavaSdk.MonitorSchedule" token="33554723" />
+      <entry key="io/sentry/MonitorSchedule$Deserializer" java-name="io/sentry/MonitorSchedule$Deserializer" managed-type-name="Sentry.JavaSdk.MonitorSchedule/Deserializer" token="33555172" />
+      <entry key="io/sentry/MonitorSchedule$JsonKeys" java-name="io/sentry/MonitorSchedule$JsonKeys" managed-type-name="Sentry.JavaSdk.MonitorSchedule/JsonKeys" token="33555173" />
+      <entry key="io/sentry/MonitorScheduleType" java-name="io/sentry/MonitorScheduleType" managed-type-name="Sentry.JavaSdk.MonitorScheduleType" token="33554724" />
+      <entry key="io/sentry/MonitorScheduleUnit" java-name="io/sentry/MonitorScheduleUnit" managed-type-name="Sentry.JavaSdk.MonitorScheduleUnit" token="33554725" />
+      <entry key="io/sentry/NoOpAppStartExtender" java-name="io/sentry/NoOpAppStartExtender" managed-type-name="Sentry.JavaSdk.NoOpAppStartExtender" token="33554726" />
+      <entry key="io/sentry/NoOpCompositePerformanceCollector" java-name="io/sentry/NoOpCompositePerformanceCollector" managed-type-name="Sentry.JavaSdk.NoOpCompositePerformanceCollector" token="33554727" />
+      <entry key="io/sentry/NoOpConnectionStatusProvider" java-name="io/sentry/NoOpConnectionStatusProvider" managed-type-name="Sentry.JavaSdk.NoOpConnectionStatusProvider" token="33554728" />
+      <entry key="io/sentry/NoOpContinuousProfiler" java-name="io/sentry/NoOpContinuousProfiler" managed-type-name="Sentry.JavaSdk.NoOpContinuousProfiler" token="33554729" />
+      <entry key="io/sentry/NoOpDistributionApi" java-name="io/sentry/NoOpDistributionApi" managed-type-name="Sentry.JavaSdk.NoOpDistributionApi" token="33554730" />
+      <entry key="io/sentry/NoOpEnvelopeReader" java-name="io/sentry/NoOpEnvelopeReader" managed-type-name="Sentry.JavaSdk.NoOpEnvelopeReader" token="33554731" />
+      <entry key="io/sentry/NoOpFeedbackApi" java-name="io/sentry/NoOpFeedbackApi" managed-type-name="Sentry.JavaSdk.NoOpFeedbackApi" token="33554732" />
+      <entry key="io/sentry/NoOpHub" java-name="io/sentry/NoOpHub" managed-type-name="Sentry.JavaSdk.NoOpHub" token="33554733" />
+      <entry key="io/sentry/NoOpLogger" java-name="io/sentry/NoOpLogger" managed-type-name="Sentry.JavaSdk.NoOpLogger" token="33554734" />
+      <entry key="io/sentry/NoOpProfileConverter" java-name="io/sentry/NoOpProfileConverter" managed-type-name="Sentry.JavaSdk.NoOpProfileConverter" token="33554735" />
+      <entry key="io/sentry/NoOpReplayBreadcrumbConverter" java-name="io/sentry/NoOpReplayBreadcrumbConverter" managed-type-name="Sentry.JavaSdk.NoOpReplayBreadcrumbConverter" token="33554736" />
+      <entry key="io/sentry/NoOpReplayController" java-name="io/sentry/NoOpReplayController" managed-type-name="Sentry.JavaSdk.NoOpReplayController" token="33554737" />
+      <entry key="io/sentry/NoOpScope" java-name="io/sentry/NoOpScope" managed-type-name="Sentry.JavaSdk.NoOpScope" token="33554738" />
+      <entry key="io/sentry/NoOpScopes" java-name="io/sentry/NoOpScopes" managed-type-name="Sentry.JavaSdk.NoOpScopes" token="33554739" />
+      <entry key="io/sentry/NoOpScopesLifecycleToken" java-name="io/sentry/NoOpScopesLifecycleToken" managed-type-name="Sentry.JavaSdk.NoOpScopesLifecycleToken" token="33554740" />
+      <entry key="io/sentry/NoOpScopesStorage" java-name="io/sentry/NoOpScopesStorage" managed-type-name="Sentry.JavaSdk.NoOpScopesStorage" token="33554741" />
+      <entry key="io/sentry/NoOpSentryExecutorService" java-name="io/sentry/NoOpSentryExecutorService" managed-type-name="Sentry.JavaSdk.NoOpSentryExecutorService" token="33554742" />
+      <entry key="io/sentry/NoOpSocketTagger" java-name="io/sentry/NoOpSocketTagger" managed-type-name="Sentry.JavaSdk.NoOpSocketTagger" token="33554743" />
+      <entry key="io/sentry/NoOpSpan" java-name="io/sentry/NoOpSpan" managed-type-name="Sentry.JavaSdk.NoOpSpan" token="33554744" />
+      <entry key="io/sentry/NoOpSpanFactory" java-name="io/sentry/NoOpSpanFactory" managed-type-name="Sentry.JavaSdk.NoOpSpanFactory" token="33554745" />
+      <entry key="io/sentry/NoOpTransaction" java-name="io/sentry/NoOpTransaction" managed-type-name="Sentry.JavaSdk.NoOpTransaction" token="33554746" />
+      <entry key="io/sentry/NoOpTransactionProfiler" java-name="io/sentry/NoOpTransactionProfiler" managed-type-name="Sentry.JavaSdk.NoOpTransactionProfiler" token="33554747" />
+      <entry key="io/sentry/NoOpTransportFactory" java-name="io/sentry/NoOpTransportFactory" managed-type-name="Sentry.JavaSdk.NoOpTransportFactory" token="33554748" />
+      <entry key="io/sentry/NoopVersionDetector" java-name="io/sentry/NoopVersionDetector" managed-type-name="Sentry.JavaSdk.NoopVersionDetector" token="33554749" />
+      <entry key="io/sentry/OptionsContainer" java-name="io/sentry/OptionsContainer" managed-type-name="Sentry.JavaSdk.OptionsContainer" token="33554750" />
+      <entry key="io/sentry/PerformanceCollectionData" java-name="io/sentry/PerformanceCollectionData" managed-type-name="Sentry.JavaSdk.PerformanceCollectionData" token="33554751" />
+      <entry key="io/sentry/ProfileContext" java-name="io/sentry/ProfileContext" managed-type-name="Sentry.JavaSdk.ProfileContext" token="33554752" />
+      <entry key="io/sentry/ProfileContext$Deserializer" java-name="io/sentry/ProfileContext$Deserializer" managed-type-name="Sentry.JavaSdk.ProfileContext/Deserializer" token="33555174" />
+      <entry key="io/sentry/ProfileContext$JsonKeys" java-name="io/sentry/ProfileContext$JsonKeys" managed-type-name="Sentry.JavaSdk.ProfileContext/JsonKeys" token="33555175" />
+      <entry key="io/sentry/ProfileLifecycle" java-name="io/sentry/ProfileLifecycle" managed-type-name="Sentry.JavaSdk.ProfileLifecycle" token="33554753" />
+      <entry key="io/sentry/ProfilingTransactionData" java-name="io/sentry/ProfilingTransactionData" managed-type-name="Sentry.JavaSdk.ProfilingTransactionData" token="33554754" />
+      <entry key="io/sentry/ProfilingTransactionData$Deserializer" java-name="io/sentry/ProfilingTransactionData$Deserializer" managed-type-name="Sentry.JavaSdk.ProfilingTransactionData/Deserializer" token="33555176" />
+      <entry key="io/sentry/ProfilingTransactionData$JsonKeys" java-name="io/sentry/ProfilingTransactionData$JsonKeys" managed-type-name="Sentry.JavaSdk.ProfilingTransactionData/JsonKeys" token="33555177" />
+      <entry key="io/sentry/PropagationContext" java-name="io/sentry/PropagationContext" managed-type-name="Sentry.JavaSdk.PropagationContext" token="33554755" />
+      <entry key="io/sentry/ReplayRecording" java-name="io/sentry/ReplayRecording" managed-type-name="Sentry.JavaSdk.ReplayRecording" token="33554756" />
+      <entry key="io/sentry/ReplayRecording$Deserializer" java-name="io/sentry/ReplayRecording$Deserializer" managed-type-name="Sentry.JavaSdk.ReplayRecording/Deserializer" token="33555178" />
+      <entry key="io/sentry/ReplayRecording$JsonKeys" java-name="io/sentry/ReplayRecording$JsonKeys" managed-type-name="Sentry.JavaSdk.ReplayRecording/JsonKeys" token="33555179" />
+      <entry key="io/sentry/RequestDetails" java-name="io/sentry/RequestDetails" managed-type-name="Sentry.JavaSdk.RequestDetails" token="33554757" />
+      <entry key="io/sentry/RequestDetailsResolver" java-name="io/sentry/RequestDetailsResolver" managed-type-name="Sentry.JavaSdk.RequestDetailsResolver" token="33554758" />
+      <entry key="io/sentry/SamplingContext" java-name="io/sentry/SamplingContext" managed-type-name="Sentry.JavaSdk.SamplingContext" token="33554759" />
+      <entry key="io/sentry/Scope" java-name="io/sentry/Scope" managed-type-name="Sentry.JavaSdk.Scope" token="33554760" />
+      <entry key="io/sentry/Scope$IWithPropagationContext" java-name="io/sentry/Scope$IWithPropagationContext" managed-type-name="Sentry.JavaSdk.Scope/IWithPropagationContext" token="33555180" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/Scope$IWithSession" java-name="io/sentry/Scope$IWithSession" managed-type-name="Sentry.JavaSdk.Scope/IWithSession" token="33555182" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/Scope$IWithTransaction" java-name="io/sentry/Scope$IWithTransaction" managed-type-name="Sentry.JavaSdk.Scope/IWithTransaction" token="33555184" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/ScopeBindingMode" java-name="io/sentry/ScopeBindingMode" managed-type-name="Sentry.JavaSdk.ScopeBindingMode" token="33554761" />
+      <entry key="io/sentry/ScopeObserverAdapter" java-name="io/sentry/ScopeObserverAdapter" managed-type-name="Sentry.JavaSdk.ScopeObserverAdapter" token="33554762" />
+      <entry key="io/sentry/Scopes" java-name="io/sentry/Scopes" managed-type-name="Sentry.JavaSdk.Scopes" token="33554764" />
+      <entry key="io/sentry/ScopesAdapter" java-name="io/sentry/ScopesAdapter" managed-type-name="Sentry.JavaSdk.ScopesAdapter" token="33554765" />
+      <entry key="io/sentry/ScopesStorageFactory" java-name="io/sentry/ScopesStorageFactory" managed-type-name="Sentry.JavaSdk.ScopesStorageFactory" token="33554766" />
+      <entry key="io/sentry/ScopeType" java-name="io/sentry/ScopeType" managed-type-name="Sentry.JavaSdk.ScopeType" token="33554767" />
+      <entry key="io/sentry/ScreenshotStrategyType" java-name="io/sentry/ScreenshotStrategyType" managed-type-name="Sentry.JavaSdk.ScreenshotStrategyType" token="33554768" />
+      <entry key="io/sentry/SendCachedEnvelopeFireAndForgetIntegration" java-name="io/sentry/SendCachedEnvelopeFireAndForgetIntegration" managed-type-name="Sentry.JavaSdk.SendCachedEnvelopeFireAndForgetIntegration" token="33554769" />
+      <entry key="io/sentry/SendCachedEnvelopeFireAndForgetIntegration$SendFireAndForget" java-name="io/sentry/SendCachedEnvelopeFireAndForgetIntegration$SendFireAndForget" managed-type-name="Sentry.JavaSdk.SendCachedEnvelopeFireAndForgetIntegration/ISendFireAndForget" token="33555186" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SendCachedEnvelopeFireAndForgetIntegration$SendFireAndForgetDirPath" java-name="io/sentry/SendCachedEnvelopeFireAndForgetIntegration$SendFireAndForgetDirPath" managed-type-name="Sentry.JavaSdk.SendCachedEnvelopeFireAndForgetIntegration/ISendFireAndForgetDirPath" token="33555188" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SendCachedEnvelopeFireAndForgetIntegration$SendFireAndForgetFactory" java-name="io/sentry/SendCachedEnvelopeFireAndForgetIntegration$SendFireAndForgetFactory" managed-type-name="Sentry.JavaSdk.SendCachedEnvelopeFireAndForgetIntegration/ISendFireAndForgetFactory" token="33555190" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SendFireAndForgetEnvelopeSender" java-name="io/sentry/SendFireAndForgetEnvelopeSender" managed-type-name="Sentry.JavaSdk.SendFireAndForgetEnvelopeSender" token="33554770" />
+      <entry key="io/sentry/SendFireAndForgetOutboxSender" java-name="io/sentry/SendFireAndForgetOutboxSender" managed-type-name="Sentry.JavaSdk.SendFireAndForgetOutboxSender" token="33554771" />
+      <entry key="io/sentry/Sentry" java-name="io/sentry/Sentry" managed-type-name="Sentry.JavaSdk.Sentry" token="33554772" />
+      <entry key="io/sentry/Sentry$OptionsConfiguration" java-name="io/sentry/Sentry$OptionsConfiguration" managed-type-name="Sentry.JavaSdk.Sentry/IOptionsConfiguration" token="33555192" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryAppStartProfilingOptions" java-name="io/sentry/SentryAppStartProfilingOptions" managed-type-name="Sentry.JavaSdk.SentryAppStartProfilingOptions" token="33554773" />
+      <entry key="io/sentry/SentryAppStartProfilingOptions$Deserializer" java-name="io/sentry/SentryAppStartProfilingOptions$Deserializer" managed-type-name="Sentry.JavaSdk.SentryAppStartProfilingOptions/Deserializer" token="33555194" />
+      <entry key="io/sentry/SentryAppStartProfilingOptions$JsonKeys" java-name="io/sentry/SentryAppStartProfilingOptions$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryAppStartProfilingOptions/JsonKeys" token="33555195" />
+      <entry key="io/sentry/SentryAttribute" java-name="io/sentry/SentryAttribute" managed-type-name="Sentry.JavaSdk.SentryAttribute" token="33554774" />
+      <entry key="io/sentry/SentryAttributes" java-name="io/sentry/SentryAttributes" managed-type-name="Sentry.JavaSdk.SentryAttributes" token="33554775" />
+      <entry key="io/sentry/SentryAttributeType" java-name="io/sentry/SentryAttributeType" managed-type-name="Sentry.JavaSdk.SentryAttributeType" token="33554776" />
+      <entry key="io/sentry/SentryAutoDateProvider" java-name="io/sentry/SentryAutoDateProvider" managed-type-name="Sentry.JavaSdk.SentryAutoDateProvider" token="33554777" />
+      <entry key="io/sentry/SentryBaseEvent" java-name="io/sentry/SentryBaseEvent" managed-type-name="Sentry.JavaSdk.SentryBaseEvent" token="33554778" />
+      <entry key="io/sentry/SentryBaseEvent$Deserializer" java-name="io/sentry/SentryBaseEvent$Deserializer" managed-type-name="Sentry.JavaSdk.SentryBaseEvent/Deserializer" token="33555196" />
+      <entry key="io/sentry/SentryBaseEvent$JsonKeys" java-name="io/sentry/SentryBaseEvent$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryBaseEvent/JsonKeys" token="33555197" />
+      <entry key="io/sentry/SentryBaseEvent$Serializer" java-name="io/sentry/SentryBaseEvent$Serializer" managed-type-name="Sentry.JavaSdk.SentryBaseEvent/Serializer" token="33555198" />
+      <entry key="io/sentry/SentryClient" java-name="io/sentry/SentryClient" managed-type-name="Sentry.JavaSdk.SentryClient" token="33554780" />
+      <entry key="io/sentry/SentryCrashLastRunState" java-name="io/sentry/SentryCrashLastRunState" managed-type-name="Sentry.JavaSdk.SentryCrashLastRunState" token="33554781" />
+      <entry key="io/sentry/SentryDate" java-name="io/sentry/SentryDate" managed-type-name="Sentry.JavaSdk.SentryDate" token="33554782" />
+      <entry key="io/sentry/SentryEnvelope" java-name="io/sentry/SentryEnvelope" managed-type-name="Sentry.JavaSdk.SentryEnvelope" token="33554784" />
+      <entry key="io/sentry/SentryEnvelopeHeader" java-name="io/sentry/SentryEnvelopeHeader" managed-type-name="Sentry.JavaSdk.SentryEnvelopeHeader" token="33554785" />
+      <entry key="io/sentry/SentryEnvelopeHeader$Deserializer" java-name="io/sentry/SentryEnvelopeHeader$Deserializer" managed-type-name="Sentry.JavaSdk.SentryEnvelopeHeader/Deserializer" token="33555199" />
+      <entry key="io/sentry/SentryEnvelopeHeader$JsonKeys" java-name="io/sentry/SentryEnvelopeHeader$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryEnvelopeHeader/JsonKeys" token="33555200" />
+      <entry key="io/sentry/SentryEnvelopeItem" java-name="io/sentry/SentryEnvelopeItem" managed-type-name="Sentry.JavaSdk.SentryEnvelopeItem" token="33554786" />
+      <entry key="io/sentry/SentryEnvelopeItemHeader" java-name="io/sentry/SentryEnvelopeItemHeader" managed-type-name="Sentry.JavaSdk.SentryEnvelopeItemHeader" token="33554787" />
+      <entry key="io/sentry/SentryEnvelopeItemHeader$Deserializer" java-name="io/sentry/SentryEnvelopeItemHeader$Deserializer" managed-type-name="Sentry.JavaSdk.SentryEnvelopeItemHeader/Deserializer" token="33555201" />
+      <entry key="io/sentry/SentryEnvelopeItemHeader$JsonKeys" java-name="io/sentry/SentryEnvelopeItemHeader$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryEnvelopeItemHeader/JsonKeys" token="33555202" />
+      <entry key="io/sentry/SentryEvent" java-name="io/sentry/SentryEvent" managed-type-name="Sentry.JavaSdk.SentryEvent" token="33554788" />
+      <entry key="io/sentry/SentryEvent$Deserializer" java-name="io/sentry/SentryEvent$Deserializer" managed-type-name="Sentry.JavaSdk.SentryEvent/Deserializer" token="33555203" />
+      <entry key="io/sentry/SentryEvent$JsonKeys" java-name="io/sentry/SentryEvent$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryEvent/JsonKeys" token="33555204" />
+      <entry key="io/sentry/SentryExceptionFactory" java-name="io/sentry/SentryExceptionFactory" managed-type-name="Sentry.JavaSdk.SentryExceptionFactory" token="33554789" />
+      <entry key="io/sentry/SentryExecutorService" java-name="io/sentry/SentryExecutorService" managed-type-name="Sentry.JavaSdk.SentryExecutorService" token="33554790" />
+      <entry key="io/sentry/SentryFeedbackOptions" java-name="io/sentry/SentryFeedbackOptions" managed-type-name="Sentry.JavaSdk.SentryFeedbackOptions" token="33554791" />
+      <entry key="io/sentry/SentryFeedbackOptions$IFormHandler" java-name="io/sentry/SentryFeedbackOptions$IFormHandler" managed-type-name="Sentry.JavaSdk.SentryFeedbackOptions/IFormHandler" token="33555205" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryFeedbackOptions$IShakeController" java-name="io/sentry/SentryFeedbackOptions$IShakeController" managed-type-name="Sentry.JavaSdk.SentryFeedbackOptions/IShakeController" token="33555207" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryFeedbackOptions$OptionsConfigurator" java-name="io/sentry/SentryFeedbackOptions$OptionsConfigurator" managed-type-name="Sentry.JavaSdk.SentryFeedbackOptions/IOptionsConfigurator" token="33555209" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryFeedbackOptions$SentryFeedbackCallback" java-name="io/sentry/SentryFeedbackOptions$SentryFeedbackCallback" managed-type-name="Sentry.JavaSdk.SentryFeedbackOptions/ISentryFeedbackCallback" token="33555211" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryInstantDate" java-name="io/sentry/SentryInstantDate" managed-type-name="Sentry.JavaSdk.SentryInstantDate" token="33554792" />
+      <entry key="io/sentry/SentryInstantDateProvider" java-name="io/sentry/SentryInstantDateProvider" managed-type-name="Sentry.JavaSdk.SentryInstantDateProvider" token="33554793" />
+      <entry key="io/sentry/SentryIntegrationPackageStorage" java-name="io/sentry/SentryIntegrationPackageStorage" managed-type-name="Sentry.JavaSdk.SentryIntegrationPackageStorage" token="33554794" />
+      <entry key="io/sentry/SentryItemType" java-name="io/sentry/SentryItemType" managed-type-name="Sentry.JavaSdk.SentryItemType" token="33554795" />
+      <entry key="io/sentry/SentryItemType$Deserializer" java-name="io/sentry/SentryItemType$Deserializer" managed-type-name="Sentry.JavaSdk.SentryItemType/Deserializer" token="33555213" />
+      <entry key="io/sentry/SentryLevel" java-name="io/sentry/SentryLevel" managed-type-name="Sentry.JavaSdk.SentryLevel" token="33554796" />
+      <entry key="io/sentry/SentryLevel$Deserializer" java-name="io/sentry/SentryLevel$Deserializer" managed-type-name="Sentry.JavaSdk.SentryLevel/Deserializer" token="33555214" />
+      <entry key="io/sentry/SentryLockReason" java-name="io/sentry/SentryLockReason" managed-type-name="Sentry.JavaSdk.SentryLockReason" token="33554797" />
+      <entry key="io/sentry/SentryLockReason$Deserializer" java-name="io/sentry/SentryLockReason$Deserializer" managed-type-name="Sentry.JavaSdk.SentryLockReason/Deserializer" token="33555215" />
+      <entry key="io/sentry/SentryLockReason$JsonKeys" java-name="io/sentry/SentryLockReason$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryLockReason/JsonKeys" token="33555216" />
+      <entry key="io/sentry/SentryLogEvent" java-name="io/sentry/SentryLogEvent" managed-type-name="Sentry.JavaSdk.SentryLogEvent" token="33554798" />
+      <entry key="io/sentry/SentryLogEvent$Deserializer" java-name="io/sentry/SentryLogEvent$Deserializer" managed-type-name="Sentry.JavaSdk.SentryLogEvent/Deserializer" token="33555217" />
+      <entry key="io/sentry/SentryLogEvent$JsonKeys" java-name="io/sentry/SentryLogEvent$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryLogEvent/JsonKeys" token="33555218" />
+      <entry key="io/sentry/SentryLogEventAttributeValue" java-name="io/sentry/SentryLogEventAttributeValue" managed-type-name="Sentry.JavaSdk.SentryLogEventAttributeValue" token="33554799" />
+      <entry key="io/sentry/SentryLogEventAttributeValue$Deserializer" java-name="io/sentry/SentryLogEventAttributeValue$Deserializer" managed-type-name="Sentry.JavaSdk.SentryLogEventAttributeValue/Deserializer" token="33555219" />
+      <entry key="io/sentry/SentryLogEventAttributeValue$JsonKeys" java-name="io/sentry/SentryLogEventAttributeValue$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryLogEventAttributeValue/JsonKeys" token="33555220" />
+      <entry key="io/sentry/SentryLogEvents" java-name="io/sentry/SentryLogEvents" managed-type-name="Sentry.JavaSdk.SentryLogEvents" token="33554800" />
+      <entry key="io/sentry/SentryLogEvents$Deserializer" java-name="io/sentry/SentryLogEvents$Deserializer" managed-type-name="Sentry.JavaSdk.SentryLogEvents/Deserializer" token="33555221" />
+      <entry key="io/sentry/SentryLogEvents$JsonKeys" java-name="io/sentry/SentryLogEvents$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryLogEvents/JsonKeys" token="33555222" />
+      <entry key="io/sentry/SentryLogLevel" java-name="io/sentry/SentryLogLevel" managed-type-name="Sentry.JavaSdk.SentryLogLevel" token="33554801" />
+      <entry key="io/sentry/SentryLogLevel$Deserializer" java-name="io/sentry/SentryLogLevel$Deserializer" managed-type-name="Sentry.JavaSdk.SentryLogLevel/Deserializer" token="33555223" />
+      <entry key="io/sentry/SentryLongDate" java-name="io/sentry/SentryLongDate" managed-type-name="Sentry.JavaSdk.SentryLongDate" token="33554802" />
+      <entry key="io/sentry/SentryMaskingOptions" java-name="io/sentry/SentryMaskingOptions" managed-type-name="Sentry.JavaSdk.SentryMaskingOptions" token="33554803" />
+      <entry key="io/sentry/SentryMetricsEvent" java-name="io/sentry/SentryMetricsEvent" managed-type-name="Sentry.JavaSdk.SentryMetricsEvent" token="33554805" />
+      <entry key="io/sentry/SentryMetricsEvent$Deserializer" java-name="io/sentry/SentryMetricsEvent$Deserializer" managed-type-name="Sentry.JavaSdk.SentryMetricsEvent/Deserializer" token="33555224" />
+      <entry key="io/sentry/SentryMetricsEvent$JsonKeys" java-name="io/sentry/SentryMetricsEvent$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryMetricsEvent/JsonKeys" token="33555225" />
+      <entry key="io/sentry/SentryMetricsEvents" java-name="io/sentry/SentryMetricsEvents" managed-type-name="Sentry.JavaSdk.SentryMetricsEvents" token="33554806" />
+      <entry key="io/sentry/SentryMetricsEvents$Deserializer" java-name="io/sentry/SentryMetricsEvents$Deserializer" managed-type-name="Sentry.JavaSdk.SentryMetricsEvents/Deserializer" token="33555226" />
+      <entry key="io/sentry/SentryMetricsEvents$JsonKeys" java-name="io/sentry/SentryMetricsEvents$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryMetricsEvents/JsonKeys" token="33555227" />
+      <entry key="io/sentry/SentryNanotimeDate" java-name="io/sentry/SentryNanotimeDate" managed-type-name="Sentry.JavaSdk.SentryNanotimeDate" token="33554807" />
+      <entry key="io/sentry/SentryNanotimeDateProvider" java-name="io/sentry/SentryNanotimeDateProvider" managed-type-name="Sentry.JavaSdk.SentryNanotimeDateProvider" token="33554808" />
+      <entry key="io/sentry/SentryOpenTelemetryMode" java-name="io/sentry/SentryOpenTelemetryMode" managed-type-name="Sentry.JavaSdk.SentryOpenTelemetryMode" token="33554809" />
+      <entry key="io/sentry/SentryOptions" java-name="io/sentry/SentryOptions" managed-type-name="Sentry.JavaSdk.SentryOptions" token="33554810" />
+      <entry key="io/sentry/SentryOptions$BeforeBreadcrumbCallback" java-name="io/sentry/SentryOptions$BeforeBreadcrumbCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IBeforeBreadcrumbCallback" token="33555228" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryOptions$BeforeEnvelopeCallback" java-name="io/sentry/SentryOptions$BeforeEnvelopeCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IBeforeEnvelopeCallback" token="33555230" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryOptions$BeforeSendCallback" java-name="io/sentry/SentryOptions$BeforeSendCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IBeforeSendCallback" token="33555232" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryOptions$BeforeSendReplayCallback" java-name="io/sentry/SentryOptions$BeforeSendReplayCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IBeforeSendReplayCallback" token="33555234" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryOptions$BeforeSendTransactionCallback" java-name="io/sentry/SentryOptions$BeforeSendTransactionCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IBeforeSendTransactionCallback" token="33555236" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryOptions$Cron" java-name="io/sentry/SentryOptions$Cron" managed-type-name="Sentry.JavaSdk.SentryOptions/Cron" token="33555238" />
+      <entry key="io/sentry/SentryOptions$DistributionOptions" java-name="io/sentry/SentryOptions$DistributionOptions" managed-type-name="Sentry.JavaSdk.SentryOptions/DistributionOptions" token="33555239" />
+      <entry key="io/sentry/SentryOptions$Logs" java-name="io/sentry/SentryOptions$Logs" managed-type-name="Sentry.JavaSdk.SentryOptions/Logs" token="33555240" />
+      <entry key="io/sentry/SentryOptions$Logs$BeforeSendLogCallback" java-name="io/sentry/SentryOptions$Logs$BeforeSendLogCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/Logs/IBeforeSendLogCallback" token="33555400" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryOptions$Metrics" java-name="io/sentry/SentryOptions$Metrics" managed-type-name="Sentry.JavaSdk.SentryOptions/Metrics" token="33555241" />
+      <entry key="io/sentry/SentryOptions$Metrics$BeforeSendMetricCallback" java-name="io/sentry/SentryOptions$Metrics$BeforeSendMetricCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/Metrics/IBeforeSendMetricCallback" token="33555402" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryOptions$OnDiscardCallback" java-name="io/sentry/SentryOptions$OnDiscardCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IOnDiscardCallback" token="33555242" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryOptions$OnOversizedEventCallback" java-name="io/sentry/SentryOptions$OnOversizedEventCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IOnOversizedEventCallback" token="33555244" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryOptions$ProfilesSamplerCallback" java-name="io/sentry/SentryOptions$ProfilesSamplerCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/IProfilesSamplerCallback" token="33555246" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryOptions$Proxy" java-name="io/sentry/SentryOptions$Proxy" managed-type-name="Sentry.JavaSdk.SentryOptions/Proxy" token="33555248" />
+      <entry key="io/sentry/SentryOptions$RequestSize" java-name="io/sentry/SentryOptions$RequestSize" managed-type-name="Sentry.JavaSdk.SentryOptions/RequestSize" token="33555249" />
+      <entry key="io/sentry/SentryOptions$TracesSamplerCallback" java-name="io/sentry/SentryOptions$TracesSamplerCallback" managed-type-name="Sentry.JavaSdk.SentryOptions/ITracesSamplerCallback" token="33555250" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryReplayEvent" java-name="io/sentry/SentryReplayEvent" managed-type-name="Sentry.JavaSdk.SentryReplayEvent" token="33554811" />
+      <entry key="io/sentry/SentryReplayEvent$Deserializer" java-name="io/sentry/SentryReplayEvent$Deserializer" managed-type-name="Sentry.JavaSdk.SentryReplayEvent/Deserializer" token="33555252" />
+      <entry key="io/sentry/SentryReplayEvent$JsonKeys" java-name="io/sentry/SentryReplayEvent$JsonKeys" managed-type-name="Sentry.JavaSdk.SentryReplayEvent/JsonKeys" token="33555253" />
+      <entry key="io/sentry/SentryReplayEvent$ReplayType" java-name="io/sentry/SentryReplayEvent$ReplayType" managed-type-name="Sentry.JavaSdk.SentryReplayEvent/ReplayType" token="33555254" />
+      <entry key="io/sentry/SentryReplayEvent$ReplayType$Deserializer" java-name="io/sentry/SentryReplayEvent$ReplayType$Deserializer" managed-type-name="Sentry.JavaSdk.SentryReplayEvent/ReplayType/Deserializer" token="33555404" />
+      <entry key="io/sentry/SentryReplayOptions" java-name="io/sentry/SentryReplayOptions" managed-type-name="Sentry.JavaSdk.SentryReplayOptions" token="33554812" />
+      <entry key="io/sentry/SentryReplayOptions$BeforeErrorSamplingCallback" java-name="io/sentry/SentryReplayOptions$BeforeErrorSamplingCallback" managed-type-name="Sentry.JavaSdk.SentryReplayOptions/IBeforeErrorSamplingCallback" token="33555255" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryReplayOptions$ReplayFrameObserver" java-name="io/sentry/SentryReplayOptions$ReplayFrameObserver" managed-type-name="Sentry.JavaSdk.SentryReplayOptions/IReplayFrameObserver" token="33555257" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/SentryReplayOptions$SentryReplayQuality" java-name="io/sentry/SentryReplayOptions$SentryReplayQuality" managed-type-name="Sentry.JavaSdk.SentryReplayOptions/SentryReplayQuality" token="33555259" />
+      <entry key="io/sentry/SentrySpanStorage" java-name="io/sentry/SentrySpanStorage" managed-type-name="Sentry.JavaSdk.SentrySpanStorage" token="33554813" />
+      <entry key="io/sentry/SentryStackTraceFactory" java-name="io/sentry/SentryStackTraceFactory" managed-type-name="Sentry.JavaSdk.SentryStackTraceFactory" token="33554814" />
+      <entry key="io/sentry/SentryThreadFactory" java-name="io/sentry/SentryThreadFactory" managed-type-name="Sentry.JavaSdk.SentryThreadFactory" token="33554815" />
+      <entry key="io/sentry/SentryTraceHeader" java-name="io/sentry/SentryTraceHeader" managed-type-name="Sentry.JavaSdk.SentryTraceHeader" token="33554816" />
+      <entry key="io/sentry/SentryTracer" java-name="io/sentry/SentryTracer" managed-type-name="Sentry.JavaSdk.SentryTracer" token="33554817" />
+      <entry key="io/sentry/SentryUUID" java-name="io/sentry/SentryUUID" managed-type-name="Sentry.JavaSdk.SentryUUID" token="33554818" />
+      <entry key="io/sentry/SentryWrapper" java-name="io/sentry/SentryWrapper" managed-type-name="Sentry.JavaSdk.SentryWrapper" token="33554819" />
+      <entry key="io/sentry/Session" java-name="io/sentry/Session" managed-type-name="Sentry.JavaSdk.Session" token="33554820" />
+      <entry key="io/sentry/Session$Deserializer" java-name="io/sentry/Session$Deserializer" managed-type-name="Sentry.JavaSdk.Session/Deserializer" token="33555260" />
+      <entry key="io/sentry/Session$JsonKeys" java-name="io/sentry/Session$JsonKeys" managed-type-name="Sentry.JavaSdk.Session/JsonKeys" token="33555261" />
+      <entry key="io/sentry/Session$State" java-name="io/sentry/Session$State" managed-type-name="Sentry.JavaSdk.Session/State" token="33555262" />
+      <entry key="io/sentry/ShutdownHookIntegration" java-name="io/sentry/ShutdownHookIntegration" managed-type-name="Sentry.JavaSdk.ShutdownHookIntegration" token="33554821" />
+      <entry key="io/sentry/Span" java-name="io/sentry/Span" managed-type-name="Sentry.JavaSdk.Span" token="33554822" />
+      <entry key="io/sentry/SpanContext" java-name="io/sentry/SpanContext" managed-type-name="Sentry.JavaSdk.SpanContext" token="33554823" />
+      <entry key="io/sentry/SpanContext$Deserializer" java-name="io/sentry/SpanContext$Deserializer" managed-type-name="Sentry.JavaSdk.SpanContext/Deserializer" token="33555263" />
+      <entry key="io/sentry/SpanContext$JsonKeys" java-name="io/sentry/SpanContext$JsonKeys" managed-type-name="Sentry.JavaSdk.SpanContext/JsonKeys" token="33555264" />
+      <entry key="io/sentry/SpanFactoryFactory" java-name="io/sentry/SpanFactoryFactory" managed-type-name="Sentry.JavaSdk.SpanFactoryFactory" token="33554824" />
+      <entry key="io/sentry/SpanId" java-name="io/sentry/SpanId" managed-type-name="Sentry.JavaSdk.SpanId" token="33554825" />
+      <entry key="io/sentry/SpanId$Deserializer" java-name="io/sentry/SpanId$Deserializer" managed-type-name="Sentry.JavaSdk.SpanId/Deserializer" token="33555265" />
+      <entry key="io/sentry/SpanOptions" java-name="io/sentry/SpanOptions" managed-type-name="Sentry.JavaSdk.SpanOptions" token="33554826" />
+      <entry key="io/sentry/SpanStatus" java-name="io/sentry/SpanStatus" managed-type-name="Sentry.JavaSdk.SpanStatus" token="33554827" />
+      <entry key="io/sentry/SpanStatus$Deserializer" java-name="io/sentry/SpanStatus$Deserializer" managed-type-name="Sentry.JavaSdk.SpanStatus/Deserializer" token="33555266" />
+      <entry key="io/sentry/SystemOutLogger" java-name="io/sentry/SystemOutLogger" managed-type-name="Sentry.JavaSdk.SystemOutLogger" token="33554828" />
+      <entry key="io/sentry/TraceContext" java-name="io/sentry/TraceContext" managed-type-name="Sentry.JavaSdk.TraceContext" token="33554829" />
+      <entry key="io/sentry/TraceContext$Deserializer" java-name="io/sentry/TraceContext$Deserializer" managed-type-name="Sentry.JavaSdk.TraceContext/Deserializer" token="33555267" />
+      <entry key="io/sentry/TraceContext$JsonKeys" java-name="io/sentry/TraceContext$JsonKeys" managed-type-name="Sentry.JavaSdk.TraceContext/JsonKeys" token="33555268" />
+      <entry key="io/sentry/TracesSampler" java-name="io/sentry/TracesSampler" managed-type-name="Sentry.JavaSdk.TracesSampler" token="33554830" />
+      <entry key="io/sentry/TracesSamplingDecision" java-name="io/sentry/TracesSamplingDecision" managed-type-name="Sentry.JavaSdk.TracesSamplingDecision" token="33554831" />
+      <entry key="io/sentry/TransactionContext" java-name="io/sentry/TransactionContext" managed-type-name="Sentry.JavaSdk.TransactionContext" token="33554832" />
+      <entry key="io/sentry/TransactionOptions" java-name="io/sentry/TransactionOptions" managed-type-name="Sentry.JavaSdk.TransactionOptions" token="33554833" />
+      <entry key="io/sentry/TypeCheckHint" java-name="io/sentry/TypeCheckHint" managed-type-name="Sentry.JavaSdk.TypeCheckHint" token="33554834" />
+      <entry key="io/sentry/UncaughtExceptionHandlerIntegration" java-name="io/sentry/UncaughtExceptionHandlerIntegration" managed-type-name="Sentry.JavaSdk.UncaughtExceptionHandlerIntegration" token="33554835" />
+      <entry key="io/sentry/UncaughtExceptionHandlerIntegration$UncaughtExceptionHint" java-name="io/sentry/UncaughtExceptionHandlerIntegration$UncaughtExceptionHint" managed-type-name="Sentry.JavaSdk.UncaughtExceptionHandlerIntegration/UncaughtExceptionHint" token="33555269" />
+      <entry key="io/sentry/UpdateInfo" java-name="io/sentry/UpdateInfo" managed-type-name="Sentry.JavaSdk.UpdateInfo" token="33554836" />
+      <entry key="io/sentry/UserFeedback" java-name="io/sentry/UserFeedback" managed-type-name="Sentry.JavaSdk.UserFeedback" token="33554837" />
+      <entry key="io/sentry/UserFeedback$Deserializer" java-name="io/sentry/UserFeedback$Deserializer" managed-type-name="Sentry.JavaSdk.UserFeedback/Deserializer" token="33555270" />
+      <entry key="io/sentry/UserFeedback$JsonKeys" java-name="io/sentry/UserFeedback$JsonKeys" managed-type-name="Sentry.JavaSdk.UserFeedback/JsonKeys" token="33555271" />
+      <entry key="io/sentry/W3CTraceparentHeader" java-name="io/sentry/W3CTraceparentHeader" managed-type-name="Sentry.JavaSdk.W3CTraceparentHeader" token="33554838" />
+      <entry key="io/sentry/vendor/Base64" java-name="io/sentry/vendor/Base64" managed-type-name="Sentry.JavaSdk.Vendor.Base64" token="33554839" />
+      <entry key="io/sentry/vendor/SentryIso8601Utils" java-name="io/sentry/vendor/SentryIso8601Utils" managed-type-name="Sentry.JavaSdk.Vendor.SentryIso8601Utils" token="33554840" />
+      <entry key="io/sentry/vendor/gson/stream/JsonReader" java-name="io/sentry/vendor/gson/stream/JsonReader" managed-type-name="Sentry.JavaSdk.Vendor.Gson.Stream.JsonReader" token="33554841" />
+      <entry key="io/sentry/vendor/gson/stream/JsonToken" java-name="io/sentry/vendor/gson/stream/JsonToken" managed-type-name="Sentry.JavaSdk.Vendor.Gson.Stream.JsonToken" token="33554842" />
+      <entry key="io/sentry/vendor/gson/stream/JsonWriter" java-name="io/sentry/vendor/gson/stream/JsonWriter" managed-type-name="Sentry.JavaSdk.Vendor.Gson.Stream.JsonWriter" token="33554843" />
+      <entry key="io/sentry/vendor/gson/internal/bind/util/ISO8601Utils" java-name="io/sentry/vendor/gson/internal/bind/util/ISO8601Utils" managed-type-name="Sentry.JavaSdk.Vendor.Gson.Internal.Bind.Util.ISO8601Utils" token="33554844" />
+      <entry key="io/sentry/util/AutoClosableReentrantLock" java-name="io/sentry/util/AutoClosableReentrantLock" managed-type-name="Sentry.JavaSdk.Util.AutoClosableReentrantLock" token="33554845" />
+      <entry key="io/sentry/util/CheckInUtils" java-name="io/sentry/util/CheckInUtils" managed-type-name="Sentry.JavaSdk.Util.CheckInUtils" token="33554846" />
+      <entry key="io/sentry/util/ClassLoaderUtils" java-name="io/sentry/util/ClassLoaderUtils" managed-type-name="Sentry.JavaSdk.Util.ClassLoaderUtils" token="33554847" />
+      <entry key="io/sentry/util/CollectionUtils" java-name="io/sentry/util/CollectionUtils" managed-type-name="Sentry.JavaSdk.Util.CollectionUtils" token="33554848" />
+      <entry key="io/sentry/util/CollectionUtils$Mapper" java-name="io/sentry/util/CollectionUtils$Mapper" managed-type-name="Sentry.JavaSdk.Util.CollectionUtils/IMapper" token="33555272" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/util/CollectionUtils$Predicate" java-name="io/sentry/util/CollectionUtils$Predicate" managed-type-name="Sentry.JavaSdk.Util.CollectionUtils/IPredicate" token="33555274" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/util/DebugMetaPropertiesApplier" java-name="io/sentry/util/DebugMetaPropertiesApplier" managed-type-name="Sentry.JavaSdk.Util.DebugMetaPropertiesApplier" token="33554849" />
+      <entry key="io/sentry/util/ErrorUtils" java-name="io/sentry/util/ErrorUtils" managed-type-name="Sentry.JavaSdk.Util.ErrorUtils" token="33554850" />
+      <entry key="io/sentry/util/EventProcessorUtils" java-name="io/sentry/util/EventProcessorUtils" managed-type-name="Sentry.JavaSdk.Util.EventProcessorUtils" token="33554851" />
+      <entry key="io/sentry/util/EventSizeLimitingUtils" java-name="io/sentry/util/EventSizeLimitingUtils" managed-type-name="Sentry.JavaSdk.Util.EventSizeLimitingUtils" token="33554852" />
+      <entry key="io/sentry/util/ExceptionUtils" java-name="io/sentry/util/ExceptionUtils" managed-type-name="Sentry.JavaSdk.Util.ExceptionUtils" token="33554853" />
+      <entry key="io/sentry/util/FileUtils" java-name="io/sentry/util/FileUtils" managed-type-name="Sentry.JavaSdk.Util.FileUtils" token="33554854" />
+      <entry key="io/sentry/util/HintUtils" java-name="io/sentry/util/HintUtils" managed-type-name="Sentry.JavaSdk.Util.HintUtils" token="33554855" />
+      <entry key="io/sentry/util/HintUtils$SentryConsumer" java-name="io/sentry/util/HintUtils$SentryConsumer" managed-type-name="Sentry.JavaSdk.Util.HintUtils/ISentryConsumer" token="33555276" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/util/HintUtils$SentryHintFallback" java-name="io/sentry/util/HintUtils$SentryHintFallback" managed-type-name="Sentry.JavaSdk.Util.HintUtils/ISentryHintFallback" token="33555278" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/util/HintUtils$SentryNullableConsumer" java-name="io/sentry/util/HintUtils$SentryNullableConsumer" managed-type-name="Sentry.JavaSdk.Util.HintUtils/ISentryNullableConsumer" token="33555280" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/util/HttpUtils" java-name="io/sentry/util/HttpUtils" managed-type-name="Sentry.JavaSdk.Util.HttpUtils" token="33554856" />
+      <entry key="io/sentry/util/InitUtil" java-name="io/sentry/util/InitUtil" managed-type-name="Sentry.JavaSdk.Util.InitUtil" token="33554857" />
+      <entry key="io/sentry/util/IntegrationUtils" java-name="io/sentry/util/IntegrationUtils" managed-type-name="Sentry.JavaSdk.Util.IntegrationUtils" token="33554858" />
+      <entry key="io/sentry/util/JsonSerializationUtils" java-name="io/sentry/util/JsonSerializationUtils" managed-type-name="Sentry.JavaSdk.Util.JsonSerializationUtils" token="33554859" />
+      <entry key="io/sentry/util/LazyDirectory" java-name="io/sentry/util/LazyDirectory" managed-type-name="Sentry.JavaSdk.Util.LazyDirectory" token="33554860" />
+      <entry key="io/sentry/util/LazyEvaluator" java-name="io/sentry/util/LazyEvaluator" managed-type-name="Sentry.JavaSdk.Util.LazyEvaluator" token="33554861" />
+      <entry key="io/sentry/util/LazyEvaluator$Evaluator" java-name="io/sentry/util/LazyEvaluator$Evaluator" managed-type-name="Sentry.JavaSdk.Util.LazyEvaluator/IEvaluator" token="33555282" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/util/LifecycleHelper" java-name="io/sentry/util/LifecycleHelper" managed-type-name="Sentry.JavaSdk.Util.LifecycleHelper" token="33554862" />
+      <entry key="io/sentry/util/LoadClass" java-name="io/sentry/util/LoadClass" managed-type-name="Sentry.JavaSdk.Util.LoadClass" token="33554863" />
+      <entry key="io/sentry/util/LoggerPropertiesUtil" java-name="io/sentry/util/LoggerPropertiesUtil" managed-type-name="Sentry.JavaSdk.Util.LoggerPropertiesUtil" token="33554864" />
+      <entry key="io/sentry/util/LogUtils" java-name="io/sentry/util/LogUtils" managed-type-name="Sentry.JavaSdk.Util.LogUtils" token="33554865" />
+      <entry key="io/sentry/util/MapObjectReader" java-name="io/sentry/util/MapObjectReader" managed-type-name="Sentry.JavaSdk.Util.MapObjectReader" token="33554866" />
+      <entry key="io/sentry/util/MapObjectWriter" java-name="io/sentry/util/MapObjectWriter" managed-type-name="Sentry.JavaSdk.Util.MapObjectWriter" token="33554867" />
+      <entry key="io/sentry/util/Objects" java-name="io/sentry/util/Objects" managed-type-name="Sentry.JavaSdk.Util.Objects" token="33554868" />
+      <entry key="io/sentry/util/Pair" java-name="io/sentry/util/Pair" managed-type-name="Sentry.JavaSdk.Util.Pair" token="33554869" />
+      <entry key="io/sentry/util/Platform" java-name="io/sentry/util/Platform" managed-type-name="Sentry.JavaSdk.Util.Platform" token="33554870" />
+      <entry key="io/sentry/util/PropagationTargetsUtils" java-name="io/sentry/util/PropagationTargetsUtils" managed-type-name="Sentry.JavaSdk.Util.PropagationTargetsUtils" token="33554871" />
+      <entry key="io/sentry/util/Random" java-name="io/sentry/util/Random" managed-type-name="Sentry.JavaSdk.Util.Random" token="33554872" />
+      <entry key="io/sentry/util/SampleRateUtils" java-name="io/sentry/util/SampleRateUtils" managed-type-name="Sentry.JavaSdk.Util.SampleRateUtils" token="33554873" />
+      <entry key="io/sentry/util/ScopesUtil" java-name="io/sentry/util/ScopesUtil" managed-type-name="Sentry.JavaSdk.Util.ScopesUtil" token="33554874" />
+      <entry key="io/sentry/util/SentryCallbackReentrancyGuard" java-name="io/sentry/util/SentryCallbackReentrancyGuard" managed-type-name="Sentry.JavaSdk.Util.SentryCallbackReentrancyGuard" token="33554875" />
+      <entry key="io/sentry/util/SentryRandom" java-name="io/sentry/util/SentryRandom" managed-type-name="Sentry.JavaSdk.Util.SentryRandom" token="33554876" />
+      <entry key="io/sentry/util/SpanUtils" java-name="io/sentry/util/SpanUtils" managed-type-name="Sentry.JavaSdk.Util.SpanUtils" token="33554877" />
+      <entry key="io/sentry/util/StringUtils" java-name="io/sentry/util/StringUtils" managed-type-name="Sentry.JavaSdk.Util.StringUtils" token="33554878" />
+      <entry key="io/sentry/util/TracingUtils" java-name="io/sentry/util/TracingUtils" managed-type-name="Sentry.JavaSdk.Util.TracingUtils" token="33554879" />
+      <entry key="io/sentry/util/TracingUtils$TracingHeaders" java-name="io/sentry/util/TracingUtils$TracingHeaders" managed-type-name="Sentry.JavaSdk.Util.TracingUtils/TracingHeaders" token="33555284" />
+      <entry key="io/sentry/util/UrlUtils" java-name="io/sentry/util/UrlUtils" managed-type-name="Sentry.JavaSdk.Util.UrlUtils" token="33554880" />
+      <entry key="io/sentry/util/UrlUtils$UrlDetails" java-name="io/sentry/util/UrlUtils$UrlDetails" managed-type-name="Sentry.JavaSdk.Util.UrlUtils/UrlDetails" token="33555285" />
+      <entry key="io/sentry/util/UUIDGenerator" java-name="io/sentry/util/UUIDGenerator" managed-type-name="Sentry.JavaSdk.Util.UUIDGenerator" token="33554881" />
+      <entry key="io/sentry/util/UUIDStringUtils" java-name="io/sentry/util/UUIDStringUtils" managed-type-name="Sentry.JavaSdk.Util.UUIDStringUtils" token="33554882" />
+      <entry key="io/sentry/util/thread/IThreadChecker" java-name="io/sentry/util/thread/IThreadChecker" managed-type-name="Sentry.JavaSdk.Util.Thread.IThreadChecker" token="33554883" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/util/thread/NoOpThreadChecker" java-name="io/sentry/util/thread/NoOpThreadChecker" managed-type-name="Sentry.JavaSdk.Util.Thread.NoOpThreadChecker" token="33554885" />
+      <entry key="io/sentry/util/thread/ThreadChecker" java-name="io/sentry/util/thread/ThreadChecker" managed-type-name="Sentry.JavaSdk.Util.Thread.ThreadChecker" token="33554886" />
+      <entry key="io/sentry/transport/AsyncHttpTransport" java-name="io/sentry/transport/AsyncHttpTransport" managed-type-name="Sentry.JavaSdk.Transport.AsyncHttpTransport" token="33554887" />
+      <entry key="io/sentry/transport/CurrentDateProvider" java-name="io/sentry/transport/CurrentDateProvider" managed-type-name="Sentry.JavaSdk.Transport.CurrentDateProvider" token="33554888" />
+      <entry key="io/sentry/transport/ICurrentDateProvider" java-name="io/sentry/transport/ICurrentDateProvider" managed-type-name="Sentry.JavaSdk.Transport.ICurrentDateProvider" token="33554889" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/transport/RateLimiterConfig" java-name="io/sentry/transport/RateLimiterConfig" managed-type-name="Sentry.JavaSdk.Transport.IRateLimiterConfig" token="33554891" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/transport/ITransport" java-name="io/sentry/transport/ITransport" managed-type-name="Sentry.JavaSdk.Transport.ITransport" token="33554893" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/transport/ITransportGate" java-name="io/sentry/transport/ITransportGate" managed-type-name="Sentry.JavaSdk.Transport.ITransportGate" token="33554895" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/transport/NoOpEnvelopeCache" java-name="io/sentry/transport/NoOpEnvelopeCache" managed-type-name="Sentry.JavaSdk.Transport.NoOpEnvelopeCache" token="33554897" />
+      <entry key="io/sentry/transport/NoOpTransport" java-name="io/sentry/transport/NoOpTransport" managed-type-name="Sentry.JavaSdk.Transport.NoOpTransport" token="33554898" />
+      <entry key="io/sentry/transport/NoOpTransportGate" java-name="io/sentry/transport/NoOpTransportGate" managed-type-name="Sentry.JavaSdk.Transport.NoOpTransportGate" token="33554899" />
+      <entry key="io/sentry/transport/RateLimiter" java-name="io/sentry/transport/RateLimiter" managed-type-name="Sentry.JavaSdk.Transport.RateLimiter" token="33554900" />
+      <entry key="io/sentry/transport/RateLimiter$IRateLimitObserver" java-name="io/sentry/transport/RateLimiter$IRateLimitObserver" managed-type-name="Sentry.JavaSdk.Transport.RateLimiter/IRateLimitObserver" token="33555286" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/transport/ReusableCountLatch" java-name="io/sentry/transport/ReusableCountLatch" managed-type-name="Sentry.JavaSdk.Transport.ReusableCountLatch" token="33554901" />
+      <entry key="io/sentry/transport/StdoutTransport" java-name="io/sentry/transport/StdoutTransport" managed-type-name="Sentry.JavaSdk.Transport.StdoutTransport" token="33554902" />
+      <entry key="io/sentry/transport/TransportResult" java-name="io/sentry/transport/TransportResult" managed-type-name="Sentry.JavaSdk.Transport.TransportResult" token="33554903" />
+      <entry key="io/sentry/protocol/App" java-name="io/sentry/protocol/App" managed-type-name="Sentry.JavaSdk.Protocol.App" token="33554905" />
+      <entry key="io/sentry/protocol/App$Deserializer" java-name="io/sentry/protocol/App$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.App/Deserializer" token="33555288" />
+      <entry key="io/sentry/protocol/App$JsonKeys" java-name="io/sentry/protocol/App$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.App/JsonKeys" token="33555289" />
+      <entry key="io/sentry/protocol/ArtContext" java-name="io/sentry/protocol/ArtContext" managed-type-name="Sentry.JavaSdk.Protocol.ArtContext" token="33554906" />
+      <entry key="io/sentry/protocol/ArtContext$Deserializer" java-name="io/sentry/protocol/ArtContext$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.ArtContext/Deserializer" token="33555290" />
+      <entry key="io/sentry/protocol/ArtContext$JsonKeys" java-name="io/sentry/protocol/ArtContext$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.ArtContext/JsonKeys" token="33555291" />
+      <entry key="io/sentry/protocol/Browser" java-name="io/sentry/protocol/Browser" managed-type-name="Sentry.JavaSdk.Protocol.Browser" token="33554907" />
+      <entry key="io/sentry/protocol/Browser$Deserializer" java-name="io/sentry/protocol/Browser$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Browser/Deserializer" token="33555292" />
+      <entry key="io/sentry/protocol/Browser$JsonKeys" java-name="io/sentry/protocol/Browser$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.Browser/JsonKeys" token="33555293" />
+      <entry key="io/sentry/protocol/Contexts" java-name="io/sentry/protocol/Contexts" managed-type-name="Sentry.JavaSdk.Protocol.Contexts" token="33554908" />
+      <entry key="io/sentry/protocol/Contexts$Deserializer" java-name="io/sentry/protocol/Contexts$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Contexts/Deserializer" token="33555294" />
+      <entry key="io/sentry/protocol/DebugImage" java-name="io/sentry/protocol/DebugImage" managed-type-name="Sentry.JavaSdk.Protocol.DebugImage" token="33554909" />
+      <entry key="io/sentry/protocol/DebugImage$Deserializer" java-name="io/sentry/protocol/DebugImage$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.DebugImage/Deserializer" token="33555295" />
+      <entry key="io/sentry/protocol/DebugImage$JsonKeys" java-name="io/sentry/protocol/DebugImage$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.DebugImage/JsonKeys" token="33555296" />
+      <entry key="io/sentry/protocol/DebugMeta" java-name="io/sentry/protocol/DebugMeta" managed-type-name="Sentry.JavaSdk.Protocol.DebugMeta" token="33554910" />
+      <entry key="io/sentry/protocol/DebugMeta$Deserializer" java-name="io/sentry/protocol/DebugMeta$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.DebugMeta/Deserializer" token="33555297" />
+      <entry key="io/sentry/protocol/DebugMeta$JsonKeys" java-name="io/sentry/protocol/DebugMeta$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.DebugMeta/JsonKeys" token="33555298" />
+      <entry key="io/sentry/protocol/Device" java-name="io/sentry/protocol/Device" managed-type-name="Sentry.JavaSdk.Protocol.Device" token="33554911" />
+      <entry key="io/sentry/protocol/Device$Deserializer" java-name="io/sentry/protocol/Device$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Device/Deserializer" token="33555299" />
+      <entry key="io/sentry/protocol/Device$DeviceOrientation" java-name="io/sentry/protocol/Device$DeviceOrientation" managed-type-name="Sentry.JavaSdk.Protocol.Device/DeviceOrientation" token="33555300" />
+      <entry key="io/sentry/protocol/Device$DeviceOrientation$Deserializer" java-name="io/sentry/protocol/Device$DeviceOrientation$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Device/DeviceOrientation/Deserializer" token="33555405" />
+      <entry key="io/sentry/protocol/Device$JsonKeys" java-name="io/sentry/protocol/Device$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.Device/JsonKeys" token="33555301" />
+      <entry key="io/sentry/protocol/FeatureFlag" java-name="io/sentry/protocol/FeatureFlag" managed-type-name="Sentry.JavaSdk.Protocol.FeatureFlag" token="33554912" />
+      <entry key="io/sentry/protocol/FeatureFlag$Deserializer" java-name="io/sentry/protocol/FeatureFlag$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.FeatureFlag/Deserializer" token="33555302" />
+      <entry key="io/sentry/protocol/FeatureFlag$JsonKeys" java-name="io/sentry/protocol/FeatureFlag$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.FeatureFlag/JsonKeys" token="33555303" />
+      <entry key="io/sentry/protocol/FeatureFlags" java-name="io/sentry/protocol/FeatureFlags" managed-type-name="Sentry.JavaSdk.Protocol.FeatureFlags" token="33554913" />
+      <entry key="io/sentry/protocol/FeatureFlags$Deserializer" java-name="io/sentry/protocol/FeatureFlags$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.FeatureFlags/Deserializer" token="33555304" />
+      <entry key="io/sentry/protocol/FeatureFlags$JsonKeys" java-name="io/sentry/protocol/FeatureFlags$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.FeatureFlags/JsonKeys" token="33555305" />
+      <entry key="io/sentry/protocol/Feedback" java-name="io/sentry/protocol/Feedback" managed-type-name="Sentry.JavaSdk.Protocol.Feedback" token="33554914" />
+      <entry key="io/sentry/protocol/Feedback$Deserializer" java-name="io/sentry/protocol/Feedback$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Feedback/Deserializer" token="33555306" />
+      <entry key="io/sentry/protocol/Feedback$JsonKeys" java-name="io/sentry/protocol/Feedback$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.Feedback/JsonKeys" token="33555307" />
+      <entry key="io/sentry/protocol/Geo" java-name="io/sentry/protocol/Geo" managed-type-name="Sentry.JavaSdk.Protocol.Geo" token="33554915" />
+      <entry key="io/sentry/protocol/Geo$Deserializer" java-name="io/sentry/protocol/Geo$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Geo/Deserializer" token="33555308" />
+      <entry key="io/sentry/protocol/Geo$JsonKeys" java-name="io/sentry/protocol/Geo$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.Geo/JsonKeys" token="33555309" />
+      <entry key="io/sentry/protocol/Gpu" java-name="io/sentry/protocol/Gpu" managed-type-name="Sentry.JavaSdk.Protocol.Gpu" token="33554916" />
+      <entry key="io/sentry/protocol/Gpu$Deserializer" java-name="io/sentry/protocol/Gpu$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Gpu/Deserializer" token="33555310" />
+      <entry key="io/sentry/protocol/Gpu$JsonKeys" java-name="io/sentry/protocol/Gpu$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.Gpu/JsonKeys" token="33555311" />
+      <entry key="io/sentry/protocol/MeasurementValue" java-name="io/sentry/protocol/MeasurementValue" managed-type-name="Sentry.JavaSdk.Protocol.MeasurementValue" token="33554917" />
+      <entry key="io/sentry/protocol/MeasurementValue$Deserializer" java-name="io/sentry/protocol/MeasurementValue$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.MeasurementValue/Deserializer" token="33555312" />
+      <entry key="io/sentry/protocol/MeasurementValue$JsonKeys" java-name="io/sentry/protocol/MeasurementValue$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.MeasurementValue/JsonKeys" token="33555313" />
+      <entry key="io/sentry/protocol/Mechanism" java-name="io/sentry/protocol/Mechanism" managed-type-name="Sentry.JavaSdk.Protocol.Mechanism" token="33554918" />
+      <entry key="io/sentry/protocol/Mechanism$Deserializer" java-name="io/sentry/protocol/Mechanism$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Mechanism/Deserializer" token="33555314" />
+      <entry key="io/sentry/protocol/Mechanism$JsonKeys" java-name="io/sentry/protocol/Mechanism$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.Mechanism/JsonKeys" token="33555315" />
+      <entry key="io/sentry/protocol/Message" java-name="io/sentry/protocol/Message" managed-type-name="Sentry.JavaSdk.Protocol.Message" token="33554919" />
+      <entry key="io/sentry/protocol/Message$Deserializer" java-name="io/sentry/protocol/Message$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Message/Deserializer" token="33555316" />
+      <entry key="io/sentry/protocol/Message$JsonKeys" java-name="io/sentry/protocol/Message$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.Message/JsonKeys" token="33555317" />
+      <entry key="io/sentry/protocol/OperatingSystem" java-name="io/sentry/protocol/OperatingSystem" managed-type-name="Sentry.JavaSdk.Protocol.OperatingSystem" token="33554920" />
+      <entry key="io/sentry/protocol/OperatingSystem$Deserializer" java-name="io/sentry/protocol/OperatingSystem$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.OperatingSystem/Deserializer" token="33555318" />
+      <entry key="io/sentry/protocol/OperatingSystem$JsonKeys" java-name="io/sentry/protocol/OperatingSystem$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.OperatingSystem/JsonKeys" token="33555319" />
+      <entry key="io/sentry/protocol/Request" java-name="io/sentry/protocol/Request" managed-type-name="Sentry.JavaSdk.Protocol.Request" token="33554921" />
+      <entry key="io/sentry/protocol/Request$Deserializer" java-name="io/sentry/protocol/Request$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Request/Deserializer" token="33555320" />
+      <entry key="io/sentry/protocol/Request$JsonKeys" java-name="io/sentry/protocol/Request$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.Request/JsonKeys" token="33555321" />
+      <entry key="io/sentry/protocol/Response" java-name="io/sentry/protocol/Response" managed-type-name="Sentry.JavaSdk.Protocol.Response" token="33554922" />
+      <entry key="io/sentry/protocol/Response$Deserializer" java-name="io/sentry/protocol/Response$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Response/Deserializer" token="33555322" />
+      <entry key="io/sentry/protocol/Response$JsonKeys" java-name="io/sentry/protocol/Response$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.Response/JsonKeys" token="33555323" />
+      <entry key="io/sentry/protocol/SdkInfo" java-name="io/sentry/protocol/SdkInfo" managed-type-name="Sentry.JavaSdk.Protocol.SdkInfo" token="33554923" />
+      <entry key="io/sentry/protocol/SdkInfo$Deserializer" java-name="io/sentry/protocol/SdkInfo$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SdkInfo/Deserializer" token="33555324" />
+      <entry key="io/sentry/protocol/SdkInfo$JsonKeys" java-name="io/sentry/protocol/SdkInfo$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.SdkInfo/JsonKeys" token="33555325" />
+      <entry key="io/sentry/protocol/SdkVersion" java-name="io/sentry/protocol/SdkVersion" managed-type-name="Sentry.JavaSdk.Protocol.SdkVersion" token="33554924" />
+      <entry key="io/sentry/protocol/SdkVersion$Deserializer" java-name="io/sentry/protocol/SdkVersion$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SdkVersion/Deserializer" token="33555326" />
+      <entry key="io/sentry/protocol/SdkVersion$JsonKeys" java-name="io/sentry/protocol/SdkVersion$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.SdkVersion/JsonKeys" token="33555327" />
+      <entry key="io/sentry/protocol/SentryException" java-name="io/sentry/protocol/SentryException" managed-type-name="Sentry.JavaSdk.Protocol.SentryException" token="33554925" />
+      <entry key="io/sentry/protocol/SentryException$Deserializer" java-name="io/sentry/protocol/SentryException$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SentryException/Deserializer" token="33555328" />
+      <entry key="io/sentry/protocol/SentryException$JsonKeys" java-name="io/sentry/protocol/SentryException$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.SentryException/JsonKeys" token="33555329" />
+      <entry key="io/sentry/protocol/SentryId" java-name="io/sentry/protocol/SentryId" managed-type-name="Sentry.JavaSdk.Protocol.SentryId" token="33554926" />
+      <entry key="io/sentry/protocol/SentryId$Deserializer" java-name="io/sentry/protocol/SentryId$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SentryId/Deserializer" token="33555330" />
+      <entry key="io/sentry/protocol/SentryPackage" java-name="io/sentry/protocol/SentryPackage" managed-type-name="Sentry.JavaSdk.Protocol.SentryPackage" token="33554927" />
+      <entry key="io/sentry/protocol/SentryPackage$Deserializer" java-name="io/sentry/protocol/SentryPackage$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SentryPackage/Deserializer" token="33555331" />
+      <entry key="io/sentry/protocol/SentryPackage$JsonKeys" java-name="io/sentry/protocol/SentryPackage$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.SentryPackage/JsonKeys" token="33555332" />
+      <entry key="io/sentry/protocol/SentryRuntime" java-name="io/sentry/protocol/SentryRuntime" managed-type-name="Sentry.JavaSdk.Protocol.SentryRuntime" token="33554928" />
+      <entry key="io/sentry/protocol/SentryRuntime$Deserializer" java-name="io/sentry/protocol/SentryRuntime$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SentryRuntime/Deserializer" token="33555333" />
+      <entry key="io/sentry/protocol/SentryRuntime$JsonKeys" java-name="io/sentry/protocol/SentryRuntime$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.SentryRuntime/JsonKeys" token="33555334" />
+      <entry key="io/sentry/protocol/SentrySpan" java-name="io/sentry/protocol/SentrySpan" managed-type-name="Sentry.JavaSdk.Protocol.SentrySpan" token="33554929" />
+      <entry key="io/sentry/protocol/SentrySpan$Deserializer" java-name="io/sentry/protocol/SentrySpan$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SentrySpan/Deserializer" token="33555335" />
+      <entry key="io/sentry/protocol/SentrySpan$JsonKeys" java-name="io/sentry/protocol/SentrySpan$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.SentrySpan/JsonKeys" token="33555336" />
+      <entry key="io/sentry/protocol/SentryStackFrame" java-name="io/sentry/protocol/SentryStackFrame" managed-type-name="Sentry.JavaSdk.Protocol.SentryStackFrame" token="33554930" />
+      <entry key="io/sentry/protocol/SentryStackFrame$Deserializer" java-name="io/sentry/protocol/SentryStackFrame$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SentryStackFrame/Deserializer" token="33555337" />
+      <entry key="io/sentry/protocol/SentryStackFrame$JsonKeys" java-name="io/sentry/protocol/SentryStackFrame$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.SentryStackFrame/JsonKeys" token="33555338" />
+      <entry key="io/sentry/protocol/SentryStackTrace" java-name="io/sentry/protocol/SentryStackTrace" managed-type-name="Sentry.JavaSdk.Protocol.SentryStackTrace" token="33554931" />
+      <entry key="io/sentry/protocol/SentryStackTrace$Deserializer" java-name="io/sentry/protocol/SentryStackTrace$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SentryStackTrace/Deserializer" token="33555339" />
+      <entry key="io/sentry/protocol/SentryStackTrace$InstructionAddressAdjustment" java-name="io/sentry/protocol/SentryStackTrace$InstructionAddressAdjustment" managed-type-name="Sentry.JavaSdk.Protocol.SentryStackTrace/InstructionAddressAdjustment" token="33555340" />
+      <entry key="io/sentry/protocol/SentryStackTrace$InstructionAddressAdjustment$Deserializer" java-name="io/sentry/protocol/SentryStackTrace$InstructionAddressAdjustment$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SentryStackTrace/InstructionAddressAdjustment/Deserializer" token="33555406" />
+      <entry key="io/sentry/protocol/SentryStackTrace$JsonKeys" java-name="io/sentry/protocol/SentryStackTrace$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.SentryStackTrace/JsonKeys" token="33555341" />
+      <entry key="io/sentry/protocol/SentryThread" java-name="io/sentry/protocol/SentryThread" managed-type-name="Sentry.JavaSdk.Protocol.SentryThread" token="33554932" />
+      <entry key="io/sentry/protocol/SentryThread$Deserializer" java-name="io/sentry/protocol/SentryThread$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SentryThread/Deserializer" token="33555342" />
+      <entry key="io/sentry/protocol/SentryThread$JsonKeys" java-name="io/sentry/protocol/SentryThread$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.SentryThread/JsonKeys" token="33555343" />
+      <entry key="io/sentry/protocol/SentryTransaction" java-name="io/sentry/protocol/SentryTransaction" managed-type-name="Sentry.JavaSdk.Protocol.SentryTransaction" token="33554933" />
+      <entry key="io/sentry/protocol/SentryTransaction$Deserializer" java-name="io/sentry/protocol/SentryTransaction$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.SentryTransaction/Deserializer" token="33555344" />
+      <entry key="io/sentry/protocol/SentryTransaction$JsonKeys" java-name="io/sentry/protocol/SentryTransaction$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.SentryTransaction/JsonKeys" token="33555345" />
+      <entry key="io/sentry/protocol/Spring" java-name="io/sentry/protocol/Spring" managed-type-name="Sentry.JavaSdk.Protocol.Spring" token="33554934" />
+      <entry key="io/sentry/protocol/Spring$Deserializer" java-name="io/sentry/protocol/Spring$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.Spring/Deserializer" token="33555346" />
+      <entry key="io/sentry/protocol/Spring$JsonKeys" java-name="io/sentry/protocol/Spring$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.Spring/JsonKeys" token="33555347" />
+      <entry key="io/sentry/protocol/TransactionInfo" java-name="io/sentry/protocol/TransactionInfo" managed-type-name="Sentry.JavaSdk.Protocol.TransactionInfo" token="33554935" />
+      <entry key="io/sentry/protocol/TransactionInfo$Deserializer" java-name="io/sentry/protocol/TransactionInfo$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.TransactionInfo/Deserializer" token="33555348" />
+      <entry key="io/sentry/protocol/TransactionInfo$JsonKeys" java-name="io/sentry/protocol/TransactionInfo$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.TransactionInfo/JsonKeys" token="33555349" />
+      <entry key="io/sentry/protocol/TransactionNameSource" java-name="io/sentry/protocol/TransactionNameSource" managed-type-name="Sentry.JavaSdk.Protocol.TransactionNameSource" token="33554936" />
+      <entry key="io/sentry/protocol/User" java-name="io/sentry/protocol/User" managed-type-name="Sentry.JavaSdk.Protocol.User" token="33554937" />
+      <entry key="io/sentry/protocol/User$Deserializer" java-name="io/sentry/protocol/User$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.User/Deserializer" token="33555350" />
+      <entry key="io/sentry/protocol/User$JsonKeys" java-name="io/sentry/protocol/User$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.User/JsonKeys" token="33555351" />
+      <entry key="io/sentry/protocol/ViewHierarchy" java-name="io/sentry/protocol/ViewHierarchy" managed-type-name="Sentry.JavaSdk.Protocol.ViewHierarchy" token="33554938" />
+      <entry key="io/sentry/protocol/ViewHierarchy$Deserializer" java-name="io/sentry/protocol/ViewHierarchy$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.ViewHierarchy/Deserializer" token="33555352" />
+      <entry key="io/sentry/protocol/ViewHierarchy$JsonKeys" java-name="io/sentry/protocol/ViewHierarchy$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.ViewHierarchy/JsonKeys" token="33555353" />
+      <entry key="io/sentry/protocol/ViewHierarchyNode" java-name="io/sentry/protocol/ViewHierarchyNode" managed-type-name="Sentry.JavaSdk.Protocol.ViewHierarchyNode" token="33554939" />
+      <entry key="io/sentry/protocol/ViewHierarchyNode$Deserializer" java-name="io/sentry/protocol/ViewHierarchyNode$Deserializer" managed-type-name="Sentry.JavaSdk.Protocol.ViewHierarchyNode/Deserializer" token="33555354" />
+      <entry key="io/sentry/protocol/ViewHierarchyNode$JsonKeys" java-name="io/sentry/protocol/ViewHierarchyNode$JsonKeys" managed-type-name="Sentry.JavaSdk.Protocol.ViewHierarchyNode/JsonKeys" token="33555355" />
+      <entry key="io/sentry/profilemeasurements/ProfileMeasurement" java-name="io/sentry/profilemeasurements/ProfileMeasurement" managed-type-name="Sentry.JavaSdk.ProfileMeasurements.ProfileMeasurement" token="33554940" />
+      <entry key="io/sentry/profilemeasurements/ProfileMeasurement$Deserializer" java-name="io/sentry/profilemeasurements/ProfileMeasurement$Deserializer" managed-type-name="Sentry.JavaSdk.ProfileMeasurements.ProfileMeasurement/Deserializer" token="33555356" />
+      <entry key="io/sentry/profilemeasurements/ProfileMeasurement$JsonKeys" java-name="io/sentry/profilemeasurements/ProfileMeasurement$JsonKeys" managed-type-name="Sentry.JavaSdk.ProfileMeasurements.ProfileMeasurement/JsonKeys" token="33555357" />
+      <entry key="io/sentry/profilemeasurements/ProfileMeasurementValue" java-name="io/sentry/profilemeasurements/ProfileMeasurementValue" managed-type-name="Sentry.JavaSdk.ProfileMeasurements.ProfileMeasurementValue" token="33554941" />
+      <entry key="io/sentry/profilemeasurements/ProfileMeasurementValue$Deserializer" java-name="io/sentry/profilemeasurements/ProfileMeasurementValue$Deserializer" managed-type-name="Sentry.JavaSdk.ProfileMeasurements.ProfileMeasurementValue/Deserializer" token="33555358" />
+      <entry key="io/sentry/profilemeasurements/ProfileMeasurementValue$JsonKeys" java-name="io/sentry/profilemeasurements/ProfileMeasurementValue$JsonKeys" managed-type-name="Sentry.JavaSdk.ProfileMeasurements.ProfileMeasurementValue/JsonKeys" token="33555359" />
+      <entry key="io/sentry/internal/modules/CompositeModulesLoader" java-name="io/sentry/internal/modules/CompositeModulesLoader" managed-type-name="Sentry.JavaSdk.Internal.Modules.CompositeModulesLoader" token="33554942" />
+      <entry key="io/sentry/internal/modules/IModulesLoader" java-name="io/sentry/internal/modules/IModulesLoader" managed-type-name="Sentry.JavaSdk.Internal.Modules.IModulesLoader" token="33554943" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/internal/modules/ManifestModulesLoader" java-name="io/sentry/internal/modules/ManifestModulesLoader" managed-type-name="Sentry.JavaSdk.Internal.Modules.ManifestModulesLoader" token="33554945" />
+      <entry key="io/sentry/internal/modules/ModulesLoader" java-name="io/sentry/internal/modules/ModulesLoader" managed-type-name="Sentry.JavaSdk.Internal.Modules.ModulesLoader" token="33554946" />
+      <entry key="io/sentry/internal/modules/NoOpModulesLoader" java-name="io/sentry/internal/modules/NoOpModulesLoader" managed-type-name="Sentry.JavaSdk.Internal.Modules.NoOpModulesLoader" token="33554948" />
+      <entry key="io/sentry/internal/modules/ResourcesModulesLoader" java-name="io/sentry/internal/modules/ResourcesModulesLoader" managed-type-name="Sentry.JavaSdk.Internal.Modules.ResourcesModulesLoader" token="33554949" />
+      <entry key="io/sentry/internal/gestures/GestureTargetLocator" java-name="io/sentry/internal/gestures/GestureTargetLocator" managed-type-name="Sentry.JavaSdk.Internal.Gestures.IGestureTargetLocator" token="33554950" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/internal/gestures/UiElement" java-name="io/sentry/internal/gestures/UiElement" managed-type-name="Sentry.JavaSdk.Internal.Gestures.UiElement" token="33554952" />
+      <entry key="io/sentry/internal/gestures/UiElement$Type" java-name="io/sentry/internal/gestures/UiElement$Type" managed-type-name="Sentry.JavaSdk.Internal.Gestures.UiElement/Type" token="33555360" />
+      <entry key="io/sentry/instrumentation/file/SentryFileInputStream" java-name="io/sentry/instrumentation/file/SentryFileInputStream" managed-type-name="Sentry.JavaSdk.Instrumentation.File.SentryFileInputStream" token="33554953" />
+      <entry key="io/sentry/instrumentation/file/SentryFileInputStream$Factory" java-name="io/sentry/instrumentation/file/SentryFileInputStream$Factory" managed-type-name="Sentry.JavaSdk.Instrumentation.File.SentryFileInputStream/Factory" token="33555361" />
+      <entry key="io/sentry/instrumentation/file/SentryFileOutputStream" java-name="io/sentry/instrumentation/file/SentryFileOutputStream" managed-type-name="Sentry.JavaSdk.Instrumentation.File.SentryFileOutputStream" token="33554954" />
+      <entry key="io/sentry/instrumentation/file/SentryFileOutputStream$Factory" java-name="io/sentry/instrumentation/file/SentryFileOutputStream$Factory" managed-type-name="Sentry.JavaSdk.Instrumentation.File.SentryFileOutputStream/Factory" token="33555362" />
+      <entry key="io/sentry/instrumentation/file/SentryFileReader" java-name="io/sentry/instrumentation/file/SentryFileReader" managed-type-name="Sentry.JavaSdk.Instrumentation.File.SentryFileReader" token="33554955" />
+      <entry key="io/sentry/instrumentation/file/SentryFileWriter" java-name="io/sentry/instrumentation/file/SentryFileWriter" managed-type-name="Sentry.JavaSdk.Instrumentation.File.SentryFileWriter" token="33554956" />
+      <entry key="io/sentry/hints/BlockingFlushHint" java-name="io/sentry/hints/BlockingFlushHint" managed-type-name="Sentry.JavaSdk.Hints.BlockingFlushHint" token="33554957" />
+      <entry key="io/sentry/hints/EventDropReason" java-name="io/sentry/hints/EventDropReason" managed-type-name="Sentry.JavaSdk.Hints.EventDropReason" token="33554959" />
+      <entry key="io/sentry/hints/AbnormalExit" java-name="io/sentry/hints/AbnormalExit" managed-type-name="Sentry.JavaSdk.Hints.IAbnormalExit" token="33554960" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/ApplyScopeData" java-name="io/sentry/hints/ApplyScopeData" managed-type-name="Sentry.JavaSdk.Hints.IApplyScopeData" token="33554962" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/Backfillable" java-name="io/sentry/hints/Backfillable" managed-type-name="Sentry.JavaSdk.Hints.IBackfillable" token="33554964" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/Cached" java-name="io/sentry/hints/Cached" managed-type-name="Sentry.JavaSdk.Hints.ICached" token="33554966" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/DiskFlushNotification" java-name="io/sentry/hints/DiskFlushNotification" managed-type-name="Sentry.JavaSdk.Hints.IDiskFlushNotification" token="33554968" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/Enqueable" java-name="io/sentry/hints/Enqueable" managed-type-name="Sentry.JavaSdk.Hints.IEnqueable" token="33554970" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/Flushable" java-name="io/sentry/hints/Flushable" managed-type-name="Sentry.JavaSdk.Hints.IFlushable" token="33554972" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/NativeCrashExit" java-name="io/sentry/hints/NativeCrashExit" managed-type-name="Sentry.JavaSdk.Hints.INativeCrashExit" token="33554974" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/Resettable" java-name="io/sentry/hints/Resettable" managed-type-name="Sentry.JavaSdk.Hints.IResettable" token="33554976" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/Retryable" java-name="io/sentry/hints/Retryable" managed-type-name="Sentry.JavaSdk.Hints.IRetryable" token="33554978" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/SessionEnd" java-name="io/sentry/hints/SessionEnd" managed-type-name="Sentry.JavaSdk.Hints.ISessionEnd" token="33554980" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/SessionStart" java-name="io/sentry/hints/SessionStart" managed-type-name="Sentry.JavaSdk.Hints.ISessionStart" token="33554982" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/SubmissionResult" java-name="io/sentry/hints/SubmissionResult" managed-type-name="Sentry.JavaSdk.Hints.ISubmissionResult" token="33554984" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/TransactionEnd" java-name="io/sentry/hints/TransactionEnd" managed-type-name="Sentry.JavaSdk.Hints.ITransactionEnd" token="33554986" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/hints/SessionEndHint" java-name="io/sentry/hints/SessionEndHint" managed-type-name="Sentry.JavaSdk.Hints.SessionEndHint" token="33554988" />
+      <entry key="io/sentry/hints/SessionStartHint" java-name="io/sentry/hints/SessionStartHint" managed-type-name="Sentry.JavaSdk.Hints.SessionStartHint" token="33554989" />
+      <entry key="io/sentry/config/PropertiesProvider" java-name="io/sentry/config/PropertiesProvider" managed-type-name="Sentry.JavaSdk.Config.IPropertiesProvider" token="33554990" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/config/PropertiesProviderFactory" java-name="io/sentry/config/PropertiesProviderFactory" managed-type-name="Sentry.JavaSdk.Config.PropertiesProviderFactory" token="33554992" />
+      <entry key="io/sentry/clientreport/ClientReport" java-name="io/sentry/clientreport/ClientReport" managed-type-name="Sentry.JavaSdk.ClientReports.ClientReport" token="33554993" />
+      <entry key="io/sentry/clientreport/ClientReport$Deserializer" java-name="io/sentry/clientreport/ClientReport$Deserializer" managed-type-name="Sentry.JavaSdk.ClientReports.ClientReport/Deserializer" token="33555363" />
+      <entry key="io/sentry/clientreport/ClientReport$JsonKeys" java-name="io/sentry/clientreport/ClientReport$JsonKeys" managed-type-name="Sentry.JavaSdk.ClientReports.ClientReport/JsonKeys" token="33555364" />
+      <entry key="io/sentry/clientreport/ClientReportRecorder" java-name="io/sentry/clientreport/ClientReportRecorder" managed-type-name="Sentry.JavaSdk.ClientReports.ClientReportRecorder" token="33554994" />
+      <entry key="io/sentry/clientreport/DiscardedEvent" java-name="io/sentry/clientreport/DiscardedEvent" managed-type-name="Sentry.JavaSdk.ClientReports.DiscardedEvent" token="33554995" />
+      <entry key="io/sentry/clientreport/DiscardedEvent$Deserializer" java-name="io/sentry/clientreport/DiscardedEvent$Deserializer" managed-type-name="Sentry.JavaSdk.ClientReports.DiscardedEvent/Deserializer" token="33555365" />
+      <entry key="io/sentry/clientreport/DiscardedEvent$JsonKeys" java-name="io/sentry/clientreport/DiscardedEvent$JsonKeys" managed-type-name="Sentry.JavaSdk.ClientReports.DiscardedEvent/JsonKeys" token="33555366" />
+      <entry key="io/sentry/clientreport/DiscardReason" java-name="io/sentry/clientreport/DiscardReason" managed-type-name="Sentry.JavaSdk.ClientReports.DiscardReason" token="33554996" />
+      <entry key="io/sentry/clientreport/IClientReportRecorder" java-name="io/sentry/clientreport/IClientReportRecorder" managed-type-name="Sentry.JavaSdk.ClientReports.IClientReportRecorder" token="33554997" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/clientreport/IClientReportStorage" java-name="io/sentry/clientreport/IClientReportStorage" managed-type-name="Sentry.JavaSdk.ClientReports.IClientReportStorage" token="33554999" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/clientreport/NoOpClientReportRecorder" java-name="io/sentry/clientreport/NoOpClientReportRecorder" managed-type-name="Sentry.JavaSdk.ClientReports.NoOpClientReportRecorder" token="33555001" />
+      <entry key="io/sentry/cache/CacheUtils" java-name="io/sentry/cache/CacheUtils" managed-type-name="Sentry.JavaSdk.Cache.CacheUtils" token="33555002" />
+      <entry key="io/sentry/cache/IEnvelopeCache" java-name="io/sentry/cache/IEnvelopeCache" managed-type-name="Sentry.JavaSdk.Cache.IEnvelopeCache" token="33555003" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/cache/PersistingOptionsObserver" java-name="io/sentry/cache/PersistingOptionsObserver" managed-type-name="Sentry.JavaSdk.Cache.PersistingOptionsObserver" token="33555005" />
+      <entry key="io/sentry/cache/PersistingScopeObserver" java-name="io/sentry/cache/PersistingScopeObserver" managed-type-name="Sentry.JavaSdk.Cache.PersistingScopeObserver" token="33555006" />
+      <entry key="io/sentry/android/supplemental/Buggy" java-name="io/sentry/android/supplemental/Buggy" managed-type-name="Sentry.JavaSdk.Android.Supplemental.Buggy" token="33555007" />
+      <entry key="io/sentry/android/replay/BuildConfig" java-name="io/sentry/android/replay/BuildConfig" managed-type-name="Sentry.JavaSdk.Android.Replay.BuildConfig" token="33555008" />
+      <entry key="io/sentry/android/replay/DefaultReplayBreadcrumbConverter" java-name="io/sentry/android/replay/DefaultReplayBreadcrumbConverter" managed-type-name="Sentry.JavaSdk.Android.Replay.DefaultReplayBreadcrumbConverter" token="33555009" />
+      <entry key="io/sentry/android/replay/GeneratedVideo" java-name="io/sentry/android/replay/GeneratedVideo" managed-type-name="Sentry.JavaSdk.Android.Replay.GeneratedVideo" token="33555010" />
+      <entry key="io/sentry/android/replay/Recorder" java-name="io/sentry/android/replay/Recorder" managed-type-name="Sentry.JavaSdk.Android.Replay.IRecorder" token="33555011" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/android/replay/ScreenshotRecorderCallback" java-name="io/sentry/android/replay/ScreenshotRecorderCallback" managed-type-name="Sentry.JavaSdk.Android.Replay.IScreenshotRecorderCallback" token="33555013" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/android/replay/WindowCallback" java-name="io/sentry/android/replay/WindowCallback" managed-type-name="Sentry.JavaSdk.Android.Replay.IWindowCallback" token="33555015" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/android/replay/ModifierExtensionsKt" java-name="io/sentry/android/replay/ModifierExtensionsKt" managed-type-name="Sentry.JavaSdk.Android.Replay.ModifierExtensionsKt" token="33555017" />
+      <entry key="io/sentry/android/replay/ReplayCache" java-name="io/sentry/android/replay/ReplayCache" managed-type-name="Sentry.JavaSdk.Android.Replay.ReplayCache" token="33555018" />
+      <entry key="io/sentry/android/replay/ReplayIntegration" java-name="io/sentry/android/replay/ReplayIntegration" managed-type-name="Sentry.JavaSdk.Android.Replay.ReplayIntegration" token="33555019" />
+      <entry key="io/sentry/android/replay/ReplayLifecycleKt" java-name="io/sentry/android/replay/ReplayLifecycleKt" managed-type-name="Sentry.JavaSdk.Android.Replay.ReplayLifecycleKt" token="33555020" />
+      <entry key="io/sentry/android/replay/ReplayLifecycleKt$WhenMappings" java-name="io/sentry/android/replay/ReplayLifecycleKt$WhenMappings" managed-type-name="Sentry.JavaSdk.Android.Replay.ReplayLifecycleKt/WhenMappings" token="33555367" />
+      <entry key="io/sentry/android/replay/ScreenshotRecorderConfig" java-name="io/sentry/android/replay/ScreenshotRecorderConfig" managed-type-name="Sentry.JavaSdk.Android.Replay.ScreenshotRecorderConfig" token="33555021" />
+      <entry key="io/sentry/android/replay/SentryReplayModifiers" java-name="io/sentry/android/replay/SentryReplayModifiers" managed-type-name="Sentry.JavaSdk.Android.Replay.SentryReplayModifiers" token="33555022" />
+      <entry key="io/sentry/android/replay/SessionReplayOptionsKt" java-name="io/sentry/android/replay/SessionReplayOptionsKt" managed-type-name="Sentry.JavaSdk.Android.Replay.SessionReplayOptionsKt" token="33555023" />
+      <entry key="io/sentry/android/replay/ViewExtensionsKt" java-name="io/sentry/android/replay/ViewExtensionsKt" managed-type-name="Sentry.JavaSdk.Android.Replay.ViewExtensionsKt" token="33555024" />
+      <entry key="io/sentry/android/replay/WindowsKt" java-name="io/sentry/android/replay/WindowsKt" managed-type-name="Sentry.JavaSdk.Android.Replay.WindowsKt" token="33555025" />
+      <entry key="io/sentry/android/ndk/BuildConfig" java-name="io/sentry/android/ndk/BuildConfig" managed-type-name="Sentry.JavaSdk.Android.Ndk.BuildConfig" token="33555026" />
+      <entry key="io/sentry/android/ndk/DebugImagesLoader" java-name="io/sentry/android/ndk/DebugImagesLoader" managed-type-name="Sentry.JavaSdk.Android.Ndk.DebugImagesLoader" token="33555027" />
+      <entry key="io/sentry/android/ndk/NdkScopeObserver" java-name="io/sentry/android/ndk/NdkScopeObserver" managed-type-name="Sentry.JavaSdk.Android.Ndk.NdkScopeObserver" token="33555028" />
+      <entry key="io/sentry/android/ndk/SentryNdk" java-name="io/sentry/android/ndk/SentryNdk" managed-type-name="Sentry.JavaSdk.Android.Ndk.SentryNdk" token="33555029" />
+      <entry key="io/sentry/android/core/ActivityBreadcrumbsIntegration" java-name="io/sentry/android/core/ActivityBreadcrumbsIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.ActivityBreadcrumbsIntegration" token="33555030" />
+      <entry key="io/sentry/android/core/ActivityFramesTracker" java-name="io/sentry/android/core/ActivityFramesTracker" managed-type-name="Sentry.JavaSdk.Android.Core.ActivityFramesTracker" token="33555031" />
+      <entry key="io/sentry/android/core/ActivityLifecycleIntegration" java-name="io/sentry/android/core/ActivityLifecycleIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.ActivityLifecycleIntegration" token="33555032" />
+      <entry key="io/sentry/android/core/AndroidContinuousProfiler" java-name="io/sentry/android/core/AndroidContinuousProfiler" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidContinuousProfiler" token="33555033" />
+      <entry key="io/sentry/android/core/AndroidCpuCollector" java-name="io/sentry/android/core/AndroidCpuCollector" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidCpuCollector" token="33555034" />
+      <entry key="io/sentry/android/core/AndroidDateUtils" java-name="io/sentry/android/core/AndroidDateUtils" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidDateUtils" token="33555035" />
+      <entry key="io/sentry/android/core/AndroidFatalLogger" java-name="io/sentry/android/core/AndroidFatalLogger" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidFatalLogger" token="33555036" />
+      <entry key="io/sentry/android/core/AndroidLogger" java-name="io/sentry/android/core/AndroidLogger" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidLogger" token="33555037" />
+      <entry key="io/sentry/android/core/AndroidLoggerBatchProcessor" java-name="io/sentry/android/core/AndroidLoggerBatchProcessor" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidLoggerBatchProcessor" token="33555038" />
+      <entry key="io/sentry/android/core/AndroidLoggerBatchProcessorFactory" java-name="io/sentry/android/core/AndroidLoggerBatchProcessorFactory" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidLoggerBatchProcessorFactory" token="33555039" />
+      <entry key="io/sentry/android/core/AndroidMemoryCollector" java-name="io/sentry/android/core/AndroidMemoryCollector" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidMemoryCollector" token="33555040" />
+      <entry key="io/sentry/android/core/AndroidMetricsBatchProcessor" java-name="io/sentry/android/core/AndroidMetricsBatchProcessor" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidMetricsBatchProcessor" token="33555041" />
+      <entry key="io/sentry/android/core/AndroidMetricsBatchProcessorFactory" java-name="io/sentry/android/core/AndroidMetricsBatchProcessorFactory" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidMetricsBatchProcessorFactory" token="33555042" />
+      <entry key="io/sentry/android/core/AndroidSocketTagger" java-name="io/sentry/android/core/AndroidSocketTagger" managed-type-name="Sentry.JavaSdk.Android.Core.AndroidSocketTagger" token="33555043" />
+      <entry key="io/sentry/android/core/AnrIntegration" java-name="io/sentry/android/core/AnrIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.AnrIntegration" token="33555044" />
+      <entry key="io/sentry/android/core/AnrIntegrationFactory" java-name="io/sentry/android/core/AnrIntegrationFactory" managed-type-name="Sentry.JavaSdk.Android.Core.AnrIntegrationFactory" token="33555045" />
+      <entry key="io/sentry/android/core/AnrV2Integration" java-name="io/sentry/android/core/AnrV2Integration" managed-type-name="Sentry.JavaSdk.Android.Core.AnrV2Integration" token="33555046" />
+      <entry key="io/sentry/android/core/AnrV2Integration$AnrV2Hint" java-name="io/sentry/android/core/AnrV2Integration$AnrV2Hint" managed-type-name="Sentry.JavaSdk.Android.Core.AnrV2Integration/AnrV2Hint" token="33555368" />
+      <entry key="io/sentry/android/core/AppComponentsBreadcrumbsIntegration" java-name="io/sentry/android/core/AppComponentsBreadcrumbsIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.AppComponentsBreadcrumbsIntegration" token="33555047" />
+      <entry key="io/sentry/android/core/ApplicationExitInfoEventProcessor" java-name="io/sentry/android/core/ApplicationExitInfoEventProcessor" managed-type-name="Sentry.JavaSdk.Android.Core.ApplicationExitInfoEventProcessor" token="33555048" />
+      <entry key="io/sentry/android/core/AppLifecycleIntegration" java-name="io/sentry/android/core/AppLifecycleIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.AppLifecycleIntegration" token="33555049" />
+      <entry key="io/sentry/android/core/AppStartExtension" java-name="io/sentry/android/core/AppStartExtension" managed-type-name="Sentry.JavaSdk.Android.Core.AppStartExtension" token="33555050" />
+      <entry key="io/sentry/android/core/AppStartExtension$ExtendAppStartListener" java-name="io/sentry/android/core/AppStartExtension$ExtendAppStartListener" managed-type-name="Sentry.JavaSdk.Android.Core.AppStartExtension/IExtendAppStartListener" token="33555369" skip-in-java-to-managed="True" />
+      <entry key="mono/io/sentry/android/core/AppStartExtension_ExtendAppStartListenerImplementor" java-name="mono/io/sentry/android/core/AppStartExtension_ExtendAppStartListenerImplementor" managed-type-name="Sentry.JavaSdk.Android.Core.AppStartExtension/IExtendAppStartListenerImplementor" token="33555372" />
+      <entry key="io/sentry/android/core/AppStartExtension$ExtendedAppStart" java-name="io/sentry/android/core/AppStartExtension$ExtendedAppStart" managed-type-name="Sentry.JavaSdk.Android.Core.AppStartExtension/ExtendedAppStart" token="33555373" />
+      <entry key="io/sentry/android/core/AppState" java-name="io/sentry/android/core/AppState" managed-type-name="Sentry.JavaSdk.Android.Core.AppState" token="33555051" />
+      <entry key="io/sentry/android/core/AppState$AppStateListener" java-name="io/sentry/android/core/AppState$AppStateListener" managed-type-name="Sentry.JavaSdk.Android.Core.AppState/IAppStateListener" token="33555374" skip-in-java-to-managed="True" />
+      <entry key="mono/io/sentry/android/core/AppState_AppStateListenerImplementor" java-name="mono/io/sentry/android/core/AppState_AppStateListenerImplementor" managed-type-name="Sentry.JavaSdk.Android.Core.AppState/IAppStateListenerImplementor" token="33555376" />
+      <entry key="io/sentry/android/core/AppState$LifecycleObserver" java-name="io/sentry/android/core/AppState$LifecycleObserver" managed-type-name="Sentry.JavaSdk.Android.Core.AppState/LifecycleObserver" token="33555377" />
+      <entry key="io/sentry/android/core/BuildConfig" java-name="io/sentry/android/core/BuildConfig" managed-type-name="Sentry.JavaSdk.Android.Core.BuildConfig" token="33555052" />
+      <entry key="io/sentry/android/core/BuildInfoProvider" java-name="io/sentry/android/core/BuildInfoProvider" managed-type-name="Sentry.JavaSdk.Android.Core.BuildInfoProvider" token="33555053" />
+      <entry key="io/sentry/android/core/ContextUtils" java-name="io/sentry/android/core/ContextUtils" managed-type-name="Sentry.JavaSdk.Android.Core.ContextUtils" token="33555054" />
+      <entry key="io/sentry/android/core/CurrentActivityHolder" java-name="io/sentry/android/core/CurrentActivityHolder" managed-type-name="Sentry.JavaSdk.Android.Core.CurrentActivityHolder" token="33555055" />
+      <entry key="io/sentry/android/core/DefaultAndroidEventProcessor" java-name="io/sentry/android/core/DefaultAndroidEventProcessor" managed-type-name="Sentry.JavaSdk.Android.Core.DefaultAndroidEventProcessor" token="33555056" />
+      <entry key="io/sentry/android/core/DeviceInfoUtil" java-name="io/sentry/android/core/DeviceInfoUtil" managed-type-name="Sentry.JavaSdk.Android.Core.DeviceInfoUtil" token="33555057" />
+      <entry key="io/sentry/android/core/EmptySecureContentProvider" java-name="io/sentry/android/core/EmptySecureContentProvider" managed-type-name="Sentry.JavaSdk.Android.Core.EmptySecureContentProvider" token="33555058" />
+      <entry key="io/sentry/android/core/EnvelopeFileObserverIntegration" java-name="io/sentry/android/core/EnvelopeFileObserverIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.EnvelopeFileObserverIntegration" token="33555060" />
+      <entry key="io/sentry/android/core/FeedbackShakeIntegration" java-name="io/sentry/android/core/FeedbackShakeIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.FeedbackShakeIntegration" token="33555062" />
+      <entry key="io/sentry/android/core/IDebugImagesLoader" java-name="io/sentry/android/core/IDebugImagesLoader" managed-type-name="Sentry.JavaSdk.Android.Core.IDebugImagesLoader" token="33555063" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/android/core/InternalSentrySdk" java-name="io/sentry/android/core/InternalSentrySdk" managed-type-name="Sentry.JavaSdk.Android.Core.InternalSentrySdk" token="33555065" />
+      <entry key="io/sentry/android/core/LoadClass" java-name="io/sentry/android/core/LoadClass" managed-type-name="Sentry.JavaSdk.Android.Core.LoadClass" token="33555066" />
+      <entry key="io/sentry/android/core/MemoryLimiterIntegration" java-name="io/sentry/android/core/MemoryLimiterIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.MemoryLimiterIntegration" token="33555067" />
+      <entry key="io/sentry/android/core/MemoryLimiterIntegration$MemoryLimiterHint" java-name="io/sentry/android/core/MemoryLimiterIntegration$MemoryLimiterHint" managed-type-name="Sentry.JavaSdk.Android.Core.MemoryLimiterIntegration/MemoryLimiterHint" token="33555383" />
+      <entry key="io/sentry/android/core/NativeEventCollector" java-name="io/sentry/android/core/NativeEventCollector" managed-type-name="Sentry.JavaSdk.Android.Core.NativeEventCollector" token="33555068" />
+      <entry key="io/sentry/android/core/NativeEventCollector$NativeEventData" java-name="io/sentry/android/core/NativeEventCollector$NativeEventData" managed-type-name="Sentry.JavaSdk.Android.Core.NativeEventCollector/NativeEventData" token="33555384" />
+      <entry key="io/sentry/android/core/NdkHandlerStrategy" java-name="io/sentry/android/core/NdkHandlerStrategy" managed-type-name="Sentry.JavaSdk.Android.Core.NdkHandlerStrategy" token="33555069" />
+      <entry key="io/sentry/android/core/NdkIntegration" java-name="io/sentry/android/core/NdkIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.NdkIntegration" token="33555070" />
+      <entry key="io/sentry/android/core/NetworkBreadcrumbsIntegration" java-name="io/sentry/android/core/NetworkBreadcrumbsIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.NetworkBreadcrumbsIntegration" token="33555071" />
+      <entry key="io/sentry/android/core/PerfettoContinuousProfiler" java-name="io/sentry/android/core/PerfettoContinuousProfiler" managed-type-name="Sentry.JavaSdk.Android.Core.PerfettoContinuousProfiler" token="33555072" />
+      <entry key="io/sentry/android/core/PerfettoProfiler" java-name="io/sentry/android/core/PerfettoProfiler" managed-type-name="Sentry.JavaSdk.Android.Core.PerfettoProfiler" token="33555073" />
+      <entry key="io/sentry/android/core/ScreenshotEventProcessor" java-name="io/sentry/android/core/ScreenshotEventProcessor" managed-type-name="Sentry.JavaSdk.Android.Core.ScreenshotEventProcessor" token="33555074" />
+      <entry key="io/sentry/android/core/SentryAndroid" java-name="io/sentry/android/core/SentryAndroid" managed-type-name="Sentry.JavaSdk.Android.Core.SentryAndroid" token="33555075" />
+      <entry key="io/sentry/android/core/SentryAndroidDateProvider" java-name="io/sentry/android/core/SentryAndroidDateProvider" managed-type-name="Sentry.JavaSdk.Android.Core.SentryAndroidDateProvider" token="33555076" />
+      <entry key="io/sentry/android/core/SentryAndroidOptions" java-name="io/sentry/android/core/SentryAndroidOptions" managed-type-name="Sentry.JavaSdk.Android.Core.SentryAndroidOptions" token="33555077" />
+      <entry key="io/sentry/android/core/SentryAndroidOptions$BeforeCaptureCallback" java-name="io/sentry/android/core/SentryAndroidOptions$BeforeCaptureCallback" managed-type-name="Sentry.JavaSdk.Android.Core.SentryAndroidOptions/IBeforeCaptureCallback" token="33555385" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/android/core/SentryFramesDelayResult" java-name="io/sentry/android/core/SentryFramesDelayResult" managed-type-name="Sentry.JavaSdk.Android.Core.SentryFramesDelayResult" token="33555078" />
+      <entry key="io/sentry/android/core/SentryInitProvider" java-name="io/sentry/android/core/SentryInitProvider" managed-type-name="Sentry.JavaSdk.Android.Core.SentryInitProvider" token="33555079" />
+      <entry key="io/sentry/android/core/SentryLogcatAdapter" java-name="io/sentry/android/core/SentryLogcatAdapter" managed-type-name="Sentry.JavaSdk.Android.Core.SentryLogcatAdapter" token="33555080" />
+      <entry key="io/sentry/android/core/SentryPerformanceProvider" java-name="io/sentry/android/core/SentryPerformanceProvider" managed-type-name="Sentry.JavaSdk.Android.Core.SentryPerformanceProvider" token="33555081" />
+      <entry key="io/sentry/android/core/SentryScreenshotOptions" java-name="io/sentry/android/core/SentryScreenshotOptions" managed-type-name="Sentry.JavaSdk.Android.Core.SentryScreenshotOptions" token="33555082" />
+      <entry key="io/sentry/android/core/SentryUserFeedbackButton" java-name="io/sentry/android/core/SentryUserFeedbackButton" managed-type-name="Sentry.JavaSdk.Android.Core.SentryUserFeedbackButton" token="33555083" />
+      <entry key="io/sentry/android/core/SentryUserFeedbackForm" java-name="io/sentry/android/core/SentryUserFeedbackForm" managed-type-name="Sentry.JavaSdk.Android.Core.SentryUserFeedbackForm" token="33555084" />
+      <entry key="io/sentry/android/core/SentryUserFeedbackForm$Builder" java-name="io/sentry/android/core/SentryUserFeedbackForm$Builder" managed-type-name="Sentry.JavaSdk.Android.Core.SentryUserFeedbackForm/SentryUserFeedbackFormBuilder" token="33555387" />
+      <entry key="io/sentry/android/core/SentryUserFeedbackForm$OptionsConfiguration" java-name="io/sentry/android/core/SentryUserFeedbackForm$OptionsConfiguration" managed-type-name="Sentry.JavaSdk.Android.Core.SentryUserFeedbackForm/IOptionsConfiguration" token="33555388" skip-in-java-to-managed="True" />
+      <entry key="io/sentry/android/core/SpanFrameMetricsCollector" java-name="io/sentry/android/core/SpanFrameMetricsCollector" managed-type-name="Sentry.JavaSdk.Android.Core.SpanFrameMetricsCollector" token="33555085" />
+      <entry key="io/sentry/android/core/SystemEventsBreadcrumbsIntegration" java-name="io/sentry/android/core/SystemEventsBreadcrumbsIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.SystemEventsBreadcrumbsIntegration" token="33555086" />
+      <entry key="io/sentry/android/core/TombstoneIntegration" java-name="io/sentry/android/core/TombstoneIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.TombstoneIntegration" token="33555087" />
+      <entry key="io/sentry/android/core/TombstoneIntegration$TombstoneHint" java-name="io/sentry/android/core/TombstoneIntegration$TombstoneHint" managed-type-name="Sentry.JavaSdk.Android.Core.TombstoneIntegration/TombstoneHint" token="33555390" />
+      <entry key="io/sentry/android/core/TombstoneIntegration$TombstonePolicy" java-name="io/sentry/android/core/TombstoneIntegration$TombstonePolicy" managed-type-name="Sentry.JavaSdk.Android.Core.TombstoneIntegration/TombstonePolicy" token="33555391" />
+      <entry key="io/sentry/android/core/UserInteractionIntegration" java-name="io/sentry/android/core/UserInteractionIntegration" managed-type-name="Sentry.JavaSdk.Android.Core.UserInteractionIntegration" token="33555088" />
+      <entry key="io/sentry/android/core/ViewHierarchyEventProcessor" java-name="io/sentry/android/core/ViewHierarchyEventProcessor" managed-type-name="Sentry.JavaSdk.Android.Core.ViewHierarchyEventProcessor" token="33555089" />
+      <entry key="io/sentry/android/core/internal/util/AndroidConnectionStatusProvider" java-name="io/sentry/android/core/internal/util/AndroidConnectionStatusProvider" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.AndroidConnectionStatusProvider" token="33555090" />
+      <entry key="io/sentry/android/core/internal/util/AndroidCurrentDateProvider" java-name="io/sentry/android/core/internal/util/AndroidCurrentDateProvider" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.AndroidCurrentDateProvider" token="33555091" />
+      <entry key="io/sentry/android/core/internal/util/AndroidThreadChecker" java-name="io/sentry/android/core/internal/util/AndroidThreadChecker" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.AndroidThreadChecker" token="33555092" />
+      <entry key="io/sentry/android/core/internal/util/BreadcrumbFactory" java-name="io/sentry/android/core/internal/util/BreadcrumbFactory" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.BreadcrumbFactory" token="33555093" />
+      <entry key="io/sentry/android/core/internal/util/ClassUtil" java-name="io/sentry/android/core/internal/util/ClassUtil" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.ClassUtil" token="33555094" />
+      <entry key="io/sentry/android/core/internal/util/ContentProviderSecurityChecker" java-name="io/sentry/android/core/internal/util/ContentProviderSecurityChecker" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.ContentProviderSecurityChecker" token="33555095" />
+      <entry key="io/sentry/android/core/internal/util/CpuInfoUtils" java-name="io/sentry/android/core/internal/util/CpuInfoUtils" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.CpuInfoUtils" token="33555096" />
+      <entry key="io/sentry/android/core/internal/util/Debouncer" java-name="io/sentry/android/core/internal/util/Debouncer" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.Debouncer" token="33555097" />
+      <entry key="io/sentry/android/core/internal/util/DeviceOrientations" java-name="io/sentry/android/core/internal/util/DeviceOrientations" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.DeviceOrientations" token="33555098" />
+      <entry key="io/sentry/android/core/internal/util/FirstDrawDoneListener" java-name="io/sentry/android/core/internal/util/FirstDrawDoneListener" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.FirstDrawDoneListener" token="33555099" />
+      <entry key="io/sentry/android/core/internal/util/NativeEventUtils" java-name="io/sentry/android/core/internal/util/NativeEventUtils" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.NativeEventUtils" token="33555100" />
+      <entry key="io/sentry/android/core/internal/util/Permissions" java-name="io/sentry/android/core/internal/util/Permissions" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.Permissions" token="33555101" />
+      <entry key="io/sentry/android/core/internal/util/RootChecker" java-name="io/sentry/android/core/internal/util/RootChecker" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.RootChecker" token="33555102" />
+      <entry key="io/sentry/android/core/internal/util/ScreenshotUtils" java-name="io/sentry/android/core/internal/util/ScreenshotUtils" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Util.ScreenshotUtils" token="33555103" />
+      <entry key="io/sentry/android/core/internal/threaddump/Line" java-name="io/sentry/android/core/internal/threaddump/Line" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.ThreadDump.Line" token="33555104" />
+      <entry key="io/sentry/android/core/internal/threaddump/Lines" java-name="io/sentry/android/core/internal/threaddump/Lines" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.ThreadDump.Lines" token="33555105" />
+      <entry key="io/sentry/android/core/internal/threaddump/ThreadDumpParser" java-name="io/sentry/android/core/internal/threaddump/ThreadDumpParser" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.ThreadDump.ThreadDumpParser" token="33555106" />
+      <entry key="io/sentry/android/core/internal/modules/AssetsModulesLoader" java-name="io/sentry/android/core/internal/modules/AssetsModulesLoader" managed-type-name="Sentry.JavaSdk.Android.Core.Internal.Modules.AssetsModulesLoader" token="33555107" />
+    </types-scratch>
+  </module>
+</api>

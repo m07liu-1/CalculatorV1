@@ -1,1 +1,1 @@
-C:\Users\LiuMi\source\repos\CalculatorV1\CalculatorV1\AppPackages\CalculatorV1_1.0.0.1_Test\CalculatorV1_1.0.0.1_x64.msix
+C:\Users\LiuMi\source\repos\CalculatorV1\CalculatorV1\AppPackages\CalculatorV1_0.0.3.0_x64_Test\CalculatorV1_0.0.3.0_x64.msix

@@ -1,0 +1,8 @@
+<api type="release" assembly-name="CalculatorV1" mvid="01487c3e0e254dd9a6bd2bdbca16ac35">
+  <module assembly-name="CalculatorV1" mvid="01487c3e0e254dd9a6bd2bdbca16ac35" mvid-bytes="PnxIASUO2U2mvSvbyhasNQ==">
+    <types-scratch>
+      <entry key="crc6420ecdfa50bd9d841/MainActivity" java-name="crc6420ecdfa50bd9d841/MainActivity" managed-type-name="CalculatorV1.MainActivity" token="33554444" />
+      <entry key="crc6420ecdfa50bd9d841/MainApplication" java-name="crc6420ecdfa50bd9d841/MainApplication" managed-type-name="CalculatorV1.MainApplication" token="33554445" />
+    </types-scratch>
+  </module>
+</api>

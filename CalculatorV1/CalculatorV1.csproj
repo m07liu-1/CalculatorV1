@@ -11,7 +11,7 @@
 		The Mac App Store will NOT accept apps with ONLY maccatalyst-arm64 indicated;
 		either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
 		<!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
-
+		<AppxBundle>Never</AppxBundle>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>CalculatorV1</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -46,8 +46,8 @@
 		<AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>False</GenerateTestArtifacts>
-		<AppInstallerUri>https://github.com/m07liu-1/CalculatorV1</AppInstallerUri>
-		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+		<AppInstallerUri>https://m07liu-1.github.io/CalculatorV1/</AppInstallerUri>
+		<HoursBetweenUpdateChecks>24</HoursBetweenUpdateChecks>
 	</PropertyGroup>
 
 	<ItemGroup>

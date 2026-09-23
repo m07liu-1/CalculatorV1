@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+	Uri="https://m07liu-1.github.io/CalculatorV1/CalculatorV1_x64.appinstaller"
+	Version="0.0.3.0" xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
+	<MainPackage
+		Name="com.companyname.calculatorv1"
+		Version="0.0.3.0"
+		Publisher="CN=LiuMi"
+		Uri="https://m07liu-1.github.io/CalculatorV1/CalculatorV1_0.0.3.0_x64_Test/CalculatorV1_0.0.3.0_x64.msix"
+		ProcessorArchitecture="x64" />
+	<Dependencies>
+		<Package
+			Name="Microsoft.WindowsAppRuntime.1.8"
+			Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+			ProcessorArchitecture="x64"
+			Uri="https://m07liu-1.github.io/CalculatorV1/CalculatorV1_0.0.3.0_x64_Test/Dependencies/x64/Microsoft.WindowsAppRuntime.1.8.msix"
+			Version="8000.879.2017.0" />
+	</Dependencies>
+	<UpdateSettings>
+		<OnLaunch
+			HoursBetweenUpdateChecks="24" />
+	</UpdateSettings>
+</AppInstaller>
