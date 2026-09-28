@@ -3,10 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CalculatorV1.Views.PageTwo"
              Title="PageTwo">
+    
     <Grid RowDefinitions="auto, auto" ColumnDefinitions="auto">
         <HorizontalStackLayout Grid.Row="0">
             <Entry  x:Name="Data1"
                         Text="{Binding Num1}"
+                        Unfocused="Entry_Unfocused"
                         Placeholder="Measurement 1"
                         PlaceholderColor="Grey"
                         TextColor="black"
@@ -14,6 +16,7 @@
                         Keyboard="Numeric"/>
             <Entry  x:Name="Data2"
                         Text="{Binding Num2}"
+                    Unfocused="Entry_Unfocused"
                         Placeholder="Measurement 2"
                         PlaceholderColor="Grey"
                         TextColor="black"

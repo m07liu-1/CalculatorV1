@@ -1,12 +1,175 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|c:\\users\\liumi\\source\\repos\\calculatorv1\\calculatorv1\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|solutionrelative:calculatorv1\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|c:\\users\\liumi\\source\\repos\\calculatorv1\\calculatorv1\\views\\pagetwo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|solutionrelative:calculatorv1\\views\\pagetwo.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|c:\\users\\liumi\\source\\repos\\calculatorv1\\calculatorv1\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|solutionrelative:calculatorv1\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|c:\\users\\liumi\\source\\repos\\calculatorv1\\calculatorv1\\views\\pagethree.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|solutionrelative:calculatorv1\\views\\pagethree.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|c:\\users\\liumi\\source\\repos\\calculatorv1\\calculatorv1\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|solutionrelative:calculatorv1\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|c:\\users\\liumi\\source\\repos\\calculatorv1\\calculatorv1\\views\\pagetwo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|solutionrelative:calculatorv1\\views\\pagetwo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|c:\\users\\liumi\\source\\repos\\calculatorv1\\calculatorv1\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|solutionrelative:calculatorv1\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|c:\\users\\liumi\\source\\repos\\calculatorv1\\calculatorv1\\views\\randomnum.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|solutionrelative:calculatorv1\\views\\randomnum.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|c:\\users\\liumi\\source\\repos\\calculatorv1\\calculatorv1\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{72736EBA-BAE4-403C-A71C-C8305E22DCBD}|CalculatorV1\\CalculatorV1.csproj|solutionrelative:calculatorv1\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PageTwo.xaml",
+              "DocumentMoniker": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\Views\\PageTwo.xaml",
+              "RelativeDocumentMoniker": "CalculatorV1\\Views\\PageTwo.xaml",
+              "ToolTip": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\Views\\PageTwo.xaml",
+              "RelativeToolTip": "CalculatorV1\\Views\\PageTwo.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-09-24T17:27:19.748Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\AppShell.xaml",
+              "RelativeDocumentMoniker": "CalculatorV1\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\AppShell.xaml",
+              "RelativeToolTip": "CalculatorV1\\AppShell.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-09-24T13:07:49.181Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "CalculatorV1\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\AppShell.xaml.cs",
+              "RelativeToolTip": "CalculatorV1\\AppShell.xaml.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAowHoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T19:40:15.805Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "CalculatorV1\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\MauiProgram.cs",
+              "RelativeToolTip": "CalculatorV1\\MauiProgram.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBUAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T13:47:01.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PageTwo.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\Views\\PageTwo.xaml.cs",
+              "RelativeDocumentMoniker": "CalculatorV1\\Views\\PageTwo.xaml.cs",
+              "ToolTip": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\Views\\PageTwo.xaml.cs",
+              "RelativeToolTip": "CalculatorV1\\Views\\PageTwo.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T17:57:39.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RandomNum.xaml",
+              "DocumentMoniker": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\Views\\RandomNum.xaml",
+              "RelativeDocumentMoniker": "CalculatorV1\\Views\\RandomNum.xaml",
+              "ToolTip": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\Views\\RandomNum.xaml",
+              "RelativeToolTip": "CalculatorV1\\Views\\RandomNum.xaml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-09-25T17:51:02.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PageThree.xaml",
+              "DocumentMoniker": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\Views\\PageThree.xaml",
+              "RelativeDocumentMoniker": "CalculatorV1\\Views\\PageThree.xaml",
+              "ToolTip": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\Views\\PageThree.xaml",
+              "RelativeToolTip": "CalculatorV1\\Views\\PageThree.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-09-24T17:27:29.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "CalculatorV1\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\MainPage.xaml.cs",
+              "RelativeToolTip": "CalculatorV1\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T00:59:17.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\MainPage.xaml",
+              "RelativeDocumentMoniker": "CalculatorV1\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\LiuMi\\source\\repos\\CalculatorV1\\CalculatorV1\\MainPage.xaml",
+              "RelativeToolTip": "CalculatorV1\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-09-24T00:57:01.011Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

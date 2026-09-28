@@ -15,10 +15,11 @@ namespace CalculatorV1
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+            builder.Services.AddSingleton<BackUp>();
             builder.Services.AddSingleton<PageTwoThreeVM>();
-            builder.Services.AddTransient<PageTwoVM>();
+            builder.Services.AddSingleton<PageTwoVM>();
             builder.Services.AddTransient<PageTwo>();
-            builder.Services.AddTransient<PageThreeVM>();
+            builder.Services.AddSingleton<PageThreeVM>();
             builder.Services.AddTransient<PageThree>();
 #if DEBUG
     		builder.Logging.AddDebug();

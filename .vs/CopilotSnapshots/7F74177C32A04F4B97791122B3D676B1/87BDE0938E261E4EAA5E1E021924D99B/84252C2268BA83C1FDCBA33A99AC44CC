@@ -1,0 +1,104 @@
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+
+namespace CalculatorV1.Views;
+
+public partial class PageTwo : ContentPage
+{
+	public PageTwo(PageTwoVM vm)
+	{
+		InitializeComponent();
+        BindingContext = vm;
+	}
+
+    private void Entry_Unfocused(object sender, EventArgs e)
+    {
+        if (BindingContext is PageTwoVM vm)
+        {
+            vm.SaveCommand.Execute(null);
+        }
+    }
+    private void updateTime(object sender, EventArgs e)
+    {
+
+    }
+
+    private void takeTime(object sender, EventArgs e)
+    {
+        var currentTime = DateTime.Now.TimeOfDay;
+        timePicker.Time = currentTime;
+    }
+
+    private void takeDate(object sender, EventArgs e)
+    {
+        datePicker.Date = DateTime.Today;
+    }
+
+    private void OnCheckBoxCheckedChanged(object sender, EventArgs e)
+    {
+
+    }
+}
+
+public partial class PageTwoVM : ObservableObject
+{
+    private BackUp backup;
+    private readonly PageTwoThreeVM _vm;
+
+    [ObservableProperty]
+    public partial string Num1 { get; set; } = "";
+
+    [ObservableProperty]
+    public partial string Num2 { get; set; } = "";
+
+    public PageTwoVM(PageTwoThreeVM vm, BackUp backup)
+    {
+        _vm = vm;
+        this.backup = backup;
+        Num1 = backup.CurrentData.Page2.Num1;
+        Num2 = backup.CurrentData.Page2.Num2;
+    }
+
+    [RelayCommand]
+    private void Transfer() {
+        _vm.UpdateData(decimal.Parse(Num1), decimal.Parse(Num2));
+        var Tabs = Shell.Current.Items.FirstOrDefault(i => i is TabBar) as TabBar;
+        foreach (ShellSection tab in Tabs.Items)
+        {
+            if (tab.Title == "PageThree")
+            {
+                Tabs.CurrentItem = tab;
+                return;
+            }
+        }
+        var pagethreeVM = AppShell.Current.Handler.MauiContext.Services.GetService<PageThreeVM>();
+        var newTab = new Tab
+        {
+            Title = "PageThree",
+            Items = { new ShellContent { Content = new PageThree(pagethreeVM) } }
+        };
+
+        Tabs.Items.Add(newTab);
+        Tabs.CurrentItem = newTab;
+    }
+
+    [RelayCommand]
+    private void Save()
+    {
+        backup.CurrentData.Page2.Num1 = Num1;
+        backup.CurrentData.Page2.Num2 = Num2;
+        backup.Save();
+    }
+
+    public void Load()
+    {
+        Num1 = backup.CurrentData.Page2.Num1;
+        Num2 = backup.CurrentData.Page2.Num2;
+    }
+}
+
+public class PageTwoData
+{
+    public string Num1 { get; set; } = "";
+    public string Num2 { get; set; } = "";
+}

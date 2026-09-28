@@ -4,9 +4,15 @@
              x:Class="CalculatorV1.Views.PageThree"
              Title="PageThree">
     <VerticalStackLayout>
+        <Label Text="The average of the two numbers is: "/>
         <Label x:Name="receiver"
             Text="{Binding _vm.Average}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Entry x:Name="testEntry"
+               Text="{Binding ToBeSaved}"
+               Keyboard="Numeric"
+               Placeholder="save a number.."
+               Unfocused="OnEntryCompleted"/>
     </VerticalStackLayout>
 </ContentPage>

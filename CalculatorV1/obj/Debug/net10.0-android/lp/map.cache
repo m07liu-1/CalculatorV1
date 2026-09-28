@@ -171,10 +171,10 @@ Microsoft.Maui.Controls.aar
 maui.aar
 Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
-sentry-android-core-8.55.0.aar
-sentry-android-ndk-8.55.0.aar
-sentry-android-replay-8.55.0.aar
-sentry-native-ndk-0.16.5.aar
+sentry-android-core-8.57.0.aar
+sentry-android-ndk-8.57.0.aar
+sentry-android-replay-8.57.0.aar
+sentry-native-ndk-0.16.6.aar
 Sentry.Bindings.Android.aar
 Xamarin.Android.Glide.Annotations.aar
 Xamarin.Android.Glide.DiskLruCache.aar
@@ -193,7 +193,3 @@ Xamarin.KotlinX.Coroutines.Core.aar
 Xamarin.KotlinX.Coroutines.Core.Jvm.aar
 Xamarin.KotlinX.Serialization.Core.aar
 Xamarin.KotlinX.Serialization.Core.Jvm.aar
-sentry-android-core-8.57.0.aar
-sentry-android-ndk-8.57.0.aar
-sentry-android-replay-8.57.0.aar
-sentry-native-ndk-0.16.6.aar

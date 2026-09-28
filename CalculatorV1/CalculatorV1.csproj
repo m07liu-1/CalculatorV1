@@ -75,6 +75,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\RandomNum.xaml.cs">
+	    <DependentUpon>RandomNum.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\PageThree.xaml.cs">
 	    <DependentUpon>PageThree.xaml</DependentUpon>
 	  </Compile>
@@ -84,6 +87,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\RandomNum.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\PageTwo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

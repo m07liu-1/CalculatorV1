@@ -8,7 +8,7 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            var window = new Window(new AppShell());
+            var window = new Window(new AppShell(new BackUp()));
 
 #if WINDOWS
                         const int desiredWidth = 450;

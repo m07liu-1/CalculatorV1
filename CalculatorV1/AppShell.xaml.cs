@@ -1,14 +1,19 @@
-﻿namespace CalculatorV1
+﻿using CalculatorV1.Views;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
+namespace CalculatorV1
 {
     public partial class AppShell : Shell
     {
-        public AppShell()
+        public AppShell(BackUp backup)
         {
             InitializeComponent();
-
+            BindingContext = backup;
             // Register the routes
             Routing.RegisterRoute(nameof(Views.PageTwo), typeof(Views.PageTwo));
             Routing.RegisterRoute(nameof(Views.PageThree), typeof(Views.PageThree));
+            Routing.RegisterRoute(nameof(Views.RandomNum), typeof(Views.RandomNum));
         }
 
         private bool openOrCreate(string name)
@@ -34,9 +39,8 @@
             } else if (request?.Text == "Page 2")
             {
                 if (openOrCreate("PageTwo")) return;
-                var sharedVM = AppShell.Current.Handler.MauiContext.Services.GetService<Views.PageTwoThreeVM>();
-                var pagetwoVM = new Views.PageTwoVM(sharedVM);
-                var newPage = new Views.PageTwo(pagetwoVM);
+                var pagetwoVM = AppShell.Current.Handler.MauiContext.Services.GetService<PageTwoVM>();
+                var newPage = new PageTwo(pagetwoVM);
                 var newTab = new Tab
                 {
                     Title = "PageTwo",
@@ -44,13 +48,11 @@
                 };
                 Tabs.Items.Add(newTab);
                 Tabs.CurrentItem = newTab;
-
             } else if (request?.Text == "Page 3")
             {
                 if (openOrCreate("PageThree")) return;
-                var sharedVM = AppShell.Current.Handler.MauiContext.Services.GetService<Views.PageTwoThreeVM>();
-                var pagethreeVM = new Views.PageThreeVM(sharedVM);
-                var newPage = new Views.PageThree(pagethreeVM);
+                var pagethreeVM = AppShell.Current.Handler.MauiContext.Services.GetService<PageThreeVM>();
+                var newPage = new PageThree(pagethreeVM);
                 var newTab = new Tab
                 {
                     Title = "PageThree",
@@ -58,8 +60,97 @@
                 };
                 Tabs.Items.Add(newTab);
                 Tabs.CurrentItem = newTab;
+            } else
+            {
+                if (openOrCreate("Random")) return;
+                var newTab = new ShellContent
+                {
+                    Title = "Random",
+                    Route = nameof(Views.RandomNum),
+                    ContentTemplate = new DataTemplate(typeof(Views.RandomNum))
+                };
+                Tabs.Items.Add(newTab);
+                Tabs.CurrentItem = newTab;
             }
         }
         
+        private void Load(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Load clicked!");
+            LoadHelper();
+        }
+
+        private async Task LoadHelper()
+        {
+            try
+            {
+                FileResult result = await FilePicker.Default.PickAsync(new PickOptions
+                { PickerTitle = "Select a xml file"
+                });
+                if (result != null) {
+                    // Ensure we load into the DI singleton BackUp that VMs use
+                    var diBackup = AppShell.Current.Handler.MauiContext.Services.GetService<BackUp>();
+                    diBackup?.Load(result.FullPath);
+
+                    PageTwoVM vm2 = AppShell.Current.Handler.MauiContext.Services.GetService<Views.PageTwoVM>();
+                    PageThreeVM vm3 = AppShell.Current.Handler.MauiContext.Services.GetService<Views.PageThreeVM>();
+                    vm2.Load();
+                    vm3.Load();
+                }
+            } catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"{ex.Message}");
+            }
+        }
+    }
+
+    [XmlRoot("AppData")]
+    public class AppData
+    {
+        public PageTwoData Page2 { get; set; } = new();
+        public PageThreeData Page3 { get; set; } = new();
+    }
+
+    public class BackUp
+    {
+        private readonly string filePath;
+        private readonly XmlSerializer serializer;
+
+        public AppData CurrentData { get; private set; } = new();
+
+        public BackUp()
+        {
+            string dir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                                "eHSN-Backups");
+            if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
+            filePath = Path.Combine(dir, DateTime.Today.ToString("yyyy-MM-dd") + ".xml");
+            serializer = new XmlSerializer(typeof(AppData));
+        }
+
+        public void Save()
+        {
+            try
+            {
+                using (var stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+                using (var writer = new StreamWriter(stream))
+                {
+                    serializer.Serialize(writer, CurrentData);
+                    writer.Flush();
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error saving xml: {e.Message}");
+            }
+        }
+
+        public void Load(string path)
+        {
+            using (StreamReader sr = new StreamReader(path))
+            {
+                CurrentData = (serializer.Deserialize(sr) as AppData) ?? new AppData();
+            }
+            
+        }
     }
 }

@@ -1,0 +1,1 @@
+C:\Users\LiuMi\source\repos\CalculatorV1\CalculatorV1\CalculatorV1.csproj;x64

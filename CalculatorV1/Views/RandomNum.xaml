@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorV1.Views.RandomNum"
+             Title="Random">
+    <Grid RowDefinitions="auto, auto, auto" Padding="10" RowSpacing="20">
+        <VerticalStackLayout Grid.Row="0">
+            <Label Text="Lowest number so far: "/>
+            <Label x:Name="HighScore"
+                   TextColor="Black"
+                   FontFamily="Times New Roman"
+                   Text="2,147,483,647"/>
+            <Label Text="Probability: "/>
+            <Label x:Name="Probability"
+                   Text="100%"/>
+            <Label Text="Numbers generated:"/>
+            <Label x:Name="Total"
+                     Text="0"/>
+        </VerticalStackLayout>
+        <Border Grid.Row="1" Stroke="Grey" StrokeShape="RoundRectangle 40" StrokeThickness="1">
+            <Label x:Name="Current"
+                   Text=""/>
+        </Border>
+        <Grid Grid.Row="2" ColumnDefinitions="auto, auto, auto, auto" ColumnSpacing="20">
+            <Button Grid.Column="0" Text="Generate" Clicked="Generate"/>
+            <Button Grid.Column="1" Text="x100" Clicked="ToggleAuto"/>
+            <Button Grid.Column="2" Text="x1000" Clicked="ToggleAuto"/>
+            <Button Grid.Column="3" Text="x10000" Clicked="ToggleAuto"/>
+        </Grid>
+            
+    </Grid>
+</ContentPage>

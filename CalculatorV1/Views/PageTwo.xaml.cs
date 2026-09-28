@@ -1,6 +1,5 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-
 namespace CalculatorV1.Views;
 
 public partial class PageTwo : ContentPage
@@ -11,42 +10,13 @@ public partial class PageTwo : ContentPage
         BindingContext = vm;
 	}
 
-    private void transferData(Object sender, EventArgs e)
+    private void Entry_Unfocused(object sender, EventArgs e)
     {
-        var shell = Shell.Current;
-        var Tabs = shell.Items.FirstOrDefault(i => i is TabBar) as TabBar;
-        if (Tabs != null)
+        if (BindingContext is PageTwoVM vm)
         {
-            if (decimal.TryParse(Data1.Text, out decimal num1) && decimal.TryParse(Data2.Text, out decimal num2))
-            {
-                foreach(ShellSection tab in Tabs.Items)
-                {
-                    if (tab.Title == "PageThree")
-                    {
-                        Tabs.CurrentItem = tab;
-                        // Call PageThree's receive data method but dont know how
-                        return;
-                    }
-                }
-                // Have to make next page
-                var template = new DataTemplate(typeof(PageThree));
-                var newTab = new ShellContent
-                { 
-                    Title = typeof(PageThree).Name,
-                    Route = nameof(PageThree),
-                    ContentTemplate = template
-                };
-                Tabs.Items.Add(newTab);
-                Tabs.CurrentItem = newTab;
-                // call PageThree's receive data method but doesnt know how
-            } else
-            {
-                message.TextColor = Colors.Red;
-                message.Text = "Error! Invalid Number(s) Entered!";
-            }
+            vm.SaveCommand.Execute(null);
         }
     }
-
     private void updateTime(object sender, EventArgs e)
     {
 
@@ -71,17 +41,21 @@ public partial class PageTwo : ContentPage
 
 public partial class PageTwoVM : ObservableObject
 {
+    private BackUp backup;
     private readonly PageTwoThreeVM _vm;
 
     [ObservableProperty]
-    public partial string Num1 { get; set; }
+    public partial string Num1 { get; set; } = "";
 
     [ObservableProperty]
-    public partial string Num2 { get; set; }
+    public partial string Num2 { get; set; } = "";
 
-    public PageTwoVM(PageTwoThreeVM vm)
+    public PageTwoVM(PageTwoThreeVM vm, BackUp backup)
     {
         _vm = vm;
+        this.backup = backup;
+        Num1 = backup.CurrentData.Page2.Num1;
+        Num2 = backup.CurrentData.Page2.Num2;
     }
 
     [RelayCommand]
@@ -96,7 +70,7 @@ public partial class PageTwoVM : ObservableObject
                 return;
             }
         }
-        var pagethreeVM = new PageThreeVM(_vm);
+        var pagethreeVM = AppShell.Current.Handler.MauiContext.Services.GetService<PageThreeVM>();
         var newTab = new Tab
         {
             Title = "PageThree",
@@ -106,4 +80,24 @@ public partial class PageTwoVM : ObservableObject
         Tabs.Items.Add(newTab);
         Tabs.CurrentItem = newTab;
     }
+
+    [RelayCommand]
+    private void Save()
+    {
+        backup.CurrentData.Page2.Num1 = Num1;
+        backup.CurrentData.Page2.Num2 = Num2;
+        backup.Save();
+    }
+
+    public void Load()
+    {
+        Num1 = backup.CurrentData.Page2.Num1;
+        Num2 = backup.CurrentData.Page2.Num2;
+    }
+}
+
+public class PageTwoData
+{
+    public string Num1 { get; set; } = "";
+    public string Num2 { get; set; } = "";
 }
