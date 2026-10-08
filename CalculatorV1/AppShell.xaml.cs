@@ -1,6 +1,7 @@
 ﻿using CalculatorV1.Views;
 using System.Diagnostics;
 using System.Xml.Serialization;
+using Octokit;
 
 namespace CalculatorV1
 {
@@ -15,7 +16,81 @@ namespace CalculatorV1
             Routing.RegisterRoute(nameof(Views.PageThree), typeof(Views.PageThree));
             Routing.RegisterRoute(nameof(Views.RandomNum), typeof(Views.RandomNum));
         }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            LaunchUpdate();
+            DownloadUpdate();
 
+        }
+
+        private async Task DownloadUpdate()
+        {
+            var github = new GitHubClient(new ProductHeaderValue("CalculatorV1"));
+            var latestRelease = await github.Repository.Release.GetLatest("m07liu-1", "CalculatorV1");
+            var latestVersion = latestRelease.TagName;
+            var CurrentVersion = AppInfo.VersionString;
+            if (latestVersion != CurrentVersion)
+            {
+                bool download = await Shell.Current.DisplayAlertAsync("Update Available", "Download in the background now?", "Yes", "No");
+               if (download)
+                {
+                    var asset = latestRelease.Assets.FirstOrDefault(a => a.Name.EndsWith(".exe"));
+                    if (asset != null)
+                    {
+                        string tempFilePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), "update.exe");
+                        using (var client = new HttpClient())
+                        {
+                            client.DefaultRequestHeaders.UserAgent.ParseAdd("CalculatorV1");
+                            var response = await client.GetAsync("CalculatorV1");
+
+                            var data = await response.Content.ReadAsByteArrayAsync();
+                            await File.WriteAllBytesAsync(tempFilePath, data);
+                        }
+                    }
+                }
+            }
+              
+
+        }
+
+        private async Task LaunchUpdate()
+        {
+            var updatePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), "update.exe");
+            if (File.Exists(updatePath))
+            {
+                bool confirm = await Shell.Current.DisplayAlertAsync("Update Ready", "An update has been downloaded. Restart to apply the update?", "Yes", "No");
+                if (!confirm) return;
+                try
+                {
+                    string executableName = Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule?.FileName) ?? "CalculatorV1.exe";
+                    string TargetExePath = Environment.ProcessPath;
+                    string batchContent = $@"@echo off
+timeout /t 2 /nobreak
+taskkill /f /im ""{executableName}""
+timeout /t 2 /nobreak
+copy /y ""{updatePath}"" ""{TargetExePath}""
+start """" ""{TargetExePath}""
+del ""{updatePath}""
+del ""%~f0""";
+                    string batchFilePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), "update.bat");
+                    await File.WriteAllTextAsync(batchFilePath, batchContent);
+                    var processInfo = new ProcessStartInfo
+                    {
+                        FileName = batchFilePath,
+                        CreateNoWindow = true,
+                        UseShellExecute = false
+                    };
+                    Process.Start(processInfo);
+                    await Task.Delay(1000);
+                    App.Current?.Quit();
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Error launching update: {ex.Message}");
+                }
+            }
+        }
         private bool openOrCreate(string name)
         {
             foreach (ShellSection tab in Tabs.Items) // Look for tab T in created tabs
@@ -131,7 +206,7 @@ namespace CalculatorV1
         {
             try
             {
-                using (var stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+                using (var stream = new FileStream(filePath, System.IO.FileMode.Create, FileAccess.Write, FileShare.None))
                 using (var writer = new StreamWriter(stream))
                 {
                     serializer.Serialize(writer, CurrentData);

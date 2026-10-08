@@ -1,5 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
+		<!-- Versions -->
+		<ApplicationVersion>1.0.0</ApplicationVersion>
+		<ApplicationDisplayVersion>1.0.0</ApplicationDisplayVersion>
+		
 		<TargetFrameworks>net10.0-android;net10.0-ios;net10.0-maccatalyst</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net10.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
@@ -24,10 +28,6 @@
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.calculatorv1</ApplicationId>
-
-		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-		<ApplicationVersion>1</ApplicationVersion>
 
 		<!-- To develop, package, and publish an app to the Microsoft Store, see: https://aka.ms/MauiTemplateUnpackaged -->
 		<WindowsPackageType>MSIX</WindowsPackageType>
@@ -71,7 +71,8 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.110" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.12" />
-		<PackageReference Include="Sentry.Maui.CommunityToolkit.Mvvm" Version="6.11.1" />
+		<PackageReference Include="Octokit" Version="14.0.0" />
+		<PackageReference Include="Sentry.Maui.CommunityToolkit.Mvvm" Version="6.12.0" />
 	</ItemGroup>
 
 	<ItemGroup>
