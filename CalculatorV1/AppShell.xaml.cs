@@ -15,17 +15,21 @@ namespace CalculatorV1
             Routing.RegisterRoute(nameof(Views.PageTwo), typeof(Views.PageTwo));
             Routing.RegisterRoute(nameof(Views.PageThree), typeof(Views.PageThree));
             Routing.RegisterRoute(nameof(Views.RandomNum), typeof(Views.RandomNum));
-        }
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-            LaunchUpdate();
-            DownloadUpdate();
 
+            // Subscribe to Loaded event to ensure UI is fully initialized before showing dialogs
+            Loaded += async (s, e) =>
+            {
+                await LaunchUpdate();
+                await DownloadUpdate();
+            };
         }
-
         private async Task DownloadUpdate()
         {
+            var updatePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), "update.exe");
+            if (File.Exists(updatePath))
+            {
+                return;
+            }
             var github = new GitHubClient(new ProductHeaderValue("CalculatorV1"));
             var latestRelease = await github.Repository.Release.GetLatest("m07liu-1", "CalculatorV1");
             var latestVersion = latestRelease.TagName;
@@ -33,30 +37,37 @@ namespace CalculatorV1
             if (latestVersion != CurrentVersion)
             {
                 bool download = await Shell.Current.DisplayAlertAsync("Update Available", "Download in the background now?", "Yes", "No");
-               if (download)
+                if (download)
                 {
-                    var asset = latestRelease.Assets.FirstOrDefault(a => a.Name.EndsWith(".exe"));
-                    if (asset != null)
+                    try
                     {
-                        string tempFilePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), "update.exe");
-                        using (var client = new HttpClient())
+                        var asset = latestRelease.Assets.FirstOrDefault(a => a.Name.EndsWith(".exe"));
+                        if (asset != null)
                         {
-                            client.DefaultRequestHeaders.UserAgent.ParseAdd("CalculatorV1");
-                            var response = await client.GetAsync("CalculatorV1");
+                            string tempFilePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), "update.exe");
+                            using (var client = new HttpClient())
+                            {
+                                client.DefaultRequestHeaders.UserAgent.ParseAdd("CalculatorV1");
+                                var response = await client.GetAsync(asset.BrowserDownloadUrl);
 
-                            var data = await response.Content.ReadAsByteArrayAsync();
-                            await File.WriteAllBytesAsync(tempFilePath, data);
+                                var data = await response.Content.ReadAsByteArrayAsync();
+                                await File.WriteAllBytesAsync(tempFilePath, data);
+                                await Shell.Current.DisplayAlertAsync("Download Complete", "Reopen the exe to launch the update", "Ok");
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine($"Error downloading update: {ex.Message}");
                     }
                 }
             }
-              
-
         }
 
         private async Task LaunchUpdate()
         {
             var updatePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), "update.exe");
+            System.Diagnostics.Debug.WriteLine("Update path: " + updatePath);
             if (File.Exists(updatePath))
             {
                 bool confirm = await Shell.Current.DisplayAlertAsync("Update Ready", "An update has been downloaded. Restart to apply the update?", "Yes", "No");
@@ -73,7 +84,7 @@ copy /y ""{updatePath}"" ""{TargetExePath}""
 start """" ""{TargetExePath}""
 del ""{updatePath}""
 del ""%~f0""";
-                    string batchFilePath = Path.Combine(Path.GetDirectoryName(Environment.ProcessPath), "update.bat");
+                    string batchFilePath = Path.Combine(Path.GetTempPath(), "update.bat");
                     await File.WriteAllTextAsync(batchFilePath, batchContent);
                     var processInfo = new ProcessStartInfo
                     {

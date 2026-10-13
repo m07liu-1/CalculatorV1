@@ -30,6 +30,7 @@
             <MenuFlyoutItem Text="Option 1"/>
             <MenuFlyoutItem Text="Option 2"/>
             <MenuFlyoutItem Text="Option 3"/>
+            <MenuFlyoutItem Text="Option 4"/>
         </MenuBarItem>
     </Shell.MenuBarItems>
     <TabBar x:Name="Tabs">

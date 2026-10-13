@@ -37,7 +37,7 @@
                         TimeSelected="updateTime"/>
                 <Button Text="Now" Clicked="takeTime"/>
             </HorizontalStackLayout>
-            <CheckBox CheckedChanged="OnCheckBoxCheckedChanged" />
+            <CheckBox Color="Blue" CheckedChanged="OnCheckBoxCheckedChanged" />
             <HorizontalStackLayout>
                 <DatePicker x:Name="datePicker" MinimumDate="01/01/1980"
                             MaximumDate="01/01/2050"/>

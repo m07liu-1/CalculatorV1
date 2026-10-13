@@ -35,7 +35,7 @@ public partial class PageTwo : ContentPage
 
     private void OnCheckBoxCheckedChanged(object sender, EventArgs e)
     {
-
+        ((CheckBox)sender).Color = ((CheckBox)sender).IsChecked ? Colors.Green : Colors.Red;
     }
 }
 
