@@ -1,5 +1,6 @@
 ﻿using CalculatorV1.Views;
 using Microsoft.Extensions.Logging;
+using CommunityToolkit.Maui;
 
 namespace CalculatorV1
 {
@@ -10,6 +11,7 @@ namespace CalculatorV1
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

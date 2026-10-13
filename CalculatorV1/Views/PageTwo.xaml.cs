@@ -1,3 +1,4 @@
+using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 namespace CalculatorV1.Views;
@@ -36,6 +37,14 @@ public partial class PageTwo : ContentPage
     private void OnCheckBoxCheckedChanged(object sender, EventArgs e)
     {
         ((CheckBox)sender).Color = ((CheckBox)sender).IsChecked ? Colors.Green : Colors.Red;
+
+    }
+
+    private async void openPopup(object sender, EventArgs e)
+    {
+        var popup = new Views.DataPopup();
+        await this.ShowPopupAsync(popup);
+
     }
 }
 

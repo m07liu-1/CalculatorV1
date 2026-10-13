@@ -64,10 +64,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="15.0.1" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="10.0.110" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.12" />
 		<PackageReference Include="Octokit" Version="14.0.0" />
-		<PackageReference Include="Sentry.Maui.CommunityToolkit.Mvvm" Version="6.12.0" />
+		<PackageReference Include="Sentry.Maui.CommunityToolkit.Mvvm" Version="6.12.1" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -83,6 +84,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Popup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\RandomNum.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

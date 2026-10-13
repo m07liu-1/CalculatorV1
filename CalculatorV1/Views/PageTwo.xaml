@@ -43,6 +43,7 @@
                             MaximumDate="01/01/2050"/>
                 <Button Text="Today" Clicked="takeDate"/>
             </HorizontalStackLayout>
+            <Button Text="Determinant Calculator" Clicked="openPopup"/>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>
