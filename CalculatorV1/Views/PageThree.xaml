@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CalculatorV1.Views.PageThree"
+             xmlns:local="clr-namespace:CalculatorV1.Views"
+             x:DataType="local:PageThreeVM"
              Title="PageThree">
     <VerticalStackLayout>
         <Label Text="The average of the two numbers is: "/>

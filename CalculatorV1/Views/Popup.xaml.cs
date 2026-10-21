@@ -1,7 +1,7 @@
 using CommunityToolkit.Maui.Views;
 namespace CalculatorV1.Views;
 
-public partial class DataPopup : Popup
+public partial class DataPopup : Popup<string>
 {
 	public DataPopup()
 	{
@@ -14,18 +14,25 @@ public partial class DataPopup : Popup
 		if (A01.Text == null) A01.Text = "0";
 		if (A10.Text == null) A10.Text = "0";
 		if (A11.Text == null) A11.Text = "0";
-        double result = double.Parse(A00.Text) * double.Parse(A11.Text) - double.Parse(A01.Text) * double.Parse(A10.Text);
-        Result.Text = "det(A) = " + result.ToString();
+		double result = double.Parse(A00.Text) * double.Parse(A11.Text) - double.Parse(A01.Text) * double.Parse(A10.Text);
+		Result.Text = "det(A) = " + result.ToString();
 	}
 
 	public void ChangeColor(object sender, TextChangedEventArgs e)
 	{
-		if (((Entry)sender).Text == "") {
+		if (((Entry)sender).Text == "")
+		{
 			((Entry)sender).BackgroundColor = Colors.Red;
-		} else
+		}
+		else
 		{
 			((Entry)sender).TextColor = Colors.Blue;
 			((Entry)sender).BackgroundColor = Colors.White;
 		}
+	}
+
+	public async void ClosePopup(Object sender, EventArgs e)
+	{
+		await CloseAsync(Result.Text);
 	}
 }

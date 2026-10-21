@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CalculatorV1.Views.PageTwo"
+             xmlns:local="clr-namespace:CalculatorV1.Views"
+             x:DataType="local:PageTwoVM"
              Title="PageTwo">
     
-    <Grid RowDefinitions="auto, auto" ColumnDefinitions="auto">
+    <Grid RowDefinitions="auto, auto, auto" ColumnDefinitions="auto">
         <HorizontalStackLayout Grid.Row="0">
             <Entry  x:Name="Data1"
                         Text="{Binding Num1}"
@@ -30,20 +32,49 @@
                 FontSize="12"
                 BackgroundColor="Green"
                 Command="{Binding TransferCommand}"/>
-            <Label Text="Completed Time: "/>
-            <HorizontalStackLayout>
-                <TimePicker x:Name="timePicker"
-                        Format="T"
-                        TimeSelected="updateTime"/>
-                <Button Text="Now" Clicked="takeTime"/>
-            </HorizontalStackLayout>
-            <CheckBox Color="Blue" CheckedChanged="OnCheckBoxCheckedChanged" />
-            <HorizontalStackLayout>
-                <DatePicker x:Name="datePicker" MinimumDate="01/01/1980"
-                            MaximumDate="01/01/2050"/>
-                <Button Text="Today" Clicked="takeDate"/>
-            </HorizontalStackLayout>
             <Button Text="Determinant Calculator" Clicked="openPopup"/>
+            <Label x:Name="Determinant" Text=""/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="2">
+            <Grid ColumnDefinitions="100, 100, 100, 50" BackgroundColor="LightGray" Padding="8" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Number" FontAttributes="Bold" Grid.Column="0"/>
+                <Label Text="Completed" FontAttributes="Bold" Grid.Column="1"/>
+                <Label Text="Time" FontAttributes="Bold" Grid.Column="2"/>
+                <Button Text="+" Grid.Column="3" Command="{Binding AddRowCommand}"/>
+            </Grid>
+            <CollectionView ItemsSource="{Binding Data}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="0"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid x:Name="ItemGrid" ColumnDefinitions="100, 100, 100, 50" RowDefinitions="50"
+                              Padding="1" ColumnSpacing="1" VerticalOptions="Center" 
+                              HorizontalOptions="Center" RowSpacing="0">
+                            <Border StrokeThickness="0" Grid.Column="0">
+                                <Entry Text="{Binding n}"
+                                    VerticalOptions="Center"/>
+                            </Border>
+                            <Border StrokeThickness="0" Grid.Column="1">
+                                <HorizontalStackLayout>
+                                    <CheckBox x:Name="Yes"/>
+                                    <CheckBox x:Name="No"/>
+                                </HorizontalStackLayout>
+                            </Border>
+                            <Border StrokeThickness="0" Grid.Column="2">
+                                <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Entry Text="{Binding hour}"/>
+                                    <Label Text=":" FontSize="Large"/>
+                                    <Entry Text="{Binding minutes}"/>
+                                </HorizontalStackLayout>
+                            </Border>
+                            <Button Text="-" Grid.Column="3" 
+                                    Command="{Binding BindingContext.RemoveCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
+                                    CommandParameter="{Binding BindingContext, Source={x:Reference ItemGrid}}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

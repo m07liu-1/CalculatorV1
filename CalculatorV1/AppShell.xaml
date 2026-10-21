@@ -19,18 +19,15 @@
             <MenuFlyoutItem Text="Random Number Game" Clicked="openTab"/>
         </MenuBarItem>
         <MenuBarItem Text="File">
-            <MenuFlyoutItem Text="Save"/>
+            <MenuFlyoutItem Text="Export"/>
             <MenuFlyoutSubItem Text="Save as">
                 <MenuFlyoutItem Text="XAML File"/>
                 <MenuFlyoutItem Text="PDF"/>
             </MenuFlyoutSubItem>
             <MenuFlyoutItem Text="Load" Clicked="Load"/>
         </MenuBarItem>
-        <MenuBarItem Text="Import">
-            <MenuFlyoutItem Text="Option 1"/>
-            <MenuFlyoutItem Text="Option 2"/>
-            <MenuFlyoutItem Text="Option 3"/>
-            <MenuFlyoutItem Text="Option 4"/>
+        <MenuBarItem Text="Tools">
+            <MenuFlyoutItem Text="Aquarius Data Extraction" Clicked="openAQ"/>
         </MenuBarItem>
     </Shell.MenuBarItems>
     <TabBar x:Name="Tabs">

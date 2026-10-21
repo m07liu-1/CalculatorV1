@@ -1,15 +1,18 @@
+    using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 namespace CalculatorV1.Views;
 
 public partial class PageTwo : ContentPage
 {
-	public PageTwo(PageTwoVM vm)
-	{
-		InitializeComponent();
+    public PageTwo(PageTwoVM vm)
+    {
+        InitializeComponent();
         BindingContext = vm;
-	}
+    }
 
     private void Entry_Unfocused(object sender, EventArgs e)
     {
@@ -17,21 +20,6 @@ public partial class PageTwo : ContentPage
         {
             vm.SaveCommand.Execute(null);
         }
-    }
-    private void updateTime(object sender, EventArgs e)
-    {
-
-    }
-
-    private void takeTime(object sender, EventArgs e)
-    {
-        var currentTime = DateTime.Now.TimeOfDay;
-        timePicker.Time = currentTime;
-    }
-
-    private void takeDate(object sender, EventArgs e)
-    {
-        datePicker.Date = DateTime.Today;
     }
 
     private void OnCheckBoxCheckedChanged(object sender, EventArgs e)
@@ -43,10 +31,19 @@ public partial class PageTwo : ContentPage
     private async void openPopup(object sender, EventArgs e)
     {
         var popup = new Views.DataPopup();
-        await this.ShowPopupAsync(popup);
-
+        IPopupResult<string> result = await this.ShowPopupAsync<string>(popup);
+        Determinant.Text = result.Result;
     }
 }
+public class TableData
+{
+    public string n { get; set; } = string.Empty;
+    public string isTrue { get; set; } = string.Empty;
+    public string hour { get; set; } = string.Empty;
+
+    public string minutes { get; set; } = string.Empty;
+}
+
 
 public partial class PageTwoVM : ObservableObject
 {
@@ -58,6 +55,10 @@ public partial class PageTwoVM : ObservableObject
 
     [ObservableProperty]
     public partial string Num2 { get; set; } = "";
+    public ObservableCollection<TableData> Data { get; set; } = new();
+
+    public ICommand AddRowCommand { get; }
+    public ICommand RemoveCommand { get; }
 
     public PageTwoVM(PageTwoThreeVM vm, BackUp backup)
     {
@@ -65,6 +66,18 @@ public partial class PageTwoVM : ObservableObject
         this.backup = backup;
         Num1 = backup.CurrentData.Page2.Num1;
         Num2 = backup.CurrentData.Page2.Num2;
+        AddRowCommand = new Command(OnAddRow);
+        RemoveCommand = new Command<TableData>(OnRemoveRow);
+        Data.Add(new TableData());
+    }
+
+    public void OnAddRow()
+    {
+        Data.Add(new TableData());
+    }
+    public void OnRemoveRow(TableData row)
+    {
+        Data.Remove(row);
     }
 
     [RelayCommand]

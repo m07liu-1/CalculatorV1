@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Xml.Serialization;
 using Octokit;
 using CommunityToolkit.Maui.Views;
+using CommunityToolkit.Maui.Extensions;
 
 namespace CalculatorV1
 {
@@ -37,11 +38,11 @@ namespace CalculatorV1
             var CurrentVersion = AppInfo.VersionString;
             if (latestVersion != CurrentVersion)
             {
-                bool download = await Shell.Current.DisplayAlertAsync("Update Available", "Download in the background now?", "Yes", "No");
+                bool download = await Shell.Current.DisplayAlertAsync("Update Available", $"Download in the background now?", "Yes", "No");
                 if (download)
                 {
                     try
-                    {
+                    { 
                         var asset = latestRelease.Assets.FirstOrDefault(a => a.Name.EndsWith(".exe"));
                         if (asset != null)
                         {
@@ -188,6 +189,12 @@ del ""%~f0""";
             {
                 System.Diagnostics.Debug.WriteLine($"{ex.Message}");
             }
+        }
+
+        private async void openAQ(object sender, EventArgs e)
+        {
+            var popup = AppShell.Current.Handler.MauiContext.Services.GetService<AQPopup>();
+            await this.ShowPopupAsync(popup);
         }
     }
 

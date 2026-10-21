@@ -2,6 +2,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 namespace CalculatorV1.Views;
 
+
 public partial class PageThree : ContentPage
 {
     public PageThree(PageThreeVM vm)
