@@ -1,6 +1,7 @@
 ﻿using CalculatorV1.Views;
-using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Storage;
+using Microsoft.Extensions.Logging;
 
 namespace CalculatorV1
 {
@@ -29,8 +30,10 @@ namespace CalculatorV1
             builder.Services.AddSingleton<PageThreeVM>();
             builder.Services.AddTransient<PageThree>();
             builder.Services.AddTransient<AppShell>();
+            builder.Services.AddSingleton<GeneratePageVM>();
+            builder.Services.AddSingleton<GeneratePage>();
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

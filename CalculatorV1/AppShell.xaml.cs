@@ -38,7 +38,7 @@ namespace CalculatorV1
             var CurrentVersion = AppInfo.VersionString;
             if (latestVersion != CurrentVersion)
             {
-                bool download = await Shell.Current.DisplayAlertAsync("Update Available", $"Download in the background now?", "Yes", "No");
+                bool download = await Shell.Current.DisplayAlertAsync("Update Available", "Download in the background now?", "Yes", "No");
                 if (download)
                 {
                     try
@@ -148,7 +148,7 @@ del ""%~f0""";
                 };
                 Tabs.Items.Add(newTab);
                 Tabs.CurrentItem = newTab;
-            } else
+            } else if (request?.Text == "Random Number Game")
             {
                 if (openOrCreate("Random")) return;
                 var newTab = new ShellContent
@@ -156,6 +156,18 @@ del ""%~f0""";
                     Title = "Random",
                     Route = nameof(Views.RandomNum),
                     ContentTemplate = new DataTemplate(typeof(Views.RandomNum))
+                };
+                Tabs.Items.Add(newTab);
+                Tabs.CurrentItem = newTab;
+            } else if (request?.Text == "PDF Generator")
+            {
+                if (openOrCreate("PDF Generator")) return;
+                var gpVM = AppShell.Current.Handler.MauiContext.Services.GetService<GeneratePageVM>();
+                var newPage = new GeneratePage(gpVM);
+                var newTab = new Tab
+                {
+                    Title = "Generate PDF",
+                    Items = { new ShellContent { Content = newPage } }
                 };
                 Tabs.Items.Add(newTab);
                 Tabs.CurrentItem = newTab;

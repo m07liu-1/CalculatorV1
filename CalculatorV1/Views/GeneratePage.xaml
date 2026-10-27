@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorV1.Views.GeneratePage"
+             xmlns:local="clr-namespace:CalculatorV1.Views"
+             x:DataType="local:GeneratePageVM"
+             Title="NewPage1">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+            <Grid RowDefinitions="*, *" ColumnDefinitions="auto, *">
+                <Label Grid.Row="0" Grid.Column="0" Text="Survey Name: "/>
+                <Entry Grid.Row="0" Grid.Column="1" Placeholder="Michael Liu" Text="{Binding Data.Name}"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Station Number: "/>
+                <Entry Grid.Row="1" Grid.Column="1" Placeholder="02KF015" Text="{Binding Data.StationNumber}"/>
+            </Grid>
+            <Grid RowDefinitions="*, auto" Margin="30, 0, 30, 0">
+                <Grid Grid.Row="0" RowDefinitions="*, *, *, *" ColumnDefinitions="*, *, *">
+                    <Border Grid.Row="0" Grid.Column="0">
+                        <Label Text="Date"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="0">
+                        <DatePicker Date="{Binding Data.SurveyDate}"/>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="1">
+                        <Label Text="Air Temp (C)"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="1">
+                        <Entry Text="{Binding Data.AirTemp}" Keyboard="Numeric"/>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="2">
+                        <Label Text="Water Temp(C)"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="2">
+                        <Entry Text="{Binding Data.WaterTemp}" Keyboard="Numeric"/>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="0">
+                        <Label Text="Area"/>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="0">
+                        <Entry Text="{Binding Data.Area}" Keyboard="Numeric"/>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="1">
+                        <Label Text="Width"/>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="1">
+                        <Entry Text="{Binding Data.Width}" Keyboard="Numeric"/>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="2">
+                        <Label Text="Discharge"/>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="2">
+                        <Entry Text="{Binding Data.Discharge}" Keyboard="Numeric"/>
+                    </Border>
+                </Grid>
+                <Editor Grid.Row="1" Text="{Binding Data.Comments}" Placeholder="Comments" HeightRequest="70"/>
+            </Grid>
+            <Button Text="Generate PDF" Clicked="GeneratePDF"/>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

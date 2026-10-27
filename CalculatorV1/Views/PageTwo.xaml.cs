@@ -77,6 +77,7 @@ public partial class PageTwoVM : ObservableObject
     }
     public void OnRemoveRow(TableData row)
     {
+        System.Diagnostics.Debug.WriteLine("Value of n is" + row.n);
         Data.Remove(row);
     }
 

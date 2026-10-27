@@ -17,6 +17,7 @@
             <MenuFlyoutItem Text="Page 2" Clicked="openTab"/>
             <MenuFlyoutItem Text="Page 3" Clicked="openTab"/>
             <MenuFlyoutItem Text="Random Number Game" Clicked="openTab"/>
+            <MenuFlyoutItem Text="PDF Generator" Clicked="openTab"/>
         </MenuBarItem>
         <MenuBarItem Text="File">
             <MenuFlyoutItem Text="Export"/>

@@ -47,7 +47,7 @@
                     <LinearItemsLayout Orientation="Vertical" ItemSpacing="0"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate x:DataType="local:TableData">
                         <Grid x:Name="ItemGrid" ColumnDefinitions="100, 100, 100, 50" RowDefinitions="50"
                               Padding="1" ColumnSpacing="1" VerticalOptions="Center" 
                               HorizontalOptions="Center" RowSpacing="0">
