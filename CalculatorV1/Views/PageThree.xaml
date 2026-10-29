@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CalculatorV1.Views.PageThree"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
              xmlns:local="clr-namespace:CalculatorV1.Views"
              x:DataType="local:PageThreeVM"
              Title="PageThree">
@@ -16,5 +17,6 @@
                Keyboard="Numeric"
                Placeholder="save a number.."
                Unfocused="OnEntryCompleted"/>
+        <Button Text="Generate Graph" Clicked="OpenGraph"/>
     </VerticalStackLayout>
 </ContentPage>

@@ -1,7 +1,9 @@
 ﻿using CalculatorV1.Views;
 using CommunityToolkit.Maui;
-using CommunityToolkit.Maui.Storage;
+using LiveChartsCore.SkiaSharpView.Maui;
 using Microsoft.Extensions.Logging;
+using LiveChartsCore;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace CalculatorV1
 {
@@ -13,6 +15,8 @@ namespace CalculatorV1
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseSkiaSharp()
+                .UseLiveCharts()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -32,6 +36,8 @@ namespace CalculatorV1
             builder.Services.AddTransient<AppShell>();
             builder.Services.AddSingleton<GeneratePageVM>();
             builder.Services.AddSingleton<GeneratePage>();
+            builder.Services.AddSingleton<GraphVM>();
+            builder.Services.AddTransient<Graph>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
