@@ -1,9 +1,7 @@
 ﻿using CalculatorV1.Views;
 using CommunityToolkit.Maui;
-using LiveChartsCore.SkiaSharpView.Maui;
 using Microsoft.Extensions.Logging;
-using LiveChartsCore;
-using SkiaSharp.Views.Maui.Controls.Hosting;
+using Syncfusion.Maui.Toolkit.Hosting;
 
 namespace CalculatorV1
 {
@@ -15,8 +13,7 @@ namespace CalculatorV1
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
-                .UseSkiaSharp()
-                .UseLiveCharts()
+                .ConfigureSyncfusionToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

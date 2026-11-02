@@ -1,7 +1,6 @@
 using CommunityToolkit.Maui.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using LiveChartsCore.Defaults;
 namespace CalculatorV1.Views;
 
 
@@ -14,8 +13,7 @@ public partial class PageThree : ContentPage
     }
     private async void OpenGraph(object sender, EventArgs e)
     {
-        GraphVM vm = AppShell.Current.Handler.MauiContext.Services.GetService<GraphVM>();
-        var popup = new Graph(vm);
+        var popup = new Graph(AppShell.Current.Handler.MauiContext.Services.GetService<GraphVM>());
         await this.ShowPopupAsync(popup);
     }
     private void OnEntryCompleted(object sender, EventArgs e)
@@ -33,13 +31,6 @@ public partial class PageThreeVM : ObservableObject
     public partial int ToBeSaved { get; set; } = 0;
     private BackUp backup;
     public PageTwoThreeVM _vm { get; }
-
-    public ObservablePoint[] Values { get; set; } = [
-        new(0,0),
-        new(1,1),
-        new(2,2.3),
-        new(4, 5)
-        ];
     public PageThreeVM(PageTwoThreeVM vm, BackUp backup)
     {
         _vm = vm;

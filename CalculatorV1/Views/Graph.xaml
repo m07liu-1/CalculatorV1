@@ -1,16 +1,128 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:Syncf="http://schemas.syncfusion.com/maui/toolkit"
              xmlns:local="clr-namespace:CalculatorV1.Views"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Toolkit.Charts;assembly=Syncfusion.Maui.Toolkit"
              x:Class="CalculatorV1.Views.Graph"
              x:DataType="local:GraphVM">
-    <lvc:CartesianChart x:Name="myChart"  ZoomMode="PanY" HeightRequest="300" >
-        <lvc:CartesianChart.Series>
-            <lvc:SeriesCollection>
-                <lvc:XamlLineSeries LineSmoothness="0.7" GeometrySize="10" Values="{Binding Values}"/>
-            </lvc:SeriesCollection>
-        </lvc:CartesianChart.Series>
-    </lvc:CartesianChart>
+    <ScrollView>
+        <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
+            <VerticalStackLayout>
+                <chart:SfCartesianChart HeightRequest="380" Margin="10, 10, 20, 20">
+                    <!-- Set the title for the Cartesian chart -->
+                    <chart:SfCartesianChart.Title>
+                        <Label Text="Station: XYZ" HorizontalOptions="Center" />
+                    </chart:SfCartesianChart.Title>
+
+                    <chart:SfCartesianChart.Legend>
+                        <chart:ChartLegend/>
+                    </chart:SfCartesianChart.Legend>
+                    <!-- Define the horizontal (X) axis as a numerical axis -->
+                    <chart:SfCartesianChart.XAxes>
+                        <chart:NumericalAxis RangePadding="Additional"/>
+                    </chart:SfCartesianChart.XAxes>
+
+                    <!-- Define the vertical (Y) axis as a numerical axis -->
+                    <chart:SfCartesianChart.YAxes>
+                        <chart:NumericalAxis RangePadding="Additional"/>
+                    </chart:SfCartesianChart.YAxes>
+
+                    <chart:SfCartesianChart.ZoomPanBehavior>
+                        <chart:ChartZoomPanBehavior EnablePinchZooming="True"/>
+                    </chart:SfCartesianChart.ZoomPanBehavior>
+
+                    <chart:SfCartesianChart.Resources>
+                        <DataTemplate x:Key="labelTemplate" x:DataType="chart:ChartDataLabel">
+                            <Label Text="{Binding Item.Date}" VerticalOptions="Center" FontSize="10"/>
+                        </DataTemplate>
+                    </chart:SfCartesianChart.Resources>
+
+                    <!-- Initialize a ColumnSeries to visualize the data in columns -->
+                    <chart:SplineSeries Label="Data 1"
+                         EnableTooltip="True" 
+                         ShowMarkers="True"
+                         ItemsSource="{Binding Values}" 
+                         XBindingPath="X" 
+                         YBindingPath="Y"
+                         LabelTemplate="{StaticResource labelTemplate}"
+                         ShowDataLabels="True">
+                        <chart:SplineSeries.DataLabelSettings>
+                            <chart:CartesianDataLabelSettings LabelPlacement="Outer"/>
+                        </chart:SplineSeries.DataLabelSettings>
+                    </chart:SplineSeries>
+
+                    <chart:ScatterSeries Label="Data 2"
+                             ItemsSource="{Binding Scatter}"
+                             XBindingPath="X"
+                             Type="Triangle"
+                             PointHeight="10"
+                             PointWidth="10"
+                             YBindingPath="Y"/>
+                </chart:SfCartesianChart>
+
+                <!-- *************************Second Graph****************************-->
+                <chart:SfCartesianChart HeightRequest="380" Margin="10, 10, 20, 20">
+                    <chart:SfCartesianChart.Title>
+                        <Label Text="Step Chart" HorizontalOptions="Center" />
+                    </chart:SfCartesianChart.Title>
+
+                    <chart:SfCartesianChart.Legend>
+                        <chart:ChartLegend Placement="Bottom" IsFloating="True" OffsetY="-30"/>
+                    </chart:SfCartesianChart.Legend>
+
+                    <chart:SfCartesianChart.XAxes>
+                        <chart:NumericalAxis />
+                    </chart:SfCartesianChart.XAxes>
+                    <chart:SfCartesianChart.YAxes>
+                        <chart:NumericalAxis RangePadding="Additional"/>
+                    </chart:SfCartesianChart.YAxes>
+                    <chart:StepLineSeries Label=" Very meaningful data"
+                                  ItemsSource="{Binding Step}"
+                                  XBindingPath="X"
+                                  YBindingPath="Y"/>
+                </chart:SfCartesianChart>
+                <!-- ****************************Third Graph ***************************-->
+                <chart:SfCartesianChart HeightRequest="380" Margin="10, 10, 20, 20">
+                    <chart:SfCartesianChart.Title>
+                        <Label Text="Area Chart" HorizontalOptions="Center" />
+                    </chart:SfCartesianChart.Title>
+
+                    <chart:SfCartesianChart.Resources>
+                        <DataTemplate x:Key="LineAnnotationTemplate" x:DataType="chart:ChartDataLabel">
+                            <chart:VerticalLineAnnotation StrokeWidth="2" X1="0" Y1="{Binding Item.Y}"/>
+                        </DataTemplate>
+                    </chart:SfCartesianChart.Resources>
+
+                    <chart:SfCartesianChart.YAxes>
+                        <chart:NumericalAxis IsInversed="True" Minimum="0" Maximum="1"/>
+                    </chart:SfCartesianChart.YAxes>
+
+                    <chart:SfCartesianChart.XAxes>
+                        <chart:NumericalAxis Minimum="0"/>
+                    </chart:SfCartesianChart.XAxes>
+
+                    <chart:AreaSeries ItemsSource="{Binding InversedArea1}"
+                                          XBindingPath="X"
+                                          YBindingPath="Y"
+                                          Fill="LightBlue"
+                                          EnableTooltip="True"/>
+                    <chart:AreaSeries ItemsSource="{Binding InversedArea2}"
+                                            XBindingPath="X"
+                                            YBindingPath="Y"
+                                            Fill="Gray"
+                                            EnableTooltip="True"/>
+                    <chart:ColumnSeries ItemsSource="{Binding InversedArea1}"
+                                        XBindingPath="X"
+                                        YBindingPath="Y"
+                                        EnableTooltip="False"
+                                        Fill="Black"
+                                        Width="0.05"
+                                        />
+                </chart:SfCartesianChart>
+                
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
 </toolkit:Popup>
