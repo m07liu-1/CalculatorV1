@@ -37,6 +37,8 @@ public partial class GraphVM
 
 	public ObservableCollection<Point> Step { get; set; }
 
+	public ObservableCollection<Point> Step2 { get; set; }
+
 	public ObservableCollection<Point> InversedArea1 { get; set; } = new ObservableCollection<Point>
 	{
 		new(1, 0), new(2, 0.6), new(3, 0.7), new(4, 0.68), new(5, 0.56), new(6, 0.8), new(7, 0.5), new(8, 0)
@@ -53,6 +55,7 @@ public partial class GraphVM
 		Values = new();
 		Scatter = new();
 		Step = new();
+		Step2 = new();
 		Random rand = new();
 		for (int i = 0; i < 10; i++)
 		{
@@ -61,6 +64,7 @@ public partial class GraphVM
 			Values.Add(new Point(i, rand.Next(0, 2) / 10 + Math.Log(i + 1), new DateTime(2026, month, date)));
 			Scatter.Add(new Point(i+0.5, rand.Next(0, 2) / 10 + Math.Log(i + 1.5), new DateTime(2026, month, date)));
 			Step.Add(new Point(i, rand.Next(0, 7)));
+			Step2.Add(new Point(i, rand.Next(4, 9)));
 		}
 	}
 }

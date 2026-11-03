@@ -10,7 +10,7 @@
     <ScrollView>
         <Grid RowDefinitions="Auto" ColumnDefinitions="Auto">
             <VerticalStackLayout>
-                <chart:SfCartesianChart HeightRequest="380" Margin="10, 10, 20, 20">
+                <chart:SfCartesianChart HeightRequest="300" Margin="10, 10, 20, 20">
                     <!-- Set the title for the Cartesian chart -->
                     <chart:SfCartesianChart.Title>
                         <Label Text="Station: XYZ" HorizontalOptions="Center" />
@@ -30,7 +30,7 @@
                     </chart:SfCartesianChart.YAxes>
 
                     <chart:SfCartesianChart.ZoomPanBehavior>
-                        <chart:ChartZoomPanBehavior EnablePinchZooming="True"/>
+                        <chart:ChartZoomPanBehavior EnablePinchZooming="True" EnableSelectionZooming="True" EnableDoubleTap="True"/>
                     </chart:SfCartesianChart.ZoomPanBehavior>
 
                     <chart:SfCartesianChart.Resources>
@@ -63,7 +63,7 @@
                 </chart:SfCartesianChart>
 
                 <!-- *************************Second Graph****************************-->
-                <chart:SfCartesianChart HeightRequest="380" Margin="10, 10, 20, 20">
+                <chart:SfCartesianChart HeightRequest="300" Margin="10, 10, 20, 20">
                     <chart:SfCartesianChart.Title>
                         <Label Text="Step Chart" HorizontalOptions="Center" />
                     </chart:SfCartesianChart.Title>
@@ -73,18 +73,34 @@
                     </chart:SfCartesianChart.Legend>
 
                     <chart:SfCartesianChart.XAxes>
-                        <chart:NumericalAxis />
+                        <chart:NumericalAxis Maximum="10" Interval="2"/>
                     </chart:SfCartesianChart.XAxes>
                     <chart:SfCartesianChart.YAxes>
-                        <chart:NumericalAxis RangePadding="Additional"/>
+                        <chart:NumericalAxis RangePadding="Additional" Name="Discharge">
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Discharge" />
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+
+                        <chart:NumericalAxis Name="Velocity" CrossesAt="{Static x:Double.MaxValue}">
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Very meaningful data" />
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
                     </chart:SfCartesianChart.YAxes>
-                    <chart:StepLineSeries Label=" Very meaningful data"
+                    <chart:StepLineSeries YAxisName="Velocity"
+                                  Label=" Very meaningful data"
                                   ItemsSource="{Binding Step}"
+                                  XBindingPath="X"
+                                  YBindingPath="Y"/>
+                    <chart:SplineSeries YAxisName="Discharge"
+                                  Label="Discharge"
+                                  ItemsSource="{Binding Step2}"
                                   XBindingPath="X"
                                   YBindingPath="Y"/>
                 </chart:SfCartesianChart>
                 <!-- ****************************Third Graph ***************************-->
-                <chart:SfCartesianChart HeightRequest="380" Margin="10, 10, 20, 20">
+                <chart:SfCartesianChart HeightRequest="300" Margin="10, 10, 20, 20">
                     <chart:SfCartesianChart.Title>
                         <Label Text="Area Chart" HorizontalOptions="Center" />
                     </chart:SfCartesianChart.Title>
@@ -100,7 +116,11 @@
                     </chart:SfCartesianChart.YAxes>
 
                     <chart:SfCartesianChart.XAxes>
-                        <chart:NumericalAxis Minimum="0"/>
+                        <chart:NumericalAxis Minimum="0">
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Time" />
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
                     </chart:SfCartesianChart.XAxes>
 
                     <chart:AreaSeries ItemsSource="{Binding InversedArea1}"
@@ -121,7 +141,7 @@
                                         Width="0.05"
                                         />
                 </chart:SfCartesianChart>
-                
+                <Label Text=""/>
             </VerticalStackLayout>
         </Grid>
     </ScrollView>

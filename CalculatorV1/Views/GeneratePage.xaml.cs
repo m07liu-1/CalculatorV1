@@ -94,6 +94,7 @@ public partial class GeneratePage : ContentPage
                 <td colspan = ""8"">{dt.Comments}</td>
             </tr>
         </table>
+        <h4>Surveyor: {dt.Name}</h4>
     </body>
 </html>";
         try

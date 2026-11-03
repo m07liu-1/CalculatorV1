@@ -15,7 +15,7 @@
                Text="{Binding ToBeSaved}"
                Keyboard="Numeric"
                Placeholder="save a number.."
-               Unfocused="OnEntryCompleted"/>
+               Unfocused="OnEntryCompleted"/> 
         <Button Text="Graph Examples" Clicked="OpenGraph"/>
     </VerticalStackLayout>
 </ContentPage>
